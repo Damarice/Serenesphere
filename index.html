@@ -107,6 +107,7 @@
             flex-direction: column;
             cursor: pointer;
             padding: 0.5rem;
+            z-index: 1010;
         }
 
         .mobile-menu-toggle span {
@@ -116,6 +117,18 @@
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 1px;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
 
         /* Compact Dropdown Menus */
@@ -194,315 +207,371 @@
 
         /* SereniSphere Footer CSS */
 
-:root {
-    --primary-terracotta: #D2691E;
-    --deep-earth: #8B4513;
-    --golden-amber: #DAA520;
-    --sage-green: #87A96B;
-    --warm-cream: #F5F5DC;
-    --rich-brown: #654321;
-    --sunset-orange: #FF8C42;
-    --deep-teal: #2F4F4F;
-    --pure-white: #FFFFFF;
-    --soft-gray: #F8F9FA;
-}
+        :root {
+            --primary-terracotta: #D2691E;
+            --deep-earth: #8B4513;
+            --golden-amber: #DAA520;
+            --sage-green: #87A96B;
+            --warm-cream: #F5F5DC;
+            --rich-brown: #654321;
+            --sunset-orange: #FF8C42;
+            --deep-teal: #2F4F4F;
+            --pure-white: #FFFFFF;
+            --soft-gray: #F8F9FA;
+        }
 
-/* Widget Footer */
-.footer {
-    background: var(--deep-earth);
-    color: white;
-    padding: 3rem 0 1rem;
-    margin-top: auto;
-}
+        /* Widget Footer */
+        .footer {
+            background: var(--deep-earth);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: auto;
+        }
 
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-.footer-widgets {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
-    align-items: start;
-}
+        .footer-widgets {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: start;
+        }
 
-.footer-widget {
-    min-height: 280px;
-}
+        .footer-widget {
+            min-height: 280px;
+        }
 
-.footer-widget:first-child {
-    grid-column: span 2;
-}
+        .footer-widget:first-child {
+            grid-column: span 2; 
+        }
 
-.footer-logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--golden-amber);
-    margin-bottom: 0.8rem;
-}
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--golden-amber);
+            margin-bottom: 0.8rem;
+        }
 
-.footer-tagline {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-}
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem; /* Added margin for spacing */
+        }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.85rem;
-}
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+        }
 
-.contact-item i {
-    width: 16px;
-    color: var(--golden-amber);
-    font-size: 0.9rem;
-}
+        .contact-item i {
+            width: 16px;
+            color: var(--golden-amber);
+            font-size: 0.9rem;
+        }
 
-.widget-title {
-    color: var(--golden-amber);
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+        .widget-title {
+            color: var(--golden-amber);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-.widget-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .widget-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.widget-links li {
-    margin-bottom: 0.6rem;
-}
+        .widget-links li {
+            margin-bottom: 0.6rem;
+        }
 
-.widget-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 400;
-    transition: all 0.3s ease;
-    display: block;
-    padding: 0.2rem 0;
-    line-height: 1.4;
-}
+        .widget-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.2rem 0;
+            line-height: 1.4;
+        }
 
-.widget-links a:hover {
-    color: var(--golden-amber);
-    padding-left: 0.5rem;
-}
+        .widget-links a:hover {
+            color: var(--golden-amber);
+            padding-left: 0.5rem;
+        }
 
-.newsletter-widget {
-    margin-bottom: 1.5rem;
-}
+        .newsletter-widget {
+            margin-bottom: 1.5rem;
+        }
 
-.newsletter-text {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-}
+        .newsletter-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
 
-.newsletter-form {
-    display: flex;
-    margin-bottom: 1.5rem;
-}
+        .newsletter-form {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
 
-.newsletter-input {
-    flex: 1;
-    padding: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    border-radius: 4px 0 0 4px;
-    font-size: 0.85rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
+        .newsletter-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border-radius: 4px 0 0 4px;
+            font-size: 0.85rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-.newsletter-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
 
-.newsletter-input:focus {
-    border-color: var(--golden-amber);
-    background: rgba(255, 255, 255, 0.1);
-}
+        .newsletter-input:focus {
+            border-color: var(--golden-amber);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-.newsletter-btn {
-    background: var(--primary-terracotta);
-    border: none;
-    padding: 0.8rem 1rem;
-    color: white;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+        .newsletter-btn {
+            background: var(--primary-terracotta);
+            border: none;
+            padding: 0.8rem 1rem;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-.newsletter-btn:hover {
-    background: var(--golden-amber);
-}
+        .newsletter-btn:hover {
+            background: var(--golden-amber);
+        }
 
-.social-links {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-}
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem; /* Added margin for spacing */
+        }
 
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background: var(--primary-terracotta);
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: var(--primary-terracotta);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
 
-.social-links a:hover {
-    background: var(--golden-amber);
-    transform: translateY(-2px);
-}
+        .social-links a:hover {
+            background: var(--golden-amber);
+            transform: translateY(-2px);
+        }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-.footer-bottom p {
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-    font-size: 0.8rem;
-}
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            font-size: 0.8rem;
+        }
 
-.footer-bottom-links {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-.footer-bottom-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.3s ease;
-}
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+        }
 
-.footer-bottom-links a:hover {
-    color: var(--golden-amber);
-}
+        .footer-bottom-links a:hover {
+            color: var(--golden-amber);
+        }
 
-/* Mobile Responsiveness for Footer */
-@media (max-width: 1024px) {
-    .footer-widgets {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.8rem;
-    }
+        /* Mobile Responsiveness for NAV */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                max-width: 350px;
+                background: var(--pure-white);
+                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 8rem;
+                gap: 1.5rem;
+                transition: right 0.4s ease;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu > li > a {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                border-bottom: 1px solid var(--soft-gray);
+            }
+            
+            .nav-item:hover .dropdown {
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: transparent;
+            }
+            
+            .dropdown {
+                display: none;
+                transition: none;
+            }
+            
+            .nav-item.active .dropdown {
+                display: block;
+            }
+            
+            .dropdown-header {
+                padding: 1rem 2rem;
+                border-bottom: none;
+                font-size: 0.8rem;
+            }
+            
+            .dropdown a {
+                padding: 0.5rem 2.5rem;
+                font-size: 0.9rem;
+            }
 
-    .footer-widget:first-child {
-        grid-column: span 1;
-    }
+            .mobile-menu-toggle {
+                display: flex;
+            }
+        }
 
-    .footer-widget:last-child {
-        grid-column: span 4;
-    }
-}
+        /* Mobile Responsiveness for Footer */
+        @media (max-width: 1024px) {
+            .footer-widgets {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.8rem;
+            }
 
-@media (max-width: 768px) {
-    .footer-widgets {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+            .footer-widget:first-child {
+                grid-column: span 2;
+            }
 
-    .footer-widget:first-child {
-        grid-column: span 2;
-    }
+            .footer-widget {
+                min-height: auto;
+            }
+        }
 
-    .footer-widget:last-child {
-        grid-column: span 2;
-    }
+        @media (max-width: 768px) {
+            .footer-widgets {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
 
-    .footer-widget {
-        min-height: auto;
-    }
+            .footer-widget:first-child {
+                grid-column: span 2;
+            }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
 
-    .footer-bottom-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
+            .footer-bottom-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
 
-@media (max-width: 480px) {
-    .footer-container {
-        padding: 0 1rem;
-    }
+        @media (max-width: 480px) {
+            .footer-container {
+                padding: 0 1rem;
+            }
 
-    .footer-widgets {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+            .footer-widgets {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
 
-    .footer-widget:first-child,
-    .footer-widget:last-child {
-        grid-column: span 1;
-    }
+            .footer-widget:first-child {
+                grid-column: span 1;
+            }
 
-    .social-links {
-        justify-content: center;
-    }
+            .social-links {
+                justify-content: center;
+            }
 
-    .newsletter-form {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
+            .newsletter-form {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
 
-    .newsletter-input {
-        border-radius: 4px;
-    }
+            .newsletter-input {
+                border-radius: 4px;
+            }
 
-    .newsletter-btn {
-        border-radius: 4px;
-        align-self: stretch;
-    }
+            .newsletter-btn {
+                border-radius: 4px;
+                align-self: stretch;
+            }
 
-    .footer-bottom-links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-}
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Compact Header -->
     <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo">
@@ -583,7 +652,6 @@
         </nav>
     </header>
 
-    <!-- Content Spacer for Demo -->
     <div class="content-spacer">
         <div>
             <h1>SereniSphere™ Compact Navigation</h1>
@@ -591,12 +659,9 @@
         </div>
     </div>
 
-<!-- Comprehensive Widget Footer -->
-    <footer class="footer">
+<footer class="footer">
         <div class="footer-container">
-            <!-- Widget Row -->
             <div class="footer-widgets">
-                <!-- Brand Widget -->
                 <div class="footer-widget">
                     <div class="footer-logo">SereniSphere™</div>
                     <p class="footer-tagline">Restoring sacred serenity through authentic African Indigenous knowledge</p>
@@ -614,76 +679,7 @@
                             <span>Kenya & Global</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Retreats Widget -->
-                <div class="footer-widget">
-                    <h4 class="widget-title">Retreats</h4>
-                    <ul class="widget-links">
-                        <li><a href="#kenya-march">Kenya Immersion - March 2026</a></li>
-                        <li><a href="#kenya-august">Kenya Immersion - August 2026</a></li>
-                        <li><a href="#kenya-october">Kenya Immersion - October 2026</a></li>
-                        <li><a href="#us-sanctuary">US Sanctuary Programs</a></li>
-                        <li><a href="#train-trainer">Train-the-Trainer Certification</a></li>
-                        <li><a href="#custom-retreats">Custom Group Retreats</a></li>
-                        <li><a href="#virtual-experiences">Virtual Experiences</a></li>
-                    </ul>
-                </div>
-
-                <!-- About Widget -->
-                <div class="footer-widget">
-                    <h4 class="widget-title">About</h4>
-                    <ul class="widget-links">
-                        <li><a href="#sacred-mission">Our Sacred Mission</a></li>
-                        <li><a href="#nine-elements">The Nine Elements of Serenity</a></li>
-                        <li><a href="#leadership">Leadership & Healers</a></li>
-                        <li><a href="#indigenous-knowledge">Indigenous Knowledge Systems</a></li>
-                        <li><a href="#cultural-heritage">Cultural Heritage & History</a></li>
-                        <li><a href="#impact-measurement">Impact & Measurement</a></li>
-                    </ul>
-                </div>
-
-                <!-- Community Widget -->
-                <div class="footer-widget">
-                    <h4 class="widget-title">Community</h4>
-                    <ul class="widget-links">
-                        <li><a href="#join-circle">Join a Local Circle</a></li>
-                        <li><a href="#global-chapters">Global Chapters Directory</a></li>
-                        <li><a href="#sister-cities">Sister Cities Program</a></li>
-                        <li><a href="#alumni-network">Alumni Network</a></li>
-                        <li><a href="#community-guidelines">Community Guidelines</a></li>
-                        <li><a href="#events-calendar">Events Calendar</a></li>
-                    </ul>
-                </div>
-
-                <!-- Marketplace Widget -->
-                <div class="footer-widget">
-                    <h4 class="widget-title">Marketplace</h4>
-                    <ul class="widget-links">
-                        <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
-                        <li><a href="#books-publications">Books & Publications</a></li>
-                        <li><a href="#digital-modules">Digital Learning Modules</a></li>
-                        <li><a href="#wellness-toolkits">Wellness Toolkits</a></li>
-                        <li><a href="#gift-certificates">Gift Certificates</a></li>
-                        <li><a href="#wholesale">Wholesale Inquiries</a></li>
-                    </ul>
-                </div>
-
-                <!-- Dynamic Content Widget -->
-                <div class="footer-widget">
-                    <h4 class="widget-title">Resources</h4>
-                    <ul class="widget-links">
-                        <li><a href="#retreat-calendar">Retreat Calendar & Booking</a></li>
-                        <li><a href="#member-dashboard">Member Dashboard</a></li>
-                        <li><a href="#community-forum">Community Forum</a></li>
-                        <li><a href="#resource-library">Resource Library</a></li>
-                        <li><a href="#heritage-timeline">Cultural Heritage Timeline</a></li>
-                        <li><a href="#impact-map">Global Impact Map</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter & Social Widget -->
-                <div class="footer-widget">
+                    
                     <h4 class="widget-title">Stay Connected</h4>
                     <div class="newsletter-widget">
                         <p class="newsletter-text">Join our sacred community for healing wisdom and retreat updates</p>
@@ -702,9 +698,69 @@
                         <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+
+                <div class="footer-widget">
+                    <h4 class="widget-title">Retreats</h4>
+                    <ul class="widget-links">
+                        <li><a href="#kenya-march">Kenya Immersion - March 2026</a></li>
+                        <li><a href="#kenya-august">Kenya Immersion - August 2026</a></li>
+                        <li><a href="#kenya-october">Kenya Immersion - October 2026</a></li>
+                        <li><a href="#us-sanctuary">US Sanctuary Programs</a></li>
+                        <li><a href="#train-trainer">Train-the-Trainer Certification</a></li>
+                        <li><a href="#custom-retreats">Custom Group Retreats</a></li>
+                        <li><a href="#virtual-experiences">Virtual Experiences</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4 class="widget-title">About</h4>
+                    <ul class="widget-links">
+                        <li><a href="#sacred-mission">Our Sacred Mission</a></li>
+                        <li><a href="#nine-elements">The Nine Elements of Serenity</a></li>
+                        <li><a href="#leadership">Leadership & Healers</a></li>
+                        <li><a href="#indigenous-knowledge">Indigenous Knowledge Systems</a></li>
+                        <li><a href="#cultural-heritage">Cultural Heritage & History</a></li>
+                        <li><a href="#impact-measurement">Impact & Measurement</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4 class="widget-title">Community</h4>
+                    <ul class="widget-links">
+                        <li><a href="#join-circle">Join a Local Circle</a></li>
+                        <li><a href="#global-chapters">Global Chapters Directory</a></li>
+                        <li><a href="#sister-cities">Sister Cities Program</a></li>
+                        <li><a href="#alumni-network">Alumni Network</a></li>
+                        <li><a href="#community-guidelines">Community Guidelines</a></li>
+                        <li><a href="#events-calendar">Events Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4 class="widget-title">Marketplace</h4>
+                    <ul class="widget-links">
+                        <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
+                        <li><a href="#books-publications">Books & Publications</a></li>
+                        <li><a href="#digital-modules">Digital Learning Modules</a></li>
+                        <li><a href="#wellness-toolkits">Wellness Toolkits</a></li>
+                        <li><a href="#gift-certificates">Gift Certificates</a></li>
+                        <li><a href="#wholesale">Wholesale Inquiries</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h4 class="widget-title">Resources</h4>
+                    <ul class="widget-links">
+                        <li><a href="#retreat-calendar">Retreat Calendar & Booking</a></li>
+                        <li><a href="#member-dashboard">Member Dashboard</a></li>
+                        <li><a href="#community-forum">Community Forum</a></li>
+                        <li><a href="#resource-library">Resource Library</a></li>
+                        <li><a href="#heritage-timeline">Cultural Heritage Timeline</a></li>
+                        <li><a href="#impact-map">Global Impact Map</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p>&copy; 2025 SereniSphere™. All rights reserved.</p>
                 <div class="footer-bottom-links">
@@ -763,6 +819,18 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+            });
+        });
+
+        // For mobile dropdowns - toggle visibility
+        document.querySelectorAll('.nav-item > a').forEach(item => {
+            item.addEventListener('click', function(e) {
+                const parent = this.parentElement;
+                const dropdown = parent.querySelector('.dropdown');
+                if (window.innerWidth <= 1024 && dropdown) {
+                    e.preventDefault();
+                    parent.classList.toggle('active');
                 }
             });
         });
