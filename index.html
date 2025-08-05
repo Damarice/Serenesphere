@@ -1,576 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SereniSphere™ - Compact Navigation & Footer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SereniSphere™ - Compact Navigation & Footer</title>
 
-        :root {
-            --primary-terracotta: #D2691E;
-            --deep-earth: #8B4513;
-            --golden-amber: #DAA520;
-            --sage-green: #87A96B;
-            --warm-cream: #F5F5DC;
-            --rich-brown: #654321;
-            --sunset-orange: #FF8C42;
-            --deep-teal: #2F4F4F;
-            --pure-white: #FFFFFF;
-            --soft-gray: #F8F9FA;
-        }
+  <!-- Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: var(--rich-brown);
-            background: var(--soft-gray);
-            min-height: 100vh;
-        }
+  <!-- Google Fonts (Montserrat) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="all">
 
-        /* Compact Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 0.8rem 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-        }
+  <!-- Font Awesome - Load asynchronously to avoid blocking -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all" onload="this.media='all'">
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-placeholder {
-            width: 50px;
-            height: 50px;
-            border: 2px dashed var(--primary-terracotta);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-terracotta);
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-            align-items: center;
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-menu > li > a {
-            text-decoration: none;
-            color: var(--rich-brown);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-            padding: 0.8rem 0;
-            display: block;
-            white-space: nowrap;
-        }
-
-        .nav-menu > li > a:hover {
-            color: var(--primary-terracotta);
-        }
-
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-            z-index: 1010;
-        }
-
-        .mobile-menu-toggle span {
-            width: 22px;
-            height: 2px;
-            background: var(--primary-terracotta);
-            margin: 2px 0;
-            transition: 0.3s;
-            border-radius: 1px;
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        /* Compact Dropdown Menus */
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: -40px;
-            background: white;
-            min-width: 260px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: all 0.3s ease;
-            padding: 1rem 0;
-            border: 1px solid rgba(210, 105, 30, 0.1);
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 0.6rem 1.2rem;
-            color: var(--deep-teal);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-        }
-
-        .dropdown a:hover {
-            background: var(--warm-cream);
-            color: var(--primary-terracotta);
-            padding-left: 1.5rem;
-        }
-
-        .dropdown-header {
-            color: var(--primary-terracotta);
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.4rem 1.2rem;
-            border-bottom: 1px solid var(--warm-cream);
-            margin-bottom: 0.4rem;
-        }
-
-        /* Main Content Spacer */
-        .content-spacer {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 2rem;
-            margin-top: 70px;
-        }
-
-        .content-spacer h1 {
-            font-size: 2.5rem;
-            color: var(--deep-earth);
-            margin-bottom: 1.5rem;
-        }
-
-        .content-spacer p {
-            font-size: 1.1rem;
-            color: var(--deep-teal);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* SereniSphere Footer CSS */
-
-        :root {
-            --primary-terracotta: #D2691E;
-            --deep-earth: #8B4513;
-            --golden-amber: #DAA520;
-            --sage-green: #87A96B;
-            --warm-cream: #F5F5DC;
-            --rich-brown: #654321;
-            --sunset-orange: #FF8C42;
-            --deep-teal: #2F4F4F;
-            --pure-white: #FFFFFF;
-            --soft-gray: #F8F9FA;
-        }
-
-        /* Widget Footer */
-        .footer {
-            background: var(--deep-earth);
-            color: white;
-            padding: 3rem 0 1rem;
-            margin-top: auto;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer-widgets {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-            align-items: start;
-        }
-
-        .footer-widget {
-            min-height: 280px;
-        }
-
-        .footer-widget:first-child {
-            grid-column: span 2; 
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--golden-amber);
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-tagline {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-bottom: 1.5rem; /* Added margin for spacing */
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.85rem;
-        }
-
-        .contact-item i {
-            width: 16px;
-            color: var(--golden-amber);
-            font-size: 0.9rem;
-        }
-
-        .widget-title {
-            color: var(--golden-amber);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .widget-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .widget-links li {
-            margin-bottom: 0.6rem;
-        }
-
-        .widget-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            display: block;
-            padding: 0.2rem 0;
-            line-height: 1.4;
-        }
-
-        .widget-links a:hover {
-            color: var(--golden-amber);
-            padding-left: 0.5rem;
-        }
-
-        .newsletter-widget {
-            margin-bottom: 1.5rem;
-        }
-
-        .newsletter-text {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.85rem;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            margin-bottom: 1.5rem;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 0.8rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            border-radius: 4px 0 0 4px;
-            font-size: 0.85rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .newsletter-input:focus {
-            border-color: var(--golden-amber);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .newsletter-btn {
-            background: var(--primary-terracotta);
-            border: none;
-            padding: 0.8rem 1rem;
-            color: white;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-btn:hover {
-            background: var(--golden-amber);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem; /* Added margin for spacing */
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: var(--primary-terracotta);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .social-links a:hover {
-            background: var(--golden-amber);
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0;
-            font-size: 0.8rem;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-bottom-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-bottom-links a:hover {
-            color: var(--golden-amber);
-        }
-
-        /* Mobile Responsiveness for NAV */
-        @media (max-width: 1024px) {
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 70%;
-                max-width: 350px;
-                background: var(--pure-white);
-                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-                flex-direction: column;
-                justify-content: flex-start;
-                padding-top: 8rem;
-                gap: 1.5rem;
-                transition: right 0.4s ease;
-            }
-            
-            .nav-menu.active {
-                right: 0;
-            }
-            
-            .nav-menu > li > a {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-                border-bottom: 1px solid var(--soft-gray);
-            }
-            
-            .nav-item:hover .dropdown {
-                position: static;
-                visibility: visible;
-                opacity: 1;
-                transform: none;
-                box-shadow: none;
-                border: none;
-                padding: 0;
-                background: transparent;
-            }
-            
-            .dropdown {
-                display: none;
-                transition: none;
-            }
-            
-            .nav-item.active .dropdown {
-                display: block;
-            }
-            
-            .dropdown-header {
-                padding: 1rem 2rem;
-                border-bottom: none;
-                font-size: 0.8rem;
-            }
-            
-            .dropdown a {
-                padding: 0.5rem 2.5rem;
-                font-size: 0.9rem;
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
-            }
-        }
-
-        /* Mobile Responsiveness for Footer */
-        @media (max-width: 1024px) {
-            .footer-widgets {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.8rem;
-            }
-
-            .footer-widget:first-child {
-                grid-column: span 2;
-            }
-
-            .footer-widget {
-                min-height: auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .footer-widgets {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-
-            .footer-widget:first-child {
-                grid-column: span 2;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .footer-bottom-links {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-container {
-                padding: 0 1rem;
-            }
-
-            .footer-widgets {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-widget:first-child {
-                grid-column: span 1;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-
-            .newsletter-input {
-                border-radius: 4px;
-            }
-
-            .newsletter-btn {
-                border-radius: 4px;
-                align-self: stretch;
-            }
-
-            .footer-bottom-links {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-        }
-    </style>
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -651,13 +99,505 @@
             </ul>
         </nav>
     </header>
+<!-- Hero Section -->
+    <section class="hero-section loading" id="hero">
+        <!-- Background slide container -->
+        <div class="hero-bg-container">
+            <div class="hero-bg-slide"></div>
+            <div class="hero-bg-slide"></div>
+            <div class="hero-bg-slide"></div>
+        </div>
 
-    <div class="content-spacer">
-        <div>
-            <h1>SereniSphere™ Compact Navigation</h1>
-            <p>This shows the compact navigation structure with Font Awesome icons, proper spacing for your logo, and a comprehensive footer. The navigation is now more streamlined and space-efficient while maintaining all functionality.</p>
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Return to Sacred Serenity</h1>
+            <p class="hero-subtitle">
+                A luxury healing experience rooted in African Indigenous wisdom — designed for changemakers, seekers, and soul-restorers.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#demo" class="btn btn-primary">Explore Retreats</a>
+                <a href="#demo" class="btn btn-secondary">Join a Circle</a>
+                <a href="#demo" class="btn btn-secondary">Discover Our Network</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l-6 6h4v10h4v-10h4l-6-6z"/>
+            </svg>
+        </div>
+
+        <!-- Optional slideshow controls -->
+        <div class="slideshow-controls">
+            <div class="slide-dot active" data-slide="0"></div>
+            <div class="slide-dot" data-slide="1"></div>
+            <div class="slide-dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="demo-content">
+            <h2>Welcome to the Experience</h2>
+            <p>This demo shows the right-to-left slideshow transition effect. The images slide smoothly from right to left, creating an engaging visual experience. You can also click the dots in the bottom-right to manually navigate between slides.</p>
+        </div>
+    </section>
+
+    <script>
+        // Hero Slideshow JavaScript with Right-to-Left Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.querySelector('.hero-section');
+            const slides = document.querySelectorAll('.hero-bg-slide');
+            const dots = document.querySelectorAll('.slide-dot');
+            
+            // Array of your background images (replace with your actual image paths)
+            const images = [
+                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+                'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+                'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'
+            ];
+            
+            let currentSlide = 0;
+            let isTransitioning = false;
+            let slideInterval;
+            
+            // Initialize slides
+            function initializeSlides() {
+                slides.forEach((slide, index) => {
+                    slide.style.backgroundImage = `url('${images[index]}')`;
+                    if (index === 0) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+            
+            // Function to change to next slide
+            function nextSlide() {
+                if (isTransitioning) return;
+                
+                isTransitioning = true;
+                const currentSlideElement = slides[currentSlide];
+                const nextSlideIndex = (currentSlide + 1) % slides.length;
+                const nextSlideElement = slides[nextSlideIndex];
+                
+                // Prepare next slide
+                nextSlideElement.style.transform = 'translateX(100%)';
+                nextSlideElement.style.opacity = '1';
+                
+                // Animate transition
+                setTimeout(() => {
+                    currentSlideElement.style.transform = 'translateX(-100%)';
+                    currentSlideElement.style.opacity = '0';
+                    nextSlideElement.style.transform = 'translateX(0)';
+                }, 50);
+                
+                // Update active states
+                setTimeout(() => {
+                    currentSlideElement.classList.remove('active');
+                    currentSlideElement.classList.add('prev');
+                    nextSlideElement.classList.add('active');
+                    
+                    // Reset previous slide position after transition
+                    setTimeout(() => {
+                        currentSlideElement.classList.remove('prev');
+                        currentSlideElement.style.transform = 'translateX(100%)';
+                        currentSlideElement.style.opacity = '0';
+                    }, 100);
+                    
+                    currentSlide = nextSlideIndex;
+                    updateDots();
+                    isTransitioning = false;
+                }, 1200);
+            }
+            
+            // Function to go to specific slide
+            function goToSlide(slideIndex) {
+                if (isTransitioning || slideIndex === currentSlide) return;
+                
+                isTransitioning = true;
+                const currentSlideElement = slides[currentSlide];
+                const targetSlideElement = slides[slideIndex];
+                
+                // Prepare target slide
+                targetSlideElement.style.transform = 'translateX(100%)';
+                targetSlideElement.style.opacity = '1';
+                
+                // Animate transition
+                setTimeout(() => {
+                    currentSlideElement.style.transform = 'translateX(-100%)';
+                    currentSlideElement.style.opacity = '0';
+                    targetSlideElement.style.transform = 'translateX(0)';
+                }, 50);
+                
+                // Update active states
+                setTimeout(() => {
+                    currentSlideElement.classList.remove('active');
+                    targetSlideElement.classList.add('active');
+                    
+                    // Reset previous slide
+                    setTimeout(() => {
+                        currentSlideElement.style.transform = 'translateX(100%)';
+                        currentSlideElement.style.opacity = '0';
+                    }, 100);
+                    
+                    currentSlide = slideIndex;
+                    updateDots();
+                    isTransitioning = false;
+                }, 1200);
+            }
+            
+            // Update dot indicators
+            function updateDots() {
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Start automatic slideshow
+            function startSlideshow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            // Stop automatic slideshow
+            function stopSlideshow() {
+                clearInterval(slideInterval);
+            }
+            
+            // Initialize everything
+            function init() {
+                heroSection.classList.remove('loading');
+                initializeSlides();
+                startSlideshow();
+                
+                // Add click events to dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        stopSlideshow();
+                        goToSlide(index);
+                        setTimeout(startSlideshow, 8000); // Restart auto-slide after 8 seconds
+                    });
+                });
+                
+                // Pause slideshow on hover
+                heroSection.addEventListener('mouseenter', stopSlideshow);
+                heroSection.addEventListener('mouseleave', startSlideshow);
+            }
+            
+            // Start initialization
+            setTimeout(init, 500);
+        });
+        
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Invitation Section -->
+    <section class="section invitation-section">
+        <div class="container">
+            <h2 class="section-title">More Than a Retreat. A Movement.</h2>
+            <div class="invitation-text">
+                <p>SereniSphere™ is a global wellness ecosystem powered by ancestral African intelligence, ritual, and restoration. We curate immersive, trauma-informed healing journeys that reconnect people to land, lineage, and collective purpose.</p>
+                <br>
+                <p>From the sacred forests of Kenya to digital sanctuaries across the diaspora, we offer a return — to ritual, to rhythm, to radical repair.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offerings Section -->
+    <section class="section">
+<div class="container">
+        <h2 class="section-title">Explore the SereniSphere Ecosystem</h2>
+        <p class="section-subtitle">Four experiences. One purpose: to heal and re-root the world.</p>
+        
+        <div class="offerings-container">
+            <div class="offering-card">
+                <div class="card-overlay">
+                    <h3 class="offering-title">SereniSphere Retreats</h3>
+                    <p class="offering-description">Immersive, nature-led healing journeys in Kenya, the US, and online.</p>
+                </div>
+            </div>
+            
+            <div class="offering-card">
+                <div class="card-overlay">
+                    <h3 class="offering-title">SereniSphere Circles</h3>
+                    <p class="offering-description">Global, community-based healing groups—virtual or in-person.</p>
+                </div>
+            </div>
+            
+            <div class="offering-card">
+                <div class="card-overlay">
+                    <h3 class="offering-title">SereniSphere Market</h3>
+                    <p class="offering-description">Wellness tools, herbal remedies, and ceremonial goods crafted in Africa.</p>
+                </div>
+            </div>
+            
+            <div class="offering-card">
+                <div class="card-overlay">
+                    <h3 class="offering-title">SereniSphere Global</h3>
+                    <p class="offering-description">A growing network of global chapters and Sister Cities.</p>
+                </div>
+            </div>
         </div>
     </div>
+    </section>
+
+    <!-- Flagship Retreat Section -->
+    <section class="section flagship-section">
+        <div class="container">
+            <div class="flagship-content">
+                <div class="flagship-text">
+                    <h2>The 10-Day Kenya Experience</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">A Transformational Journey Back to Self, Soil, and Spirit</p>
+                    <p>Our signature retreat blends trauma-informed care with African ritual and nature immersion. Designed for professionals, healers, diaspora leaders, and seekers, this is sacred restoration on ancestral land.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="#" class="btn btn-primary">View Full Itinerary</a>
+                        <a href="#" class="btn btn-secondary" style="margin-left: 1rem;">Reserve Your Spot</a>
+                    </div>
+                </div>
+                
+                <div class="flagship-highlights">
+                    <div class="highlight-item">
+                        <strong>Forest meditation, yoga, and bodywork</strong>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Breathwork, art therapy, and grief tending</strong>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Community rituals and conservation engagement</strong>
+                    </div>
+                    <div class="highlight-item">
+                        <strong>Cultural immersion and indigenous wisdom</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Nine Elements Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Healing Framework: The Nine Elements of Serenity</h2>
+            <p class="section-subtitle">Holistic restoration across body, mind, and ecosystem.</p>
+            
+            <div class="elements-grid">
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Mental</div>
+                        <p class="element-description">Mindfulness and cognitive reset through meditation and mental clarity practices</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Physical</div>
+                        <p class="element-description">Somatic movement and body awareness through traditional dance and healing</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Spiritual</div>
+                        <p class="element-description">Ancestral rituals and sacred storytelling connecting to ancient wisdom</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Aspirational</div>
+                        <p class="element-description">Visioning, purpose discovery, and African futurism exploration</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Financial</div>
+                        <p class="element-description">Wealth from within through village co-ops and sustainable economics</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Environmental</div>
+                        <p class="element-description">Earth rituals, tree planting, and eco-therapy connecting with nature</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Occupational</div>
+                        <p class="element-description">Artisan skill-sharing and creative enterprise development</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Social</div>
+                        <p class="element-description">Homestays, communal feasts, and local community bonding experiences</p>
+                    </div>
+                </div>
+                
+                <div class="element-card">
+                    <div class="element-image"></div>
+                    <div class="element-content">
+                        <div class="element-title">Nutritional</div>
+                        <p class="element-description">Herbal medicine, conscious cooking, and slow food practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Global Impact Section -->
+    <section class="section flagship-section">
+        <div class="container">
+            <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem;">Healing at Scale, Led by Africa</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">The Serenity-Centered Global Framework™ is our blueprint for local-to-global transformation. From immersive retreats to civic wellness toolkits, our ecosystem scales through certification, online modules, and Sister City partnerships.</p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <p>Lives transformed through our pilot retreats</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <p>Countries with active Circles</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <p>Continents with diaspora-led chapters</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2026</span>
+                    <p>Global Train-the-Trainer model launch</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn btn-primary">Become a Certified Facilitator</a>
+                <a href="#" class="btn btn-secondary" style="margin-left: 1rem;">Start a Sister Chapter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Real People. Real Return.</h2>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"SereniSphere is not a retreat — it's a reawakening."</p>
+                    <p class="testimonial-author">— Coach, Nairobi</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I came to rest. I left re-rooted."</p>
+                    <p class="testimonial-author">— Diaspora Leader, US</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"It's the only healing space that lets Africa lead."</p>
+                    <p class="testimonial-author">— Facilitator, Ghana</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">More Stories</a>
+                <a href="#" class="btn btn-secondary" style="margin-left: 1rem;">Submit Yours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Are You Ready to Return?</h2>
+            <p class="final-cta-text">This is more than wellness. It's a return to rhythm, ritual, and rootedness. Whether you're seeking personal healing, collective change, or ancestral connection—SereniSphere™ is your sacred invitation.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-secondary">Join a Retreat</a>
+                <a href="#" class="btn btn-secondary">Host a Circle</a>
+                <a href="#" class="btn btn-secondary">Partner With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-section');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.offering-card, .element-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
 
 <footer class="footer">
         <div class="footer-container">
