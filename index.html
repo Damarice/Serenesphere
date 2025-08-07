@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+
 
    <!-- Minified CSS for faster load -->
   <link rel="stylesheet" href="styles.css" media="all">
@@ -142,6 +144,7 @@
             </div>
         </nav>
     </header>
+
 <!-- Hero Section -->
     <section class="hero-section loading" id="hero">
         <!-- Background slide container -->
@@ -752,27 +755,78 @@
     </footer>
 
 <script>
+        let mobileMenuOpen = false;
+
         function toggleMobileMenu() {
             const toggle = document.querySelector('.mobile-menu-toggle');
             const navLeft = document.getElementById('navLeft');
             const navRight = document.getElementById('navRight');
+            const body = document.body;
+            
+            mobileMenuOpen = !mobileMenuOpen;
             
             toggle.classList.toggle('active');
-            navLeft.classList.toggle('active');
-            navRight.classList.toggle('active');
-        }
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-left a, .nav-right a').forEach(link => {
-            link.addEventListener('click', () => {
-                const toggle = document.querySelector('.mobile-menu-toggle');
-                const navLeft = document.getElementById('navLeft');
-                const navRight = document.getElementById('navRight');
+            
+            if (mobileMenuOpen) {
+                // Show mobile menu
+                navLeft.classList.add('active');
+                navRight.classList.add('active');
+                body.style.overflow = 'hidden';
                 
-                toggle.classList.remove('active');
+                // Create backdrop
+                const backdrop = document.createElement('div');
+                backdrop.className = 'mobile-backdrop active';
+                backdrop.onclick = toggleMobileMenu;
+                document.body.appendChild(backdrop);
+            } else {
+                // Hide mobile menu
                 navLeft.classList.remove('active');
                 navRight.classList.remove('active');
+                body.style.overflow = '';
+                
+                // Remove backdrop
+                const backdrop = document.querySelector('.mobile-backdrop');
+                if (backdrop) {
+                    backdrop.remove();
+                }
+                
+                // Close all dropdowns
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        }
+
+        // Toggle dropdowns in mobile
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const navItem = event.target.closest('.nav-item');
+                navItem.classList.toggle('active');
+            }
+        }
+
+        // Add click listeners to nav items for mobile dropdown toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item > a').forEach(link => {
+                link.addEventListener('click', toggleDropdown);
             });
+            
+            // Close mobile menu when clicking on dropdown links
+            document.querySelectorAll('.dropdown a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenuOpen) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && mobileMenuOpen) {
+                toggleMobileMenu();
+            }
         });
     </script>
 </body>
