@@ -1,31 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SereneSphere - Updated Navigation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SereneSphere - Updated Navigation</title>
 
-  <!-- Preconnect for faster font loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Google Fonts (Montserrat & Open Sans per brand guidelines) -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
 
+    <link rel="stylesheet" href="styles.css" media="all">
 
-   <!-- Minified CSS for faster load -->
-  <link rel="stylesheet" href="styles.css" media="all">
-
-  </head>
-
+</head>
 <body>
     <header class="header">
         <nav class="nav-container">
-            <!-- Left Side Navigation -->
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+            
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-left" id="navLeft">
                 <li class="nav-item">
                     <a href="#retreats">Retreats</a>
@@ -41,7 +43,6 @@
                         <a href="#virtual-experience">Virtual Experience Retreats</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#circles">Circles</a>
                     <div class="dropdown">
@@ -52,7 +53,6 @@
                         <a href="#community-guidelines">Community Guidelines</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#markets">Markets</a>
                     <div class="dropdown">
@@ -63,7 +63,6 @@
                         <a href="#coming-soon">Coming Soon</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#chapters">Chapters</a>
                     <div class="dropdown">
@@ -75,12 +74,6 @@
                 </li>
             </ul>
 
-            <!-- Center Logo -->
-            <a href="index.html" class="logo">
-                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
-            </a>
-
-            <!-- Right Side Navigation -->
             <ul class="nav-right" id="navRight">
                 <li class="nav-item">
                     <a href="#about">About Us</a>
@@ -91,7 +84,6 @@
                         <a href="#nine-elements">The Nine Elements</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#stories">Stories</a>
                     <div class="dropdown">
@@ -102,7 +94,6 @@
                         <a href="#podcast">Podcast</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#resources">Resources</a>
                     <div class="dropdown">
@@ -114,7 +105,6 @@
                         <a href="#events-calendar">Events Calendar</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#connect">Connect</a>
                     <div class="dropdown">
@@ -124,7 +114,6 @@
                         <a href="#global-impact-map-2">Global Impact Map</a>
                     </div>
                 </li>
-                
                 <li class="nav-item">
                     <a href="#contact">Contact Us</a>
                     <div class="dropdown">
@@ -135,15 +124,10 @@
                     </div>
                 </li>
             </ul>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
+
+    <div class="mobile-backdrop"></div>
 
 <!-- Hero Section -->
     <section class="hero-section loading" id="hero">
@@ -755,79 +739,79 @@
     </footer>
 
  <script>
-        let mobileMenuOpen = false;
+       let mobileMenuOpen = false;
 
-        function toggleMobileMenu() {
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            const navLeft = document.getElementById('navLeft');
-            const navRight = document.getElementById('navRight');
-            const body = document.body;
-            
-            mobileMenuOpen = !mobileMenuOpen;
-            
-            toggle.classList.toggle('active');
-            
-            if (mobileMenuOpen) {
-                // Show mobile menu
-                navLeft.classList.add('active');
-                navRight.classList.add('active');
-                body.style.overflow = 'hidden';
-                
-                // Create backdrop
-                const backdrop = document.createElement('div');
-                backdrop.className = 'mobile-backdrop active';
-                backdrop.onclick = toggleMobileMenu;
-                document.body.appendChild(backdrop);
-            } else {
-                // Hide mobile menu
-                navLeft.classList.remove('active');
-                navRight.classList.remove('active');
-                body.style.overflow = '';
-                
-                // Remove backdrop
-                const backdrop = document.querySelector('.mobile-backdrop');
-                if (backdrop) {
-                    backdrop.remove();
-                }
-                
-                // Close all dropdowns
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-            }
-        }
-
-        // Toggle dropdowns in mobile
-        function toggleDropdown(event) {
-            if (window.innerWidth <= 768) {
-                event.preventDefault();
-                const navItem = event.target.closest('.nav-item');
-                navItem.classList.toggle('active');
-            }
-        }
-
-        // Add click listeners to nav items for mobile dropdown toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.nav-item > a').forEach(link => {
-                link.addEventListener('click', toggleDropdown);
-            });
-            
-            // Close mobile menu when clicking on dropdown links
-            document.querySelectorAll('.dropdown a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileMenuOpen) {
-                        toggleMobileMenu();
-                    }
-                });
-            });
+function toggleMobileMenu() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const navLeft = document.getElementById('navLeft');
+    const navRight = document.getElementById('navRight');
+    const backdrop = document.querySelector('.mobile-backdrop');
+    const body = document.body;
+    
+    mobileMenuOpen = !mobileMenuOpen;
+    
+    toggle.classList.toggle('active');
+    
+    if (mobileMenuOpen) {
+        navLeft.classList.add('active');
+        navRight.classList.add('active');
+        backdrop.classList.add('active');
+        body.style.overflow = 'hidden';
+    } else {
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+        backdrop.classList.remove('active');
+        body.style.overflow = '';
+        
+        // Close all dropdowns
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
         });
+    }
+}
 
-        // Close mobile menu on window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && mobileMenuOpen) {
+// Toggle dropdowns in mobile
+function toggleDropdown(event) {
+    if (window.innerWidth <= 768) {
+        event.preventDefault();
+        const navItem = event.target.closest('.nav-item');
+        
+        // Close other open dropdowns
+        document.querySelectorAll('.nav-item.active').forEach(item => {
+            if (item !== navItem) {
+                item.classList.remove('active');
+            }
+        });
+        
+        navItem.classList.toggle('active');
+    }
+}
+
+// Add click listeners to nav items for mobile dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Backdrop close handler
+    document.querySelector('.mobile-backdrop').addEventListener('click', toggleMobileMenu);
+
+    document.querySelectorAll('.nav-item > a').forEach(link => {
+        link.addEventListener('click', toggleDropdown);
+    });
+    
+    // Close mobile menu when clicking on a sub-link
+    document.querySelectorAll('.dropdown a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenuOpen) {
                 toggleMobileMenu();
             }
         });
+    });
+});
+
+// Close mobile menu on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && mobileMenuOpen) {
+        toggleMobileMenu();
+    }
+});
     </script>
 </body>
 </html>
