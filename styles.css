@@ -211,7 +211,6 @@
         margin-bottom: 0.5rem;
     }
 
-
     /* Responsive Design */
     @media (max-width: 1024px) {
         .nav-left,
@@ -227,8 +226,8 @@
 
     @media (max-width: 768px) {
         .header {
-            padding: 1rem 0;
-            min-height: 100px;
+            padding: 0.5rem 0;
+            min-height: 70px;
         }
 
         .nav-container {
@@ -236,7 +235,7 @@
             position: relative;
             justify-content: space-between;
             align-items: center;
-            min-height: 80px;
+            min-height: 60px;
         }
 
         .mobile-menu-toggle {
@@ -252,7 +251,7 @@
         }
 
         .logo-img {
-            height: 70px;
+            height: 50px;
         }
 
         /* Hide desktop navigation */
@@ -265,122 +264,125 @@
         .nav-left.active {
             display: flex;
             position: fixed;
-            top: 100px;
+            top: 70px;
             left: 0;
             width: 100vw;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 70px);
             background: white;
             flex-direction: column;
-            padding: 2rem 1rem;
+            padding: 1rem;
             overflow-y: auto;
             z-index: 1005;
-            box-shadow: 0 4px 20px rgba(137, 207, 240, 0.2);
+            box-shadow: 0 2px 10px rgba(137, 207, 240, 0.2);
         }
 
         /* Mobile menu items */
         .nav-left.active .nav-item,
-        .nav-right .nav-item {
+        .nav-left.active ~ .nav-right .nav-item {
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .nav-left.active .nav-item > a,
-        .nav-right .nav-item > a {
+        .nav-left.active ~ .nav-right .nav-item > a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 1.5rem;
-            background: rgba(137, 207, 240, 0.08);
-            border: 1px solid rgba(137, 207, 240, 0.2);
-            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            background: rgba(137, 207, 240, 0.06);
+            border: 1px solid rgba(137, 207, 240, 0.15);
+            border-radius: 6px;
             color: var(--deep-gray);
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .nav-left.active .nav-item > a:hover,
-        .nav-right .nav-item > a:hover {
-            background: rgba(137, 207, 240, 0.15);
+        .nav-left.active ~ .nav-right .nav-item > a:hover {
+            background: rgba(137, 207, 240, 0.12);
             color: var(--sky-blue);
-            transform: translateX(5px);
         }
 
         .nav-left.active .nav-item > a::after,
-        .nav-right .nav-item > a::after {
+        .nav-left.active ~ .nav-right .nav-item > a::after {
             content: '▼';
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--sky-blue);
             transition: transform 0.3s ease;
         }
 
         .nav-left.active .nav-item.active > a::after,
-        .nav-right .nav-item.active > a::after {
+        .nav-left.active ~ .nav-right .nav-item.active > a::after {
             transform: rotate(180deg);
         }
 
         /* Mobile dropdowns */
-        .dropdown {
+        .nav-left.active .dropdown,
+        .nav-left.active ~ .nav-right .dropdown {
             position: static;
             opacity: 1;
             visibility: visible;
             transform: none;
             box-shadow: none;
-            background: rgba(137, 207, 240, 0.05);
-            margin-top: 0.5rem;
-            border-radius: 8px;
+            background: rgba(137, 207, 240, 0.04);
+            margin-top: 0.3rem;
+            border-radius: 4px;
             border: none;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
+            transition: max-height 0.3s ease, padding 0.3s ease;
             padding: 0;
         }
 
-        .nav-item.active .dropdown {
-            max-height: 400px;
-            padding: 1rem 0;
+        .nav-left.active .nav-item.active .dropdown,
+        .nav-left.active ~ .nav-right .nav-item.active .dropdown {
+            max-height: 300px;
+            padding: 0.5rem 0;
         }
 
-        .dropdown-header {
-            padding: 0.8rem 1.5rem;
-            font-size: 0.7rem;
+        .nav-left.active .dropdown-header,
+        .nav-left.active ~ .nav-right .dropdown-header {
+            padding: 0.5rem 1rem;
+            font-size: 0.65rem;
             color: var(--sky-blue);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            background: rgba(137, 207, 240, 0.1);
-            margin-bottom: 0.5rem;
-            border-radius: 6px;
-            margin: 0 1rem 0.5rem 1rem;
+            letter-spacing: 0.8px;
+            background: rgba(137, 207, 240, 0.08);
+            margin: 0 0.5rem 0.3rem 0.5rem;
+            border-radius: 4px;
         }
 
-        .dropdown a {
+        .nav-left.active .dropdown a,
+        .nav-left.active ~ .nav-right .dropdown a {
             display: block;
-            padding: 0.8rem 1.5rem;
+            padding: 0.6rem 1rem;
             color: var(--accent-gray);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
-            border-left: 3px solid transparent;
+            border-left: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .dropdown a:hover {
+        .nav-left.active .dropdown a:hover,
+        .nav-left.active ~ .nav-right .dropdown a:hover {
             color: var(--sky-blue);
             border-left-color: var(--sky-blue);
-            background: rgba(137, 207, 240, 0.1);
-            padding-left: 2rem;
+            background: rgba(137, 207, 240, 0.08);
+            padding-left: 1.3rem;
         }
 
-        /* Add right nav items to mobile menu */
+        /* Add separator between left and right nav */
         .nav-left.active::after {
             content: '';
             display: block;
             width: 100%;
             height: 1px;
             background: rgba(137, 207, 240, 0.2);
-            margin: 1rem 0;
+            margin: 0.8rem 0;
         }
 
         /* Show right nav items in mobile menu */
@@ -395,10 +397,17 @@
             height: auto;
         }
 
-        /* Empty space for hamburger */
+        /* Empty space for hamburger balance */
         .nav-right {
-            width: 48px;
-            height: 48px;
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Reduce demo content margin */
+        .demo-content {
+            margin-top: 90px;
+            padding: 1.5rem;
+            text-align: center;
         }
     }
   /* =======================
