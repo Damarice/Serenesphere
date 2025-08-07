@@ -359,6 +359,15 @@
             line-height: 1.2;
         }
 
+        .hero-subtagline {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 700px;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
         .hero-subtitle {
             font-family: var(--font-body);
             font-size: clamp(1.2rem, 3vw, 1.8rem);
