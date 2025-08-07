@@ -1,133 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SereneSphere - Updated Navigation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenesephere - Modern Header</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
-
-    <link rel="stylesheet" href="styles.css" media="all">
+  <!-- ✅ Add your script here -->
+  <script src="script.js" defer></script>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
-            </a>
 
+<body>
+<header class="header">
+        <nav class="nav-container">
+            <!-- Mobile Menu Toggle -->
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            
-            <div class="mobile-nav-container" id="mobileNavContainer">
-                <ul class="nav-left" id="navLeft">
-                    <li class="nav-item">
-                        <a href="#retreats">Retreats</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Immersive Experiences</div>
-                            <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
-                            <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
-                            <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
-                            <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
-                            <a href="#private-retreats">Private Retreats</a>
-                            <a href="#custom-group">Custom Group Retreats</a>
-                            <a href="#intercruise">Intercruise Retreats</a>
-                            <a href="#virtual-experience">Virtual Experience Retreats</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#circles">Circles</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Community Healing</div>
-                            <a href="#join-circle">Join a Local Circle</a>
-                            <a href="#conservation">Conservation Initiatives</a>
-                            <a href="#train-trainer">Train the Trainer Program</a>
-                            <a href="#community-guidelines">Community Guidelines</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#markets">Markets</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Healing Resources</div>
-                            <a href="#wellness-tools">Wellness Tools & Artifacts</a>
-                            <a href="#wholesale">Wholesale Inquiries</a>
-                            <a href="#digital-modules">Digital Learning Modules</a>
-                            <a href="#coming-soon">Coming Soon</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#chapters">Chapters</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Global Network</div>
-                            <a href="#us-programs">US Programs</a>
-                            <a href="#global-impact">Global Impact Map</a>
-                            <a href="#sister-cities">Sister Cities Programs</a>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="nav-right" id="navRight">
-                    <li class="nav-item">
-                        <a href="#about">About Us</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Our Foundation</div>
-                            <a href="#story">Our Story</a>
-                            <a href="#mission">Our Mission</a>
-                            <a href="#nine-elements">The Nine Elements</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#stories">Stories</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Community Voices</div>
-                            <a href="#how-we-work">How we Work</a>
-                            <a href="#testimonials">Testimonials</a>
-                            <a href="#blog">Blog</a>
-                            <a href="#podcast">Podcast</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resources">Resources</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Knowledge Base</div>
-                            <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
-                            <a href="#cultural-heritage">Cultural Heritage & History</a>
-                            <a href="#publications">Books & Publications</a>
-                            <a href="#global-impact-map">Global Impact Map</a>
-                            <a href="#events-calendar">Events Calendar</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#connect">Connect</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Get Involved</div>
-                            <a href="#become-partner">Become a Partner</a>
-                            <a href="#champions">Serenesephere Champions</a>
-                            <a href="#global-impact-map-2">Global Impact Map</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact">Contact Us</a>
-                        <div class="dropdown">
-                            <div class="dropdown-header">Get In Touch</div>
-                            <a href="#get-in-touch">Get In Touch</a>
-                            <a href="#retreat-calendar">Retreat Calendar & Bookings</a>
-                            <a href="#faq">FAQ</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
+            <!-- LEFT MENU -->
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item has-dropdown">
+                    <a href="#retreats" class="nav-link">Retreats</a>
+                    <div class="dropdown-content">
+                        <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
+                        <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
+                        <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
+                        <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
+                        <a href="#private-retreats">Private Retreats</a>
+                        <a href="#custom-group">Custom Group Retreats</a>
+                        <a href="#intercruise">Intercruise Retreats</a>
+                        <a href="#virtual-experience">Virtual Experience Retreats</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- LOGO CENTERED -->
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <!-- RIGHT MENU -->
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="#story">Our Story</a>
+                        <a href="#mission">Our Mission</a>
+                        <a href="#nine-elements">The Nine Elements</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#stories" class="nav-link">Stories</a>
+                    <div class="dropdown-content">
+                        <a href="#how-we-work">How we Work</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#podcast">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                        <a href="#global-impact-map-2">Global Impact Map</a>
+                        <a href="#events-calendar">Events Calendar</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                        <a href="#global-impact-map-3">Global Impact Map</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="#get-in-touch">Get In Touch</a>
+                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </li>
+            </ul>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item has-dropdown">
+                    <a href="#retreats" class="nav-link">Retreats</a>
+                    <div class="dropdown-content">
+                        <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
+                        <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
+                        <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
+                        <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
+                        <a href="#private-retreats">Private Retreats</a>
+                        <a href="#custom-group">Custom Group Retreats</a>
+                        <a href="#intercruise">Intercruise Retreats</a>
+                        <a href="#virtual-experience">Virtual Experience Retreats</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="#story">Our Story</a>
+                        <a href="#mission">Our Mission</a>
+                        <a href="#nine-elements">The Nine Elements</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#stories" class="nav-link">Stories</a>
+                    <div class="dropdown-content">
+                        <a href="#how-we-work">How we Work</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#podcast">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                        <a href="#global-impact-map-2">Global Impact Map</a>
+                        <a href="#events-calendar">Events Calendar</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                        <a href="#global-impact-map-3">Global Impact Map</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="#get-in-touch">Get In Touch</a>
+                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </header>
 
-    <div class="mobile-backdrop"></div>
 
 <!-- Hero Section -->
     <section class="hero-section loading" id="hero">
@@ -737,78 +817,5 @@
             </div>
         </div>
     </footer>
-
- <script>
-    let mobileMenuOpen = false;
-
-function toggleMobileMenu() {
-    const toggle = document.querySelector('.mobile-menu-toggle');
-    const mobileNavContainer = document.getElementById('mobileNavContainer');
-    const backdrop = document.querySelector('.mobile-backdrop');
-    const body = document.body;
-    
-    mobileMenuOpen = !mobileMenuOpen;
-    
-    toggle.classList.toggle('active');
-    
-    if (mobileMenuOpen) {
-        mobileNavContainer.classList.add('active');
-        backdrop.classList.add('active');
-        body.style.overflow = 'hidden';
-    } else {
-        mobileNavContainer.classList.remove('active');
-        backdrop.classList.remove('active');
-        body.style.overflow = '';
-        
-        // Close all dropdowns
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-    }
-}
-
-// Toggle dropdowns in mobile
-function toggleDropdown(event) {
-    if (window.innerWidth <= 768) {
-        event.preventDefault();
-        const navItem = event.target.closest('.nav-item');
-        
-        // Close other open dropdowns
-        document.querySelectorAll('.mobile-nav-container.active .nav-item.active').forEach(item => {
-            if (item !== navItem) {
-                item.classList.remove('active');
-            }
-        });
-        
-        navItem.classList.toggle('active');
-    }
-}
-
-// Add click listeners to nav items for mobile dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-    // Backdrop close handler
-    document.querySelector('.mobile-backdrop').addEventListener('click', toggleMobileMenu);
-
-    document.querySelectorAll('.nav-item > a').forEach(link => {
-        link.addEventListener('click', toggleDropdown);
-    });
-    
-    // Close mobile menu when clicking on a sub-link
-    document.querySelectorAll('.dropdown a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenuOpen) {
-                toggleMobileMenu();
-            }
-        });
-    });
-});
-
-// Close mobile menu on window resize
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768 && mobileMenuOpen) {
-        toggleMobileMenu();
-    }
-});
-</script>
 </body>
 </html>
