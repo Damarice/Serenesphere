@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serenesephere</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenesephere</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- ✅ Add your script here -->
-  <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-<header class="header">
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+254 (0) 700 123 456</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
         <nav class="nav-container">
-            <!-- Mobile Menu Toggle -->
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <!-- LEFT MENU -->
             <ul class="nav-items nav-items-left">
                 <li class="nav-item has-dropdown">
                     <a href="#retreats" class="nav-link">Retreats</a>
@@ -69,12 +85,10 @@
                 </li>
             </ul>
 
-            <!-- LOGO CENTERED -->
             <a href="index.html" class="logo">
                 <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
             </a>
 
-            <!-- RIGHT MENU -->
             <ul class="nav-items nav-items-right">
                 <li class="nav-item has-dropdown">
                     <a href="#about-us" class="nav-link">About Us</a>
@@ -122,7 +136,6 @@
             </ul>
         </nav>
 
-        <!-- Mobile Menu Overlay -->
         <div id="mobileMenuOverlay" class="mobile-menu-overlay">
             <ul class="nav-items-mobile">
                 <li class="nav-item has-dropdown">
@@ -210,217 +223,942 @@
         </div>
     </header>
 
+    <main>
+        <section class="hero-section loading" id="hero">
+            <div class="hero-bg-container">
+                <div class="hero-bg-slide" style="background-image: url('assets/slide1.jpg');"></div>
+                <div class="hero-bg-slide" style="background-image: url('assets/slide2.jpg');"></div>
+                <div class="hero-bg-slide" style="background-image: url('assets/slide3.jpg');"></div>
+            </div>
 
-<!-- Hero Section -->
-<section class="hero-section loading" id="hero">
+            <div class="floating-elements">
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+                <div class="floating-circle"></div>
+            </div>
 
-    <!-- Background slide container -->
-    <div class="hero-bg-container">
-        <div class="hero-bg-slide"></div>
-        <div class="hero-bg-slide"></div>
-        <div class="hero-bg-slide"></div>
-    </div>
+            <div class="hero-content">
+                <h2 class="hero-tagline">Serenesephere</h2>
+                <p class="hero-subtagline">Return. Reconnect. Regenerate.</p>
 
-    <div class="floating-elements">
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-    </div>
+                <div class="cta-buttons">
+                    <a href="#welcome" class="btn btn-primary">Begin Your Journey</a>
+                    <a href="#retreats" class="btn btn-secondary">Explore Retreats</a>
+                    <a href="#connect" class="btn btn-secondary">Become a Partner</a>
+                </div>
+            </div>
 
-    <div class="hero-content">
-        <h2 class="hero-tagline">Return. Reconnect. Regenerate.</h2>
-        <p class="hero-subtagline">
-            Sacred wellness journeys that weave African Indigenous wisdom with transformative wellness,
-            creating spheres of serenity for global souls seeking wholeness.
-        </p>
+            <div class="slideshow-controls">
+                <div class="slide-dot active" data-slide="0"></div>
+                <div class="slide-dot" data-slide="1"></div>
+                <div class="slide-dot" data-slide="2"></div>
+            </div>
+        </section>
 
-        <div class="cta-buttons">
-            <a href="#demo" class="btn btn-primary">Begin Your Journey</a>
-            <a href="#demo" class="btn btn-secondary">Explore Retreats</a>
-        </div>
-    </div>
-
-    <div class="scroll-indicator">
-        <span>Scroll Down</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l-6 6h4v10h4v-10h4l-6-6z"/>
-        </svg>
-    </div>
-
-    <!-- Slideshow controls -->
-    <div class="slideshow-controls">
-        <div class="slide-dot active" data-slide="0"></div>
-        <div class="slide-dot" data-slide="1"></div>
-        <div class="slide-dot" data-slide="2"></div>
-    </div>
-</section>
-
- <script>
-    // Hero Slideshow JavaScript with Right-to-Left Animation
-    document.addEventListener('DOMContentLoaded', function () {
-        const heroSection = document.querySelector('.hero-section');
-        const slides = document.querySelectorAll('.hero-bg-slide');
-        const dots = document.querySelectorAll('.slide-dot');
-
-        // Array of background images from assets folder
-        const images = [
-            'assets/slide1.jpg',
-            'assets/slide2.jpg',
-            'assets/slide3.jpg'
-        ];
-
-        let currentSlide = 0;
-        let isTransitioning = false;
-        let slideInterval;
-
-        // Initialize slides
-        function initializeSlides() {
-            slides.forEach((slide, index) => {
-                slide.style.backgroundImage = `url('${images[index]}')`;
-                if (index === 0) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            if (isTransitioning) return;
-
-            isTransitioning = true;
-            const currentSlideElement = slides[currentSlide];
-            const nextSlideIndex = (currentSlide + 1) % slides.length;
-            const nextSlideElement = slides[nextSlideIndex];
-
-            nextSlideElement.style.transform = 'translateX(100%)';
-            nextSlideElement.style.opacity = '1';
-
-            setTimeout(() => {
-                currentSlideElement.style.transform = 'translateX(-100%)';
-                currentSlideElement.style.opacity = '0';
-                nextSlideElement.style.transform = 'translateX(0)';
-            }, 50);
-
-            setTimeout(() => {
-                currentSlideElement.classList.remove('active');
-                currentSlideElement.classList.add('prev');
-                nextSlideElement.classList.add('active');
-
-                setTimeout(() => {
-                    currentSlideElement.classList.remove('prev');
-                    currentSlideElement.style.transform = 'translateX(100%)';
-                    currentSlideElement.style.opacity = '0';
-                }, 100);
-
-                currentSlide = nextSlideIndex;
-                updateDots();
-                isTransitioning = false;
-            }, 1200);
-        }
-
-        function goToSlide(slideIndex) {
-            if (isTransitioning || slideIndex === currentSlide) return;
-
-            isTransitioning = true;
-            const currentSlideElement = slides[currentSlide];
-            const targetSlideElement = slides[slideIndex];
-
-            targetSlideElement.style.transform = 'translateX(100%)';
-            targetSlideElement.style.opacity = '1';
-
-            setTimeout(() => {
-                currentSlideElement.style.transform = 'translateX(-100%)';
-                currentSlideElement.style.opacity = '0';
-                targetSlideElement.style.transform = 'translateX(0)';
-            }, 50);
-
-            setTimeout(() => {
-                currentSlideElement.classList.remove('active');
-                targetSlideElement.classList.add('active');
-
-                setTimeout(() => {
-                    currentSlideElement.style.transform = 'translateX(100%)';
-                    currentSlideElement.style.opacity = '0';
-                }, 100);
-
-                currentSlide = slideIndex;
-                updateDots();
-                isTransitioning = false;
-            }, 1200);
-        }
-
-        function updateDots() {
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 6000);
-        }
-
-        function stopSlideshow() {
-            clearInterval(slideInterval);
-        }
-
-        function init() {
-            heroSection.classList.remove('loading');
-            initializeSlides();
-            startSlideshow();
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    stopSlideshow();
-                    goToSlide(index);
-                    setTimeout(startSlideshow, 8000);
-                });
-            });
-
-            heroSection.addEventListener('mouseenter', stopSlideshow);
-            heroSection.addEventListener('mouseleave', startSlideshow);
-        }
-
-        setTimeout(init, 500);
-    });
-
-    // Smooth scroll for CTA buttons
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-</script>
-<!-- Invitation Section -->
-    <section class="section invitation-section">
-        <div class="decorative-element"></div>
-        <div class="decorative-element"></div>
-        
-        <div class="container">
-            <div class="welcome-container">
-                <h1 class="section-title">
-                    Welcome to Serenesephere
-                </h1>
-                
-                <div class="welcome-content">
-                    <div class="intro-text">
-                        Serenesephere is a global serenity-centered ecosystem designed to restore human wholeness through African indigenous wisdom, holistic healing, and regenerative practices. It is more than a retreat brand — it's a movement and healing portal bridging the ancient and the future designed to serve both local and diaspora audiences.
+        <section class="features-section">
+        <div class="features-container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
+                    <h3 class="feature-title">Regenerative Practices</h3>
+                </div>
+                 
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Supporting Communities</h3>
+                </div>
+                 
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Collective Wellness</h3>
+                </div>
+                 
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3 5.197v1M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ethical Partnerships</h3>
                 </div>
             </div>
         </div>
     </section>
+        <section class="welcome-section" id="welcome">
+            <div class="decorative-circle"></div>
+            <div class="decorative-circle"></div>
+            <div class="decorative-circle"></div>
+            
+            <div class="welcome-container">
+                <div class="welcome-content">
+                    <p class="greeting-text">We Are Glad You Are Here</p>
+                    <h1 class="main-title">
+                        Welcome To <span class="highlight">Serenesephere</span>
+                    </h1>
+                    <p class="description-text">
+                        Serenesephere is a global serenity-centered ecosystem designed to restore human wholeness through African indigenous wisdom, holistic healing, and regenerative practices. It is more than a retreat brand — it's a movement and healing portal bridging the ancient and the future designed to serve both local and diaspora audiences.
+                    </p>
+                    <a href="#about-us" class="cta-button">More About Us</a>
+                </div>
+                
+                <div class="welcome-image">
+                    <img src="./assets/retreat.jpg" alt="Workshop presentation" />
+                </div>
+            </div>
+        </section>
+
+        <section class="retreats-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Retreat Spotlight</h2>
+            <div class="section-nav">
+                <span class="page-indicator">1 / 2</span>
+                <div class="nav-arrows">
+                    <span class="nav-arrow disabled">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </span>
+                    <span class="nav-arrow">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="retreats-grid">
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="https://images.unsplash.com/photo-1575917415840-7f2a15c32431?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coastal sunset yoga">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Yoga
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Coastal Sunset Yoga: Find Your Inner Calm</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            3 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            November 12-14, 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">CS</div>
+                        <div>
+                            <div class="organizer-name">Coastal Serenity</div>
+                            <div class="location-info">
+                                <span class="online-badge">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$450</span>
+                            <span class="price-duration">/ 3 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.92</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kenya savanna with wildlife">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Cultural
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Kenya Immersion: Reclaiming Your Wild Spirit</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            10 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            March 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$3500</span>
+                            <span class="price-duration">/ 10 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.95</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traditional healing ceremony with elders">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Healing
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Return to Motherland: Ancestral Homecoming</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            7 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            June 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">West Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$2800</span>
+                            <span class="price-duration">/ 7 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.97</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wilderness meditation">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Meditation
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Wild Serenity: Meditate in Nature's Embrace</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            5 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            October 20-25, 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">NS</div>
+                        <div>
+                            <div class="organizer-name">Nature Serenity</div>
+                            <div class="location-info">
+                                <span class="online-badge">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$650</span>
+                            <span class="price-duration">/ 5 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.85</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Healing
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Iboga: Journey to Inner Revelation</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            3 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            August 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Gabon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$1500</span>
+                            <span class="price-duration">/ 3 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/ocean meditation.jpg" alt="Ocean meditation at sunrise">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Healing
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Intercruise: Journey of Discovery on Water</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            8 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            November 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Coastal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$3000</span>
+                            <span class="price-duration">/ 8 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.88</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/healing.jpg" alt="Traditional healing ceremony with elders">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Healing
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">10-Day Serenity Retreat in Kenya</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            10 Days Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            October 2026
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$3000</span>
+                            <span class="price-duration">/ 10 days</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.95</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/private_retreat.jpg" alt="A serene private setting">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Healing
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Private Retreats</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Custom Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            On Demand
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Bespoke</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">Tailored</span>
+                            <span class="price-duration">/ per person</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/group_retreat.jpg" alt="A group of people in a workshop setting">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Community
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Custom Group Retreats</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Custom Package
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            On Demand
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="offline-badge">Bespoke</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">Tailored</span>
+                            <span class="price-duration">/ per group</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="retreat-card">
+                <div class="retreat-image">
+                    <img src="assets/virtual_retreat.jpg" alt="A person meditating in front of a computer">
+                    <div class="category-badge">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                        Online
+                    </div>
+                    <div class="heart-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="retreat-content">
+                    <h3 class="retreat-title">Virtual Experience Retreats</h3>
+                    <div class="retreat-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Ongoing Programs
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            Flexible Dates
+                        </div>
+                    </div>
+                    <div class="organizer-info">
+                        <div class="organizer-avatar">SS</div>
+                        <div>
+                            <div class="organizer-name">Serenity Sphere</div>
+                            <div class="location-info">
+                                <span class="online-badge">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retreat-footer">
+                        <div class="price-section">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$100</span>
+                            <span class="price-duration">/ per person</span>
+                        </div>
+                        <div class="rating-section">
+                            <div class="star-rating">
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                                <svg class="star" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <span class="rating-score">4.91</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const retreats = document.querySelectorAll('.retreat-card');
+    const prevBtn = document.querySelectorAll('.nav-arrow')[0];
+    const nextBtn = document.querySelectorAll('.nav-arrow')[1];
+    const pageIndicator = document.querySelector('.page-indicator');
+
+    const cardsPerPage = 4;
+    const totalPages = Math.ceil(retreats.length / cardsPerPage);
+    let currentPage = 1;
+    let autoSlideInterval;
+
+    function updateCarousel() {
+        retreats.forEach((card, index) => {
+            const start = (currentPage - 1) * cardsPerPage;
+            const end = currentPage * cardsPerPage;
+            if (index >= start && index < end) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        prevBtn.classList.toggle('disabled', currentPage === 1);
+        nextBtn.classList.toggle('disabled', currentPage === totalPages);
+        pageIndicator.textContent = `${currentPage} / ${totalPages}`;
+    }
+
+    function startAutoSlide() {
+        // Clear any existing interval to prevent multiple timers
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            if (currentPage < totalPages) {
+                currentPage++;
+            } else {
+                currentPage = 1; // Loop back to the first page
+            }
+            updateCarousel();
+        }, 5000); // 5 seconds
+    }
+
+    function resetAutoSlide() {
+        startAutoSlide();
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', function () {
+        if (currentPage > 1) {
+            currentPage--;
+            updateCarousel();
+            resetAutoSlide(); // Reset timer after manual click
+        }
+    });
+
+    nextBtn.addEventListener('click', function () {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updateCarousel();
+            resetAutoSlide(); // Reset timer after manual click
+        }
+    });
+
+    // Initialize on load
+    updateCarousel();
+    startAutoSlide();
+});
+</script>
+
 
     <section class="ecosystem-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Enter the SereneSphere Ecosystem</h2>
-                <p class="section-subtitle">Four pillars. One mission: to heal and re-root the world.</p>
+                <h2 class="section-title">The Serenesephere Ecosystem</h2>
             </div>
 
             <div class="ecosystem-grid">
@@ -429,7 +1167,7 @@
                         <img src="assets/retreat.jpg" alt="Personal transformation" />
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">SereneSphere Retreats</h3>
+                        <h3 class="pillar-title">Serenesephere Retreats</h3>
                         <p class="pillar-description">Immersive transformation journeys in nature's sacred spaces</p>
                     </div>
                 </div>
@@ -439,7 +1177,7 @@
                         <img src="assets/circles.jpg" alt="Circle of diverse people" />
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">SereneSphere Circles</h3>
+                        <h3 class="pillar-title">Serenesephere Circles</h3>
                         <p class="pillar-description">Global healing communities fostering collective wisdom</p>
                     </div>
                 </div>
@@ -449,7 +1187,7 @@
                         <img src="assets/markets.jpg" alt="Sprouting plant from soil" />
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">SereneSphere Markets</h3>
+                        <h3 class="pillar-title">Serenesephere Markets</h3>
                         <p class="pillar-description">Regenerative products rooted in ancestral wisdom</p>
                     </div>
                 </div>
@@ -459,7 +1197,7 @@
                         <img src="assets/global.jpg"alt="Earth at night satellite view" />
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">SereneSphere Global</h3>
+                        <h3 class="pillar-title">Serenesephere Global</h3>
                         <p class="pillar-description">Worldwide diaspora chapters and sister cities</p>
                     </div>
                 </div>
@@ -467,303 +1205,101 @@
         </div>
     </section>
 
-<!-- Discover Your Retreats Section -->
-    <section class="retreats-carousel-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Discover Your Retreats</h2>
-                <p>Journey through transformative experiences that honor ancient wisdom and nurture profound healing</p>
+
+<section class="nine-elements-section" id="serenity-elements">
+    <div class="container">
+       <div class="section-header">
+                <h2 class="section-title">Our Nine Elements of Serenity</h2>
             </div>
-            
-            <div class="retreats-carousel">
-                <div class="retreats-scroll">
-                    <!-- Kenya Immersion Retreat -->
-                    <div class="retreat-card">
-                        <div class="retreat-image">
-                            <img src="assets/wildlife.jpg" alt="Kenya savanna with wildlife">
-                            <div class="retreat-date">March 2026</div>
-                        </div>
-                        <div class="retreat-content">
-                            <h3>Kenya Immersion: Reclaiming Your Wild Spirit</h3>
-                            <p>A profound journey into Kenya's heartland, where ancient landscapes and vibrant cultures ignite your innate connection to nature and self.</p>
-                            <div class="retreat-highlights">
-                                <span class="highlight-tag">Wildlife Encounters</span>
-                                <span class="highlight-tag">Cultural Exchange</span>
-                                <span class="highlight-tag">Sacred Forests</span>
-                            </div>
-                            <a href="#" class="btn-retreat">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Return to Motherland Retreat -->
-                    <div class="retreat-card">
-                        <div class="retreat-image">
-                            <img src="assets/healing.jpg" alt="Traditional healing ceremony with elders">
-                            <div class="retreat-date">June 2026</div>
-                        </div>
-                        <div class="retreat-content">
-                            <h3>Return to Motherland: Ancestral Homecoming</h3>
-                            <p>Reconnect with your roots and reclaim your heritage on a sacred journey to the heart of ancestral wisdom and healing.</p>
-                            <div class="retreat-highlights">
-                                <span class="highlight-tag">Ancestral Healing</span>
-                                <span class="highlight-tag">Cultural Immersion</span>
-                                <span class="highlight-tag">Elder Wisdom</span>
-                            </div>
-                            <a href="#" class="btn-retreat">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Iboga Plant Ceremony -->
-                    <div class="retreat-card">
-                        <div class="retreat-image">
-                            <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup">
-                            <div class="retreat-date">August 2026</div>
-                        </div>
-                        <div class="retreat-content">
-                            <h3>Iboga: Journey to Inner Revelation</h3>
-                            <p>Experience profound spiritual insight and deep healing through the ancient wisdom of the Iboga plant, guided by revered traditions.</p>
-                            <div class="retreat-highlights">
-                                <span class="highlight-tag">Bwiti Tradition</span>
-                                <span class="highlight-tag">Spiritual Awakening</span>
-                                <span class="highlight-tag">Deep Healing</span>
-                            </div>
-                            <a href="#" class="btn-retreat">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Meditate in the Wild -->
-                    <div class="retreat-card">
-                        <div class="retreat-image">
-                            <img src="assets/meditation.jpg">
-                            <div class="retreat-date">October 2026</div>
-                        </div>
-                        <div class="retreat-content">
-                            <h3>Wild Serenity: Meditate in Nature's Embrace</h3>
-                            <p>Find profound peace and clarity as you immerse yourself in the untamed beauty of nature, guided by ancient meditative practices.</p>
-                            <div class="retreat-highlights">
-                                <span class="highlight-tag">Wilderness Meditation</span>
-                                <span class="highlight-tag">Mindfulness</span>
-                                <span class="highlight-tag">Nature Connection</span>
-                            </div>
-                            <a href="#" class="btn-retreat">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Intercruise Retreat -->
-                    <div class="retreat-card">
-                        <div class="retreat-image">
-                            <img src="assets/ocean meditation.jpg" alt="Ocean meditation at sunrise">
-                            <div class="retreat-date">2026</div>
-                        </div>
-                        <div class="retreat-content">
-                            <h3>Intercruise: Journey of Discovery on Water</h3>
-                            <p>Embark on a unique healing voyage, where the serenity of the seas meets the profound wisdom of Serenesephere™.</p>
-                            <div class="retreat-highlights">
-                                <span class="highlight-tag">Ocean Healing</span>
-                                <span class="highlight-tag">Mindful Cruising</span>
-                                <span class="highlight-tag">Coastal Communities</span>
-                            </div>
-                            <a href="#" class="btn-retreat">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Navigation Dots -->
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Retreats Carousel Functionality
-        function initCarousel() {
-            const carousel = document.querySelector('.retreats-scroll');
-            const dots = document.querySelectorAll('.dot');
-            const cards = document.querySelectorAll('.retreat-card');
-            let currentIndex = 0;
-
-            function updateCarousel(index) {
-                const cardWidth = cards[0].offsetWidth + 32; // Card width + gap
-                carousel.scrollTo({
-                    left: cardWidth * index,
-                    behavior: 'smooth'
-                });
-
-                // Update dots
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-                
-                currentIndex = index;
-            }
-
-            // Dot navigation
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => updateCarousel(index));
-            });
-
-            // Auto-advance carousel
-            let autoAdvanceTimer = setInterval(() => {
-                const nextIndex = (currentIndex + 1) % cards.length;
-                updateCarousel(nextIndex);
-            }, 6000);
-
-            // Pause auto-advance on hover
-            carousel.addEventListener('mouseenter', () => {
-                clearInterval(autoAdvanceTimer);
-            });
-
-            carousel.addEventListener('mouseleave', () => {
-                autoAdvanceTimer = setInterval(() => {
-                    const nextIndex = (currentIndex + 1) % cards.length;
-                    updateCarousel(nextIndex);
-                }, 6000);
-            });
-
-            // Touch/swipe support for mobile
-            let startX = 0;
-
-            carousel.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].pageX;
-            });
-
-            carousel.addEventListener('touchend', (e) => {
-                const endX = e.changedTouches[0].pageX;
-                const diff = startX - endX;
-                
-                if (Math.abs(diff) > 50) { // Minimum swipe distance
-                    if (diff > 0 && currentIndex < cards.length - 1) {
-                        updateCarousel(currentIndex + 1);
-                    } else if (diff < 0 && currentIndex > 0) {
-                        updateCarousel(currentIndex - 1);
-                    }
-                }
-            });
-        }
-
-        // Initialize carousel when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initCarousel);
-        } else {
-            initCarousel();
-        }
-    </script>
-     <!-- Nine Elements Section -->
-    <section class="section">
-        <div class="container">
-        <div class="header">
-            <h1 class="main-title">Nine Elements of Serenity</h1>
-            <p class="subtitle">Holistic Wellness Framework - Spherical Chart</p>
-        </div>
-
-        <div class="spherical-chart">
-            <!-- Connecting Lines -->
-            <div class="connecting-lines">
-                <div class="line" style="top: 100px; left: 150px; width: 200px; transform: rotate(45deg);"></div>
-                <div class="line" style="top: 200px; left: 50px; width: 150px; transform: rotate(-30deg);"></div>
-                <div class="line" style="top: 300px; left: 200px; width: 180px; transform: rotate(60deg);"></div>
-                <div class="line" style="top: 400px; left: 100px; width: 200px; transform: rotate(-45deg);"></div>
-                <div class="line" style="top: 500px; left: 150px; width: 180px; transform: rotate(30deg);"></div>
-            </div>
-
-            <!-- Center Core -->
+        
+        <div class="nine-elements-grid">
             <div class="center-core">
-                <div class="center-title">Serenity<br>Framework</div>
-                <div class="center-subtitle">Complete Wellness</div>
+                <h3>Serenity<br>Framework</h3>
+                <p>Complete Wellness</p>
             </div>
 
-            <!-- Element 1: Mental -->
-            <div class="element">
-                <div class="element-number">1</div>
-                <div class="element-title">Mental</div>
-                <div class="element-description">Mindfulness and cognitive reset through meditation and mental clarity practices</div>
+            <div id="element-1" class="element">
+                <div class="element-icon"><i class="fas fa-brain"></i></div>
+                <div class="element-content">
+                    <h4>Mental</h4>
+                    <p>Mindfulness, cognitive reset, and clarity.</p>
+                </div>
             </div>
 
-            <!-- Element 2: Physical -->
-            <div class="element">
-                <div class="element-number">2</div>
-                <div class="element-title">Physical</div>
-                <div class="element-description">Somatic movement and body awareness through traditional dance and healing</div>
+            <div id="element-2" class="element">
+                <div class="element-icon"><i class="fas fa-spa"></i></div>
+                <div class="element-content">
+                    <h4>Physical</h4>
+                    <p>Somatic movement and body awareness.</p>
+                </div>
             </div>
 
-            <!-- Element 3: Spiritual -->
-            <div class="element">
-                <div class="element-number">3</div>
-                <div class="element-title">Spiritual</div>
-                <div class="element-description">Ancestral rituals and sacred storytelling connecting to ancient wisdom</div>
+            <div id="element-3" class="element">
+                <div class="element-icon"><i class="fas fa-dove"></i></div>
+                <div class="element-content">
+                    <h4>Spiritual</h4>
+                    <p>Ancestral rituals and sacred storytelling.</p>
+                </div>
             </div>
 
-            <!-- Element 4: Aspirational -->
-            <div class="element">
-                <div class="element-number">4</div>
-                <div class="element-title">Aspirational</div>
-                <div class="element-description">Visioning, purpose discovery, and African futurism exploration</div>
+            <div id="element-4" class="element">
+                <div class="element-icon"><i class="fas fa-star"></i></div>
+                <div class="element-content">
+                    <h4>Aspirational</h4>
+                    <p>Purpose discovery and future visioning.</p>
+                </div>
             </div>
 
-            <!-- Element 5: Financial -->
-            <div class="element">
-                <div class="element-number">5</div>
-                <div class="element-title">Financial</div>
-                <div class="element-description">Wealth from within through village co-ops and sustainable economics</div>
+            <div id="element-5" class="element">
+                <div class="element-icon"><i class="fas fa-coins"></i></div>
+                <div class="element-content">
+                    <h4>Financial</h4>
+                    <p>Village co-ops and sustainable economics.</p>
+                </div>
             </div>
 
-            <!-- Element 6: Environmental -->
-            <div class="element">
-                <div class="element-number">6</div>
-                <div class="element-title">Environmental</div>
-                <div class="element-description">Earth rituals, tree planting, and eco-therapy connecting with nature</div>
+            <div id="element-6" class="element">
+                <div class="element-icon"><i class="fas fa-seedling"></i></div>
+                <div class="element-content">
+                    <h4>Environmental</h4>
+                    <p>Earth rituals and eco-therapy.</p>
+                </div>
             </div>
 
-            <!-- Element 7: Occupational -->
-            <div class="element">
-                <div class="element-number">7</div>
-                <div class="element-title">Occupational</div>
-                <div class="element-description">Artisan skill-sharing and creative enterprise development</div>
+            <div id="element-7" class="element">
+                <div class="element-icon"><i class="fas fa-tools"></i></div>
+                <div class="element-content">
+                    <h4>Occupational</h4>
+                    <p>Artisan skill-sharing and creative enterprise.</p>
+                </div>
             </div>
 
-            <!-- Element 8: Social -->
-            <div class="element">
-                <div class="element-number">8</div>
-                <div class="element-title">Social</div>
-                <div class="element-description">Homestays, communal feasts, and local community bonding experiences</div>
+            <div id="element-8" class="element">
+                <div class="element-icon"><i class="fas fa-handshake"></i></div>
+                <div class="element-content">
+                    <h4>Social</h4>
+                    <p>Community bonding and shared experiences.</p>
+                </div>
             </div>
 
-            <!-- Element 9: Nutritional -->
-            <div class="element">
-                <div class="element-number">9</div>
-                <div class="element-title">Nutritional</div>
-                <div class="element-description">Herbal medicine, conscious cooking, and slow food practices</div>
+            <div id="element-9" class="element">
+                <div class="element-icon"><i class="fas fa-apple-alt"></i></div>
+                <div class="element-content">
+                    <h4>Nutritional</h4>
+                    <p>Herbal medicine and conscious cooking.</p>
+                </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
+    
      <div class="stories-inspirations">
         <section class="section flagship-section">
             <div class="container">
                 <h2>Stories & Inspirations</h2>
-                <p>Real transformations from our global community. Discover how the Serenity-Centered Framework™ is creating lasting change across continents, one story at a time.</p>
                 
                 <div class="stories-grid">
-                    <!-- Video Testimonial 1 -->
-                    <div class="story-card">
-                        <div class="video-story video-amara" onclick="playVideo('amara-kenya')">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <div class="video-overlay">
-                                <div class="video-title">Amara's Journey</div>
-                                <div class="video-description">From burnout to breakthrough in Nairobi</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text Story 1 -->
+                 <!-- Text Story 1 -->
                     <div class="story-card">
                         <div class="text-story">
                             <div class="story-quote">
@@ -783,19 +1319,7 @@
                         </div>
                     </div>
 
-                    <!-- Video Testimonial 2 -->
-                    <div class="story-card">
-                        <div class="video-story video-marcus" onclick="playVideo('marcus-diaspora')">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <div class="video-overlay">
-                                <div class="video-title">Marcus's Return</div>
-                                <div class="video-description">Diaspora healing in Atlanta</div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <!-- Text Story 2 -->
                     <div class="story-card">
                         <div class="text-story">
@@ -816,19 +1340,7 @@
                         </div>
                     </div>
 
-                    <!-- Video Testimonial 3 -->
-                    <div class="story-card">
-                        <div class="video-story video-ubuntu" onclick="playVideo('ubuntu-transformation')">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <div class="video-overlay">
-                                <div class="video-title">Ubuntu in Action</div>
-                                <div class="video-description">Corporate wellness transformation</div>
-                            </div>
-                        </div>
-                    </div>
-
+                
                     <!-- Text Story 3 -->
                     <div class="story-card">
                         <div class="text-story">
@@ -850,203 +1362,68 @@
                     </div>
                 </div>
 
-                <div class="cta-section">
-                    <h3 style="color: var(--bright-cyan-glow); margin-bottom: 1rem; font-family: var(--font-heading);">Ready to Write Your Story?</h3>
-                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem;">Join thousands who've discovered their path to healing and transformation.</p>
-                    <a href="#" class="btn btn-primary">Read More Stories</a>
-                    <a href="#" class="btn btn-secondary">Share Your Journey</a>
-                </div>
+                
             </div>
         </section>
     </div>
 
-    <script>
-        function playVideo(videoId) {
-            // Simulate video play functionality
-            const videoElement = event.currentTarget;
-            const playButton = videoElement.querySelector('.play-button');
-            
-            // Add loading state
-            playButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            
-            // Simulate video loading
-            setTimeout(() => {
-                alert(`Playing ${videoId} testimonial video...`);
-                playButton.innerHTML = '<i class="fas fa-play"></i>';
-            }, 1000);
-        }
+    
+  <section class="section newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2 class="section-title">Join Our Global Circle</h2>
+            <p class="section-subtitle">
+                Connect with kindred spirits worldwide. Receive wisdom, healing insights, and be the first to know about transformative gatherings.
+            </p>
 
-        // Add scroll animations
-        const observeElements = () => {
-            const cards = document.querySelectorAll('.story-card');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
+            <div class="two-column-layout">
+                <div class="form-column">
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-input"
+                                placeholder="Your Name"
+                                required
+                            >
+                        </div>
 
-            cards.forEach(card => observer.observe(card));
-        };
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-input"
+                                placeholder="Your Email Address"
+                                required
+                            >
+                        </div>
 
-        document.addEventListener('DOMContentLoaded', observeElements);
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-input"
+                                placeholder="Your Location (Optional)"
+                            >
+                        </div>
 
-        // Add hover effects for mobile
-        if ('ontouchstart' in window) {
-            document.querySelectorAll('.story-card').forEach(card => {
-                card.addEventListener('touchstart', () => {
-                    card.style.transform = 'translateY(-5px)';
-                });
-                
-                card.addEventListener('touchend', () => {
-                    card.style.transform = 'translateY(0)';
-                });
-            });
-        }
-    </script>
-    <!-- Newsletter & Connection Section -->
-    <section class="section newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="section-title">Join Our Global Circle</h2>
-                <p class="section-subtitle">
-                    Connect with kindred spirits worldwide. Receive wisdom, healing insights, and be the first to know about transformative gatherings.
-                </p>
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" id="healing-updates" class="form-checkbox" required>
+                            <label for="healing-updates">I'm ready to receive healing wisdom and retreat updates</label>
+                        </div>
 
-                <!-- Newsletter Signup Form -->
-                <form class="newsletter-form" id="newsletterForm">
-                    <div class="form-group">
-                        <input 
-                            type="text" 
-                            class="form-input" 
-                            placeholder="Your Name"
-                            required
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your Email Address"
-                            required
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <input 
-                            type="text" 
-                            class="form-input" 
-                            placeholder="Your Location (Optional)"
-                        >
-                    </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                            Join the Circle
+                        </button>
+                    </form>
+                </div>
 
-                    <div class="form-checkbox-group">
-                        <input type="checkbox" id="healing-updates" class="form-checkbox" required>
-                        <label for="healing-updates">I'm ready to receive healing wisdom and retreat updates</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-                        Join the Circle
-                    </button>
-                </form>
-
-                <!-- Social Media Integration -->
-                <div class="social-connection">
-                    <span class="social-text">Follow our healing journey:</span>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
+                <div class="image-column">
+                    <img src="assets/wildlife.jpg" alt="Connecting circles" class="newsletter-image">
                 </div>
             </div>
         </div>
-    </section>
-
-    <script>
-        // Newsletter form functionality
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form elements
-            const nameInput = this.querySelector('input[type="text"]');
-            const emailInput = this.querySelector('input[type="email"]');
-            const locationInput = this.querySelectorAll('input[type="text"]')[1];
-            const checkbox = this.querySelector('input[type="checkbox"]');
-            const submitBtn = this.querySelector('.btn-primary');
-            
-            // Simple validation
-            if (!nameInput.value.trim() || !emailInput.value.trim() || !checkbox.checked) {
-                alert('Please fill in all required fields and accept the updates.');
-                return;
-            }
-            
-            // Simulate form submission
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Joining...';
-            submitBtn.style.pointerEvents = 'none';
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check" style="margin-right: 0.5rem;"></i>Welcome to the Circle!';
-                submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
-                
-                // Reset form after 3 seconds
-                setTimeout(() => {
-                    this.reset();
-                    submitBtn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>Join the Circle';
-                    submitBtn.style.background = 'linear-gradient(135deg, var(--bright-cyan-glow), var(--secondary-teal))';
-                    submitBtn.style.pointerEvents = 'auto';
-                }, 3000);
-            }, 2000);
-        });
-
-        // Social link interactions
-        document.querySelectorAll('.social-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Add a subtle animation effect
-                this.style.transform = 'translateY(-5px) scale(1.1) rotate(360deg)';
-                
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-5px) scale(1.1)';
-                }, 600);
-                
-                // In a real implementation, these would link to actual social media pages
-                console.log('Redirecting to social media page...');
-            });
-        });
-
-        // Smooth scroll animations on load
-        window.addEventListener('load', function() {
-            const elements = document.querySelectorAll('.newsletter-content > *');
-            elements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    el.style.transition = 'all 0.8s ease';
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
-        });
-    </script>
+    </div>
+</section>
 
 
     <script>
@@ -1098,134 +1475,83 @@
     </script>
 
 <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- 1. Comprehensive Navigation -->
-                <div class="footer-navigation">
-                    <h3>Explore SereneSphere</h3>
-                    <div class="nav-grid">
-                        <div class="nav-column">
-                            <h4>Retreats</h4>
-                            <ul class="nav-links">
-                                <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
-                                <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
-                                <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
-                                <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
-                                <li><a href="#private-retreats">Private Retreats</a></li>
-                                <li><a href="#custom-group">Custom Group Retreats</a></li>
-                                <li><a href="#intercruise">Intercruise Retreats</a></li>
-                                <li><a href="#virtual-experience">Virtual Experience Retreats</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="nav-column">
-                            <h4>Community</h4>
-                            <ul class="nav-links">
-                                <li><a href="#join-circle">Join Local Circles</a></li>
-                                <li><a href="#global-chapters">Global Chapters</a></li>
-                                <li><a href="#us-programs">US Programs</a></li>
-                                <li><a href="#sister-cities">Sister Cities Programs</a></li>
-                                <li><a href="#train-trainer">Train the Trainer Program</a></li>
-                                <li><a href="#conservation">Conservation Initiatives</a></li>
-                                <li><a href="#community-guidelines">Community Guidelines</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="nav-column">
-                            <h4>Markets & Resources</h4>
-                            <ul class="nav-links">
-                                <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
-                                <li><a href="#digital-modules">Digital Learning Modules</a></li>
-                                <li><a href="#wholesale">Wholesale Inquiries</a></li>
-                                <li><a href="#indigenous-knowledge">Indigenous Knowledge Systems</a></li>
-                                <li><a href="#cultural-heritage">Cultural Heritage & History</a></li>
-                                <li><a href="#publications">Books & Publications</a></li>
-                                <li><a href="#global-impact-map">Global Impact Map</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="nav-column">
-                            <h4>About & Connect</h4>
-                            <ul class="nav-links">
-                                <li><a href="#story">Our Story</a></li>
-                                <li><a href="#mission">Our Mission</a></li>
-                                <li><a href="#nine-elements">The Nine Elements</a></li>
-                                <li><a href="#how-we-work">How We Work</a></li>
-                                <li><a href="#testimonials">Testimonials</a></li>
-                                <li><a href="#blog">Blog & Podcast</a></li>
-                                <li><a href="#become-partner">Become a Partner</a></li>
-                                <li><a href="#champions">SereneSphere Champions</a></li>
-                                <li><a href="#events-calendar">Events Calendar</a></li>
-                                <li><a href="#faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Contact Information & Social Links -->
-                <div class="footer-contact">
-                    <h3>Contact Information</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@SereneSphere.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+254 704 405 018</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Kenya & Global</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Available 24/7 Online</span>
-                        </div>
-                    </div>
-
-                    <!-- 3. Social Links -->
-                    <div class="social-section">
-                        <h4>Follow Our Journey</h4>
-                        <div class="social-links">
-                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Sustainability Commitments -->
-                <div class="sustainability-commitments">
-                    <h3><i class="fas fa-leaf"></i> Our Commitment</h3>
-                    <div class="commitments-list">
-                        <div class="commitment-item">
-                            <i class="fas fa-seedling"></i>
-                            <span>Regenerative tourism practices</span>
-                        </div>
-                        <div class="commitment-item">
-                            <i class="fas fa-hands-helping"></i>
-                            <span>Supporting indigenous communities</span>
-                        </div>
-                        <div class="commitment-item">
-                            <i class="fas fa-heart"></i>
-                            <span>Healing people and planet</span>
-                        </div>
-                        <div class="commitment-item">
-                            <i class="fas fa-globe-africa"></i>
-                            <span>Ethical African partnerships</span>
-                        </div>
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="/assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="footer-logo">
+                <p class="brand-description">
+                    Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
+                </p>
+                <div class="social-section">
+                    <h4>Follow Our Journey</h4>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 SereneSphere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            <div class="nav-column">
+                <h4>Retreats</h4>
+                <ul class="nav-links">
+                    <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
+                    <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
+                    <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
+                    <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
+                    <li><a href="#private-retreats">Private Retreats</a></li>
+                    <li><a href="#custom-group">Custom Group Retreats</a></li>
+                    <li><a href="#intercruise">Intercruise Retreats</a></li>
+                    <li><a href="#virtual-experience">Virtual Experience Retreats</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-column">
+                <h4>Community & Resources</h4>
+                <ul class="nav-links">
+                    <li><a href="#join-circle">Join Local Circles</a></li>
+                    <li><a href="#global-chapters">Global Chapters</a></li>
+                    <li><a href="#us-programs">US Programs</a></li>
+                    <li><a href="#sister-cities">Sister Cities Programs</a></li>
+                    <li><a href="#train-trainer">Train the Trainer Program</a></li>
+                    <li><a href="#conservation">Conservation Initiatives</a></li>
+                    <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
+                    <li><a href="#digital-modules">Digital Learning Modules</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-column">
+                <h4>About & Contact</h4>
+                <ul class="nav-links">
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#nine-elements">The Nine Elements</a></li>
+                    <li><a href="#how-we-work">How We Work</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#blog">Blog & Podcast</a></li>
+                    <li><a href="#become-partner">Become a Partner</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@Serenesephere.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+254 704 405 018</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
