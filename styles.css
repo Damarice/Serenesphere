@@ -317,27 +317,32 @@ body {
     padding: 0 2rem;
     animation: fadeInUp 1.5s ease-out;
     position: relative;
+    text-align: center; /* Ensures all content is centered */
 }
 
 .hero-tagline {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3.5rem, 8vw, 7rem); /* Increased for more impact */
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1rem; /* Reduced spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -2px;
-    line-height: 1.1;
+    line-height: 1.0; /* Tighter line height */
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .hero-subtagline {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 600; /* slightly bold */
-    margin-bottom: 1.5rem;
-    color: #30DDE0;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-shadow: none;
+    font-size: 1.4rem;          /* Increased to match screenshot */
+    font-weight: 500;           /* Medium weight, not too bold */
+    margin-bottom: 2.5rem;      /* Increased spacing below */
+    color: #ffffff;             /* Pure white for better readability */
+    line-height: 1.4;
+    letter-spacing: 0.5px;      /* Slight letter spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .cta-buttons {
@@ -345,9 +350,49 @@ body {
     gap: 1.5rem !important;
     justify-content: center !important;
     flex-wrap: wrap !important;
-    margin-top: 2rem !important;
+    margin-top: 3rem !important; /* Increased margin to move buttons down */
 }
 
+.btn, .btn-primary, .btn-secondary, .btn-tertiary {
+    font-family: var(--font-body) !important;
+    padding: 18px 40px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    background: linear-gradient(135deg, var(--secondary-teal), var(--bright-cyan-glow)) !important;
+    color: var(--pure-white) !important;
+    transition: all 0.4s ease !important;
+    text-align: center !important;
+}
+
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    background: linear-gradient(135deg, var(--bright-cyan-glow), var(--secondary-teal)) !important;
+    color: var(--pure-white) !important;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+    .hero-tagline {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        line-height: 1.1;
+    }
+    
+    .hero-subtagline {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-buttons {
+        margin-top: 2rem !important;
+        gap: 1rem !important;
+    }
+}
 .btn,
 .btn-primary,
 .btn-secondary,
@@ -2560,7 +2605,7 @@ main {
 
 /* COMPACT HERO SECTION */
 .hero-section {
-    height: 80vh !important;
+    height: 100vh !important;
     padding: 1rem 0 !important;
     margin: 0 !important;
     display: flex;
@@ -2636,4 +2681,14 @@ body {
     .footer {
         padding: 1rem 0 !important;
     }
+}
+
+/* Smooth fade-in for lazy-loaded images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
 }
