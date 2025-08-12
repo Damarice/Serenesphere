@@ -1000,14 +1000,6 @@ body {
     }
 }
 
-/* Add this to your styles.css file */
-
-/* 1. Set up the Scroll Snap Container on the body */
-body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
 /* 2. Style the Sections to be Scroll Snap Items */
 .hero-section,
 .features-section,
@@ -1045,6 +1037,7 @@ body {
 main {
     overflow: hidden;
 }
+
 
 /* Retreats Carousel Section */
 .retreats-section {
@@ -2775,11 +2768,6 @@ main {
     margin-top: 1rem !important;
 }
 
-/* Scroll snap disabling */
-body {
-    scroll-snap-type: none !important;
-}
-
 .hero-section,
 .features-section,
 .welcome-section {
@@ -2826,3 +2814,4 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
     opacity: 1;
 }
+
