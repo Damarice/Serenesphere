@@ -2410,12 +2410,19 @@ main {
         }
 
         .footer-logo {
-            max-width: 150px;
-            margin-bottom: 1rem;
-            background: var(--bright-cyan-glow);
-            padding: 1rem;
-            border-radius: 8px;
-        }
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--bright-cyan-glow);
+    border-radius: 8px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
 
         .brand-description {
             font-size: 0.9rem;
