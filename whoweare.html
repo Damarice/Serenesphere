@@ -53,6 +53,7 @@ body {
 /* Hero Section */
 .hero {
     height: 80vh;
+    min-height: 500px; /* Ensure minimum height on small screens */
     background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 100%);
     display: flex;
     align-items: center;
@@ -73,31 +74,36 @@ body {
 .hero-content {
     text-align: center;
     z-index: 1;
-    padding: 0 2rem;
+    padding: 0 1rem; /* Reduced padding for mobile */
     color: var(--pure-white);
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(2.5rem, 8vw, 8rem); /* Reduced minimum size */
     font-weight: 700;
     margin-bottom: 1rem;
+    line-height: 1.1; /* Tighter line height for mobile */
 }
 
 .hero .subtitle {
     font-family: var(--font-body);
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2rem); /* Better mobile scaling */
     color: var(--bright-cyan-glow);
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
 }
 
 .hero .tagline {
     font-family: var(--font-body);
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 1rem; /* Add padding for mobile */
 }
 
 @keyframes float {
@@ -108,8 +114,8 @@ body {
 /* Welcome Section */
 .welcome-section {
     background: var(--light-gray);
-    padding: 6rem 2rem;
-    min-height: 80vh;
+    padding: 4rem 1rem; /* Reduced padding for mobile */
+    min-height: auto; /* Remove fixed height for mobile flexibility */
     display: flex;
     align-items: center;
 }
@@ -118,27 +124,30 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     align-items: center;
+    width: 100%;
 }
 
 .text-content h2 {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     color: var(--secondary-teal);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 600;
-    text-align: left;
+    text-align: center; /* Center on mobile */
+    line-height: 1.2;
 }
 
 .welcome-text {
     font-family: var(--font-body);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.8;
     color: var(--accent-gray);
     margin-bottom: 1.5rem;
-    text-align: left;
+    text-align: center; /* Center on mobile */
+    max-width: 100%;
 }
 
 .highlight {
@@ -151,16 +160,113 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .welcome-image {
-    width: 320px;
-    height: 320px;
+    width: clamp(250px, 60vw, 320px); /* Responsive image size */
+    height: clamp(250px, 60vw, 320px);
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--bright-cyan-glow);
+    border: 4px solid var(--bright-cyan-glow); /* Thinner border on mobile */
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 450px;
+    }
+    
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+    
+    .welcome-section {
+        padding: 3rem 1rem;
+    }
+    
+    .welcome-content {
+        gap: 2rem;
+    }
+    
+    .text-content h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-text {
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-image {
+        border: 3px solid var(--bright-cyan-glow);
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+    
+    .hero h1 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero .subtitle {
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-section {
+        padding: 2rem 0.5rem;
+    }
+    
+    .welcome-content {
+        gap: 1.5rem;
+    }
+    
+    .image-container {
+        padding: 0.5rem;
+    }
+}
+
+/* Large screens - restore two-column layout */
+@media (min-width: 1024px) {
+    .welcome-content {
+        grid-template-columns: 1fr 400px;
+        gap: 4rem;
+    }
+    
+    .text-content h2 {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    
+    .welcome-text {
+        text-align: left;
+    }
+    
+    .welcome-section {
+        padding: 6rem 2rem;
+        min-height: 80vh;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1440px) {
+    .welcome-section {
+        padding: 8rem 2rem;
+    }
+    
+    .welcome-content {
+        gap: 5rem;
+    }
+}
 /* Mission Section */
 .mission-section {
     background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 100%);
