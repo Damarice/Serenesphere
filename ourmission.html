@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Serenesephere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+<style>
+    :root {
+        --deep-teal: #0C4F58;
+        --bright-cyan: #30DDE0;
+        --secondary-teal: #2BA6A0;
+        --pure-white: #FFFFFF;
+        --light-gray: #F8F9FA;
+        --accent-gray: #666666;
+        --gold-accent: #D4AF37;
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'Montserrat', sans-serif;
+        --gradient-primary: linear-gradient(135deg, #0C4F58 0%, #2BA6A0 50%, #30DDE0 100%);
+        --gradient-gold: linear-gradient(45deg, #D4AF37 0%, #F4E4A6 100%);
+        --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-body);
+        color: var(--accent-gray);
+        line-height: 1.7;
+        background: var(--pure-white);
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 60vh;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
+    }
+
+    .hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: var(--pure-white);
+        z-index: 1;
+        max-width: 800px;
+        animation: fadeUp 1s ease-out;
+    }
+
+    /* Sections */
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-light {
+        background: var(--light-gray);
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .mission-card {
+        background: var(--pure-white);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shadow-soft);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+    }
+
+    .mission-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .mission-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem auto;
+        color: var(--pure-white);
+        font-size: 1.8rem;
+        box-shadow: var(--shadow-soft);
+    }
+
+    h2 {
+        font-family: var(--font-heading);
+        color: var(--deep-teal);
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .highlight {
+        color: var(--deep-teal);
+        font-weight: 600;
+    }
+
+    .gradient-text {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+    }
+
+    /* CTA */
+    .cta-section {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: var(--gradient-primary);
+        color: var(--pure-white);
+    }
+
+    .cta-button {
+        background: var(--gradient-gold);
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        color: var(--deep-teal);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: var(--shadow-soft);
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .mission-card {
+            text-align: center;
+        }
+    }
+</style
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+254 (0) 700 123 456</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item has-dropdown">
+                    <a href="#retreats" class="nav-link">Retreats</a>
+                    <div class="dropdown-content">
+                        <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
+                        <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
+                        <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
+                        <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
+                        <a href="#private-retreats">Private Retreats</a>
+                        <a href="#custom-group">Custom Group Retreats</a>
+                        <a href="#intercruise">Intercruise Retreats</a>
+                        <a href="#virtual-experience">Virtual Experience Retreats</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="ourstory.html">Our Story</a>
+                        <a href="ourmission.html">Our Mission</a>
+                        <a href="nine-elements.html">The Nine Elements</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#stories" class="nav-link">Stories</a>
+                    <div class="dropdown-content">
+                        <a href="#how-we-work">How we Work</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#podcast">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                        <a href="#global-impact-map-2">Global Impact Map</a>
+                        <a href="#events-calendar">Events Calendar</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                        <a href="#global-impact-map-3">Global Impact Map</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="#get-in-touch">Get In Touch</a>
+                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item has-dropdown">
+                    <a href="#retreats" class="nav-link">Retreats</a>
+                    <div class="dropdown-content">
+                        <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
+                        <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
+                        <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
+                        <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
+                        <a href="#private-retreats">Private Retreats</a>
+                        <a href="#custom-group">Custom Group Retreats</a>
+                        <a href="#intercruise">Intercruise Retreats</a>
+                        <a href="#virtual-experience">Virtual Experience Retreats</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="ourstory.html">Our Story</a>
+                        <a href="ourmission.html">Our Mission</a>
+                        <a href="nine-elements.html">The Nine Elements</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#stories" class="nav-link">Stories</a>
+                    <div class="dropdown-content">
+                        <a href="#how-we-work">How we Work</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#podcast">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                        <a href="#global-impact-map-2">Global Impact Map</a>
+                        <a href="#events-calendar">Events Calendar</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                        <a href="#global-impact-map-3">Global Impact Map</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <div class="dropdown-content">
+                        <a href="#get-in-touch">Get In Touch</a>
+                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+<section class="hero">
+    <h1>Our Mission</h1>
+</section>
+
+<!-- Mission -->
+<section>
+    <div class="container">
+        <div class="mission-card">
+            <div class="mission-icon"><i class="fas fa-leaf"></i></div>
+            <h2>Our Sacred Purpose</h2>
+            <p>
+                To <span class="highlight">restore sacred serenity</span> through the authentic integration of African Indigenous knowledge, offering holistic and regenerative wellness experiences that empower individuals, uplift communities, and heal ecosystems—locally and globally.
+            </p>
+            <br>
+            <p>
+                We exist to reconnect <span class="gradient-text">displaced souls, diaspora leaders, and social impact changemakers</span> with ancestral wisdom, creating a ripple of transformation that is deeply rooted, inclusive, and enduring.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="section-light">
+    <div class="container">
+        <div class="mission-card">
+            <div class="mission-icon"><i class="fas fa-globe"></i></div>
+            <h2>Our Vision</h2>
+            <p>
+                We envision a world where <span class="highlight">serenity is not an escape, but a return</span>. To root. To ritual. To radical repair.
+            </p>
+            <br>
+            <p>
+                A global movement where ancient wisdom and modern innovation converge to create a harmonious and regenerative future for all. In the <span class="gradient-text">SereniSphere™</span>, healing isn't just personal—it's communal, ecological, and ancestral.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Begin Your Journey Today</h2>
+    <br>
+    <a href="#" class="cta-button">Start Now →</a>
+</section>
+
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                   <div class="footer-logo">
+    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+</div>
+<p class="brand-description">
+    Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
+</p>
+
+                    <div class="social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links">
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-column">
+                    <h4>Retreats</h4>
+                    <ul class="nav-links">
+                        <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
+                        <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
+                        <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
+                        <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
+                        <li><a href="#private-retreats">Private Retreats</a></li>
+                        <li><a href="#custom-group">Custom Group Retreats</a></li>
+                        <li><a href="#intercruise">Intercruise Retreats</a></li>
+                        <li><a href="#virtual-experience">Virtual Experience Retreats</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-column">
+                    <h4>Community & Resources</h4>
+                    <ul class="nav-links">
+                        <li><a href="#join-circle">Join Local Circles</a></li>
+                        <li><a href="#global-chapters">Global Chapters</a></li>
+                        <li><a href="#us-programs">US Programs</a></li>
+                        <li><a href="#sister-cities">Sister Cities Programs</a></li>
+                        <li><a href="#train-trainer">Train the Trainer Program</a></li>
+                        <li><a href="#conservation">Conservation Initiatives</a></li>
+                        <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
+                        <li><a href="#digital-modules">Digital Learning Modules</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-column">
+                    <h4>About & Contact</h4>
+                    <ul class="nav-links">
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#nine-elements">The Nine Elements</a></li>
+                        <li><a href="#how-we-work">How We Work</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog & Podcast</a></li>
+                        <li><a href="#become-partner">Become a Partner</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@Serenesephere.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 704 405 018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner Logos Section -->
+            <div class="partners-section">
+                <h3 class="partners-title">Our Trusted Partners</h3>
+                <div class="partners-grid">
+                    <div class="partner-logo">
+                        <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
+                        
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2"> 
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+                    </div>
+                    <div class="partner-logo">
+                       <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
