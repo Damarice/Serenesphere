@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +12,15 @@
     
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -225,18 +233,14 @@
 <section class="hero-section" id="hero">
     <!-- Background Video -->
     <div class="hero-bg-container">
-        <video autoplay muted loop class="hero-bg-video">
+        <video autoplay loop class="hero-bg-video" controls>
             <source src="assets/serene sphere_fnl.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
     <div class="hero-content">
-        <h2 class="hero-tagline">Serenesephere</h2>
-        <p class="hero-subtagline">Return. Reconnect. Regenerate.</p>
-
         <div class="cta-buttons">
-
             <a href="#booking" class="btn btn-tertiary">Book Now</a>
         </div>
     </div>
@@ -303,11 +307,11 @@
             
             <div class="welcome-container">
                 <div class="welcome-content">
-                    <p class="greeting-text">Born from a vision to redefine travel as a force for good</p>
+                    <p class="greeting-text"><Strong>Born from a vision to redefine travel as a force for good</Strong></p>
                     <h1 class="main-title">
                         Welcome To <span class="highlight">Serenesephere</span>
                     </h1>
-                    <p class="description-text">SereniSphere™ is a worldwide platform using travel, wellness, and African wisdom to help people heal and grow — while building a movement that connects tradition with modern life for both Africans and the diaspora.
+                    <p class="description-text">Serenesephere is a worldwide platform using travel, wellness, and African wisdom to help people heal and grow — while building a movement that connects tradition with modern life for both Africans and the diaspora.
                     </p>
                     <a href="#about-us" class="cta-button">More About Us</a>
                 </div>
@@ -319,324 +323,137 @@
         </section>
 
 <section class="retreats-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Retreat Spotlight</h2>
-            <div class="section-nav">
-                <span class="page-indicator">1 / 2</span>
-                <div class="nav-arrows">
-                    <span class="nav-arrow disabled">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </span>
-                    <span class="nav-arrow">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </span>
-                </div>
-            </div>
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Retreat Spotlight</h2>
+      <div class="section-nav">
+        <span class="page-indicator">1 / 2</span>
+        <div class="nav-arrows">
+          <span class="nav-arrow disabled">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <span class="nav-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </span>
         </div>
-        <div class="retreats-grid">
-            <div class="retreat-card">
-                <div class="retreat-image">
-                    <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Coastal sunset yoga">
-                    <div class="category-badge">
-                        <svg class="category-icon" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                        </svg>
-                        Yoga
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="retreat-content">
-                    <h3 class="retreat-title">Coastal Sunset Yoga: Find Your Inner Calm</h3>
-                    <div class="retreat-meta">
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
-                            3 Days Package
-                        </div>
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                            November 12-14, 2026
-                        </div>
-                    </div>
-                    <div class="organizer-info">
-                        <div class="organizer-avatar">CS</div>
-                        <div>
-                            <div class="organizer-name">Coastal Serenity</div>
-                            <div class="location-info">
-                                <span class="online-badge">Online</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="retreat-footer">
-                        <div class="price-section">
-                            <span class="price-from">From</span>
-                            <span class="price-amount">$4500</span>
-                            <span class="price-duration">/ 3 days</span>
-                        </div>
-                        <div class="rating-section">
-                            <div class="star-rating">
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                            </div>
-                            <span class="rating-score">4.92</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="retreat-card">
-                <div class="retreat-image">
-                    <img src="assets/Kenya Full Safari Experience Retreat_ Reclaim Your Wild March 2026.jpg" alt="Kenya savanna with wildlife">
-                    <div class="category-badge">
-                        <svg class="category-icon" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                        </svg>
-                        Cultural
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="retreat-content">
-                    <h3 class="retreat-title">Kenya Immersion: Reclaim Your Wild</h3>
-                    <div class="retreat-meta">
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
-                            10 Days Package
-                        </div>
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                            March 2026
-                        </div>
-                    </div>
-                    <div class="organizer-info">
-                        <div class="organizer-avatar">SS</div>
-                        <div>
-                            <div class="organizer-name">Serenity Sphere</div>
-                            <div class="location-info">
-                                <span class="offline-badge">Kenya</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="retreat-footer">
-                        <div class="price-section">
-                            <span class="price-from">From</span>
-                            <span class="price-amount">$4500</span>
-                            <span class="price-duration">/ 10 days</span>
-                        </div>
-                        <div class="rating-section">
-                            <div class="star-rating">
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                            </div>
-                            <span class="rating-score">4.95</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="retreat-card">
-                <div class="retreat-image">
-                    <img src="assets/Kenya Kwanzaa Retreat_ Return to Motherland Ceremony August 2026.jpg" alt="Traditional healing ceremony with elders">
-                    <div class="category-badge">
-                        <svg class="category-icon" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                        </svg>
-                        Healing
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="retreat-content">
-                    <h3 class="retreat-title">Kwanzaa Retreat: Return to Motherland Ceremony</h3>
-                    <div class="retreat-meta">
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
-                            10 Days Package
-                        </div>
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                            June 2026
-                        </div>
-                    </div>
-                    <div class="organizer-info">
-                        <div class="organizer-avatar">SS</div>
-                        <div>
-                            <div class="organizer-name">Serenity Sphere</div>
-                            <div class="location-info">
-                                <span class="offline-badge">West Africa</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="retreat-footer">
-                        <div class="price-section">
-                            <span class="price-from">From</span>
-                            <span class="price-amount">$4500</span>
-                            <span class="price-duration">/ 10 days</span>
-                        </div>
-                        <div class="rating-section">
-                            <div class="star-rating">
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                            </div>
-                            <span class="rating-score">4.97</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="retreat-card">
-                <div class="retreat-image">
-                    <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup">
-                    <div class="category-badge">
-                        <svg class="category-icon" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                        </svg>
-                        Healing
-                    </div>
-                    <div class="heart-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="retreat-content">
-                    <h3 class="retreat-title">Iboga Retreat: Plant Ceremony</h3>
-                    <div class="retreat-meta">
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
-                            10 Days Package
-                        </div>
-                        <div class="meta-item">
-                            <svg class="meta-icon" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                            August 2026
-                        </div>
-                    </div>
-                    <div class="organizer-info">
-                        <div class="organizer-avatar">SS</div>
-                        <div>
-                            <div class="organizer-name">Serenity Sphere</div>
-                            <div class="location-info">
-                                <span class="offline-badge">Gabon</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="retreat-footer">
-                        <div class="price-section">
-                            <span class="price-from">From</span>
-                            <span class="price-amount">$4500</span>
-                            <span class="price-duration">/ 10 days</span>
-                        </div>
-                        <div class="rating-section">
-                            <div class="star-rating">
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                                <svg class="star" viewBox="0 0 24 24">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-                                </svg>
-                            </div>
-                            <span class="rating-score">4.90</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="retreats-grid">
+      <!-- Retreat 1 -->
+      <a href="coastalsunsetyogaitenerary.html" class="retreat-card">
+        <div class="retreat-image">
+          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Coastal sunset yoga">
+          <div class="heart-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        <div class="retreat-content">
+          <h3 class="retreat-title">Coastal Sunset Yoga: Find Your Inner Calm</h3>
+          <p>Discover peace and balance on the serene coast with daily yoga and meditation sessions.</p>
+          <p><strong>Date:</strong> November 12-14, 2026</p>
+          <div class="retreat-footer">
+            <div class="price-section">
+              <span class="price-amount">$4500</span>
+            </div>
+            <div class="rating-section">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="rating-score">4.9</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Retreat 2 -->
+      <a href="kenya-immersion.html" class="retreat-card">
+        <div class="retreat-image">
+          <img src="assets/Kenya Full Safari Experience Retreat_ Reclaim Your Wild March 2026.jpg" alt="Kenya savanna with wildlife">
+          <div class="heart-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        <div class="retreat-content">
+          <h3 class="retreat-title">Kenya Immersion: Reclaim Your Wild</h3>
+          <p>Reconnect with nature on a breathtaking 10-day safari experience across Kenya.</p>
+          <p><strong>Date:</strong> March 2026</p>
+          <div class="retreat-footer">
+            <div class="price-section">
+              <span class="price-amount">$4500</span>
+            </div>
+            <div class="rating-section">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-score">4.95</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Retreat 3 -->
+      <a href="kwanzaa-retreat.html" class="retreat-card">
+        <div class="retreat-image">
+          <img src="assets/Kenya Kwanzaa Retreat_ Return to Motherland Ceremony August 2026.jpg" alt="Traditional healing ceremony with elders">
+          <div class="heart-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        <div class="retreat-content">
+          <h3 class="retreat-title">Kwanzaa Retreat: Return to Motherland Ceremony</h3>
+          <p>A spiritual retreat reconnecting with roots through traditional African ceremonies.</p>
+          <p><strong>Date:</strong> June 2026</p>
+          <div class="retreat-footer">
+            <div class="price-section">
+              <span class="price-amount">$4500</span>
+            </div>
+            <div class="rating-section">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-score">4.97</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Retreat 4 -->
+      <a href="iboga-retreat.html" class="retreat-card">
+        <div class="retreat-image">
+          <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup">
+          <div class="heart-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+        <div class="retreat-content">
+          <h3 class="retreat-title">Iboga Retreat: Plant Ceremony</h3>
+          <p>Participate in a powerful plant medicine ceremony guided by experienced healers.</p>
+          <p><strong>Date:</strong> August 2026</p>
+          <div class="retreat-footer">
+            <div class="price-section">
+              <span class="price-amount">$4500</span>
+            </div>
+            <div class="rating-section">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="rating-score">4.90</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 
@@ -760,101 +577,69 @@ document.addEventListener('DOMContentLoaded', function () {
     </section>
 
 
- <div class="container">
-        <h2 class="section-title">Our Nine Elements of Serenity</h2>
-        
-        <div class="elements-container">
-            <!-- SVG Connection Lines -->
-            <svg class="connections-svg" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid meet">
-                <!-- Lines from center (450, 450) to each element position -->
-                <line class="connection-line" x1="450" y1="450" x2="450" y2="110" />
-                <line class="connection-line" x1="450" y1="450" x2="668.6" y2="189.6" />
-                <line class="connection-line" x1="450" y1="450" x2="784.8" y2="391" />
-                <line class="connection-line" x1="450" y1="450" x2="744.4" y2="620" />
-                <line class="connection-line" x1="450" y1="450" x2="566.3" y2="769.5" />
-                <line class="connection-line" x1="450" y1="450" x2="333.7" y2="769.5" />
-                <line class="connection-line" x1="450" y1="450" x2="155.6" y2="620" />
-                <line class="connection-line" x1="450" y1="450" x2="115.2" y2="391" />
-                <line class="connection-line" x1="450" y1="450" x2="231.4" y2="189.6" />
-            </svg>
+<section class="destinations-section" id="destinations">
+  <div class="container">
+    <h2 class="section-title">Destinations Within Kenya</h2>
 
-            <!-- Center Core -->
-            <div class="center-core">
-                <h3>Serenity<br>Framework</h3>
-                <p>Complete Wellness</p>
-            </div>
-
-            <!-- Element 1: Spiritual (Top) -->
-            <div id="element-1" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-pray"></i></div>
-                <h4>Spiritual</h4>
-                <p>Ancestral rituals and sacred storytelling</p>
-            </div>
-
-            <!-- Element 2: Physical -->
-            <div id="element-2" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-person-walking"></i></div>
-                <h4>Physical</h4>
-                <p>Somatic movement and body</p>
-            </div>
-
-            <!-- Element 3: Aspirational -->
-            <div id="element-3" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-book"></i></div>
-                <h4>Aspirational</h4>
-                <p>Falling asleep, staying positive</p>
-            </div>
-
-            <!-- Element 4: Financial -->
-            <div id="element-4" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-coins"></i></div>
-                <h4>Financial</h4>
-                <p>Village co-ops and sustainable economics</p>
-            </div>
-
-            <!-- Element 5: Environmental -->
-            <div id="element-5" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-leaf"></i></div>
-                <h4>Environmental</h4>
-                <p>Earth rituals and eco-therapy</p>
-            </div>
-
-            <!-- Element 6: Occupational (Bottom) -->
-            <div id="element-6" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-briefcase"></i></div>
-                <h4>Occupational</h4>
-                <p>Artisans and eco-therapy</p>
-            </div>
-
-            <!-- Element 7: Social -->
-            <div id="element-7" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-lightbulb"></i></div>
-                <h4>Social</h4>
-                <p>Community bonding and shared experiences</p>
-            </div>
-
-            <!-- Element 8: Nutritional -->
-            <div id="element-8" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-apple-alt"></i></div>
-                <h4>Nutritional</h4>
-                <p>Herbal medicine and conscious cooking</p>
-            </div>
-
-            <!-- Element 9: Mental -->
-            <div id="element-9" class="element-bubble">
-                <div class="element-icon"><i class="fas fa-brain"></i></div>
-                <h4>Mental</h4>
-                <p>Mindfulness, cognitive reset, and clarity</p>
-            </div>
+    <div class="destinations-grid">
+      <!-- Diani Beach -->
+      <div class="destination-card">
+        <div class="destination-image">
+          <img src="assets/slide1.jpg" alt="Diani Beach">
         </div>
-    </div>
-    <div class="cta-buttons">
-            <a href="#welcome" class="btn btn-primary">Begin Your Journey</a>
-            <a href="#retreats" class="btn btn-secondary">Explore Retreats</a>
-            <a href="#connect" class="btn btn-secondary">Become a Partner</a>
-    </div>        
+        <div class="destination-content">
+          <h3 class="destination-title">Diani Beach</h3>
+          <p>Pristine white sands and turquoise waters, perfect for relaxation, water sports, and romantic getaways.</p>
+        </div>
+      </div>
 
+      <!-- Maasai Mara -->
+      <div class="destination-card">
+        <div class="destination-image">
+          <img src="assets/slide2.jpg" alt="Maasai Mara">
+        </div>
+        <div class="destination-content">
+          <h3 class="destination-title">Maasai Mara</h3>
+          <p>Home of the Great Migration and the Big Five, offering breathtaking safari adventures year-round.</p>
+        </div>
+      </div>
+
+      <!-- Amboseli -->
+      <div class="destination-card">
+        <div class="destination-image">
+          <img src="assets/slide3.jpg" alt="Amboseli National Park">
+        </div>
+        <div class="destination-content">
+          <h3 class="destination-title">Amboseli</h3>
+          <p>Famous for large elephant herds with the stunning backdrop of Mount Kilimanjaro.</p>
+        </div>
+      </div>
+
+      <!-- Samburu -->
+      <div class="destination-card">
+        <div class="destination-image">
+          <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+        </div>
+        <div class="destination-content">
+          <h3 class="destination-title">Samburu</h3>
+          <p>A semi-arid wilderness with unique wildlife such as Grevy’s zebra and reticulated giraffe.</p>
+        </div>
+      </div>
+
+      <!-- Lake Naivasha -->
+      <div class="destination-card">
+        <div class="destination-image">
+          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Lake Naivasha">
+        </div>
+        <div class="destination-content">
+          <h3 class="destination-title">Lake Naivasha</h3>
+          <p>A freshwater lake surrounded by hippos, birds, and lush scenery, ideal for boat rides and nature walks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
     
      <div class="stories-inspirations">
         <section class="section flagship-section">
@@ -1081,29 +866,69 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
             </div>
-
-            <!-- Partner Logos Section -->
-            <div class="partners-section">
-                <h3 class="partners-title">Our Trusted Partners</h3>
-                <div class="partners-grid">
-                    <div class="partner-logo">
-                        <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
-                        
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2"> 
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Mundui House Logo.avif" alt="Partner 3">
-                    </div>
-                    <div class="partner-logo">
-                       <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
-                    </div>
-                </div>
+<div class="partners-section">
+    <h3 class="partners-title">Our Trusted Partners</h3>
+    <div class="partners-slider-wrapper">
+        <div class="partners-slider">
+            <div class="partner-logo">
+                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
             </div>
+            <div class="partner-logo">
+                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
+            </div>
+            <!-- Repeat logos to create smooth loop -->
+            <div class="partner-logo">
+                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const swiper = new Swiper(".partners-slider", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
+  });
+</script>
+
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
