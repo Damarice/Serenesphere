@@ -4,22 +4,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenesephere</title>
 
+    <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styles.css" as="style">
     
+    <!-- Fonts with optimized loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Font Awesome with optimized loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Main Script -->
     <script src="script.js" defer></script>
-    <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Swiper - Load asynchronously since it's not critical for initial render -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"></noscript>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
 
 </head>
 
@@ -102,7 +114,6 @@
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
                         <a href="whoweare.html">Who We Are</a>
-                        <a href="nine-elements.html">The Nine Elements</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -187,7 +198,6 @@
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
                         <a href="whoweare.html">Who We Are</a>
-                        <a href="nine-elements.html">The Nine Elements</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -342,7 +352,7 @@
     <div class="retreats-grid">
 
       <!-- Retreat 1 -->
-      <a href="kenya-detox-march.html" class="retreat-card">
+      <a href="coastalsunsetyogaitenerary.html" class="retreat-card">
         <div class="retreat-image">
           <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Coastal sunset yoga">
           <div class="heart-icon">
@@ -368,7 +378,7 @@
       <!-- Retreat 2 -->
       <a href="kenya-detox-august-ocean.html" class="retreat-card">
         <div class="retreat-image">
-          <img src="assets/Kenya Full Safari Experience Retreat_ Reclaim Your Wild March 2026.jpg" alt="Kenya savanna with wildlife">
+          <img src="assets/Kenya Full Safari Experience Retreat_ Reclaim Your Wild March 2026.jpg" alt="Kenya savanna with wildlife" loading="lazy">
           <div class="heart-icon">
             <i class="fas fa-heart"></i>
           </div>
@@ -392,7 +402,7 @@
       <!-- Retreat 3 -->
       <a href="kenya-detox-august-trail.html" class="retreat-card">
         <div class="retreat-image">
-          <img src="assets/Kenya Kwanzaa Retreat_ Return to Motherland Ceremony August 2026.jpg" alt="Traditional healing ceremony with elders">
+          <img src="assets/Kenya Kwanzaa Retreat_ Return to Motherland Ceremony August 2026.jpg" alt="Traditional healing ceremony with elders" loading="lazy">
           <div class="heart-icon">
             <i class="fas fa-heart"></i>
           </div>
@@ -416,7 +426,7 @@
       <!-- Retreat 4 -->
       <a href="kenya-detox-october.html" class="retreat-card">
         <div class="retreat-image">
-          <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup">
+          <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup" loading="lazy">
           <div class="heart-icon">
             <i class="fas fa-heart"></i>
           </div>
@@ -520,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="ecosystem-grid">
                 <div class="pillar-card retreats">
                     <div class="pillar-image">
-                        <img src="assets/Serenesephere Retreats.jpg" alt="Personal transformation" />
+                        <img src="assets/Serenesephere Retreats.jpg" alt="Personal transformation" loading="lazy" />
                     </div>
                     <div class="pillar-content">
                         <h3 class="pillar-title">Serenesephere Retreats</h3>
@@ -530,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="pillar-card circles">
                     <div class="pillar-image">
-                        <img src="assets/Serenesephere Circles.jpg" alt="Circle of diverse people" />
+                        <img src="assets/Serenesephere Circles.jpg" alt="Circle of diverse people" loading="lazy" />
                     </div>
                     <div class="pillar-content">
                         <h3 class="pillar-title">Serenesephere Circles</h3>
@@ -540,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="pillar-card markets">
                     <div class="pillar-image">
-                        <img src="assets/Serenesephere Markets.jpg" alt="Sprouting plant from soil" />
+                        <img src="assets/Serenesephere Markets.jpg" alt="Sprouting plant from soil" loading="lazy" />
                     </div>
                     <div class="pillar-content">
                         <h3 class="pillar-title">Serenesephere Markets</h3>
@@ -550,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 <div class="pillar-card global">
                     <div class="pillar-image">
-                        <img src="assets/Serenesephere Global.jpg"alt="Earth at night satellite view" />
+                        <img src="assets/Serenesephere Global.jpg" alt="Earth at night satellite view" loading="lazy" />
                     </div>
                     <div class="pillar-content">
                         <h3 class="pillar-title">Serenesephere Global</h3>
@@ -570,7 +580,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Diani Beach -->
       <div class="destination-card">
         <div class="destination-image">
-          <img src="assets/slide1.jpg" alt="Diani Beach">
+          <img src="assets/slide1.jpg" alt="Diani Beach" loading="lazy">
         </div>
         <div class="destination-content">
           <h3 class="destination-title">Diani Beach</h3>
@@ -581,7 +591,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Maasai Mara -->
       <div class="destination-card">
         <div class="destination-image">
-          <img src="assets/slide2.jpg" alt="Maasai Mara">
+          <img src="assets/slide2.jpg" alt="Maasai Mara" loading="lazy">
         </div>
         <div class="destination-content">
           <h3 class="destination-title">Maasai Mara</h3>
@@ -592,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Amboseli -->
       <div class="destination-card">
         <div class="destination-image">
-          <img src="assets/slide3.jpg" alt="Amboseli National Park">
+          <img src="assets/slide3.jpg" alt="Amboseli National Park" loading="lazy">
         </div>
         <div class="destination-content">
           <h3 class="destination-title">Amboseli</h3>
@@ -603,7 +613,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Samburu -->
       <div class="destination-card">
         <div class="destination-image">
-          <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+          <img src="assets/wildlife.jpg" alt="Samburu National Reserve" loading="lazy">
         </div>
         <div class="destination-content">
           <h3 class="destination-title">Samburu</h3>
@@ -614,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Lake Naivasha -->
       <div class="destination-card">
         <div class="destination-image">
-          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Lake Naivasha">
+          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Lake Naivasha" loading="lazy">
         </div>
         <div class="destination-content">
           <h3 class="destination-title">Lake Naivasha</h3>
@@ -751,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
 
                 <div class="image-column">
-                    <img src="assets/Join our Globa Circle.jpg" alt="Connecting circles" class="newsletter-image">
+                    <img src="assets/Join our Globa Circle.jpg" alt="Connecting circles" class="newsletter-image" loading="lazy">
                 </div>
             </div>
         </div>
@@ -780,7 +790,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="footer-main">
                 <div class="footer-brand">
                    <div class="footer-logo">
-    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" loading="lazy">
 </div>
 <p class="brand-description">
     Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
@@ -856,29 +866,29 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="partners-slider-wrapper">
         <div class="partners-slider">
             <div class="partner-logo">
-                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
+                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2">
+                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+                <img src="assets/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
+                <img src="assets/University of Nairobi Logo.png" alt="Partner 4" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
+                <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5" loading="lazy">
             </div>
             <!-- Repeat logos to create smooth loop -->
             <div class="partner-logo">
-                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
+                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2">
+                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+                <img src="assets/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
             </div>
         </div>
     </div>

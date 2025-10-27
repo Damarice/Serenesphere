@@ -20,10 +20,18 @@
     --text-light: #777;
     --rating-gold: #f5c518;
 }
-{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Image Performance Optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 html, body {
