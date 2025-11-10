@@ -132,4 +132,71 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  
+// ========================================
+// TOP DESTINATIONS SLIDER
+// ========================================
+
+// Wait for Swiper library to load
+// Initialize Destinations Swiper with retry mechanism
+function initDestinationsSwiper() {
+    if (typeof Swiper !== 'undefined') {
+        console.log('Initializing destinations swiper...');
+        const destinationsSwiper = new Swiper('.destinations-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            loopedSlides: 10,
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+            speed: 5000,
+            allowTouchMove: true,
+            grabCursor: true,
+            centeredSlides: false,
+            freeMode: false,
+            breakpoints: {
+                480: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 8,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 9,
+                    spaceBetween: 20,
+                },
+            },
+        });
+        console.log('Destinations swiper initialized successfully!');
+        return true;
+    } else {
+        console.error('Swiper library not loaded yet!');
+        return false;
+    }
+}
+
+// Try to initialize immediately
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(initDestinationsSwiper, 100);
+    });
+} else {
+    setTimeout(initDestinationsSwiper, 100);
+}
+
+// Backup: Try again on window load
+window.addEventListener('load', function() {
+    setTimeout(initDestinationsSwiper, 200);
+});

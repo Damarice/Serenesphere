@@ -24,14 +24,12 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Swiper CSS and JS - Load before main script -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
     <!-- Main Script -->
     <script src="script.js" defer></script>
-    
-    <!-- Swiper - Load asynchronously since it's not critical for initial render -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"></noscript>
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
 
 </head>
 
@@ -243,10 +241,14 @@
 <section class="hero-section" id="hero">
     <!-- Background Video -->
     <div class="hero-bg-container">
-        <video autoplay loop class="hero-bg-video" controls>
-            <source src="assets/serene sphere_fnl.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe 
+            class="hero-bg-video" 
+            src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=0&showinfo=0&rel=0&modestbranding=1" 
+            title="Serenesephere Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
 
     <div class="hero-content">
@@ -256,383 +258,656 @@
     </div>
 </section>
 
+<!-- Top Destinations Slider Section -->
+<section class="top-destinations-section" id="top-destinations">
+    <div class="container">
+        <div class="destinations-header">
+            <span class="section-subtitle">Top Destinations</span>
+            <h2 class="section-title">Explore Our Immersions</h2>
+            <p class="section-description">
+                Tired of screens. Tired of being watched, tracked, sold to. Tired of the noise. 
+                It's time to log off, not just for an hour, but for a lifetime. It's time to come home.
+            </p>
+        </div>
 
-        <section class="features-section">
-        <div class="features-container">
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+        <div class="destinations-slider-wrapper">
+            <div class="swiper destinations-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Destination 1 - Diani Beach -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide1.jpg" alt="Diani Beach">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Diani Beach</h3>
+                                    <p>Pristine white sands and turquoise waters, perfect for relaxation, water sports, and romantic getaways.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Regenerative Practices</h3>
-                </div>
-                 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+
+                    <!-- Destination 2 - Maasai Mara -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide2.jpg" alt="Maasai Mara">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Maasai Mara</h3>
+                                    <p>Home of the Great Migration and the Big Five, offering breathtaking safari adventures year-round.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Supporting Communities</h3>
-                </div>
-                 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+
+                    <!-- Destination 3 - Amboseli -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide3.jpg" alt="Amboseli National Park">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Amboseli</h3>
+                                    <p>Famous for large elephant herds with the stunning backdrop of Mount Kilimanjaro.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Collective Wellness</h3>
-                </div>
-                 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3 5.197v1M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+
+                    <!-- Destination 4 - Samburu -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Samburu</h3>
+                                    <p>A semi-arid wilderness with unique wildlife such as Grevy's zebra and reticulated giraffe.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Ethical Partnerships</h3>
+
+                    <!-- Destination 5 - Lake Naivasha -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/ocean meditation.jpg" alt="Lake Naivasha">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Lake Naivasha</h3>
+                                    <p>A freshwater lake surrounded by hippos, birds, and lush scenery, ideal for boat rides and nature walks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat - Destination 1 - Diani Beach -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide1.jpg" alt="Diani Beach">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Diani Beach</h3>
+                                    <p>Pristine white sands and turquoise waters, perfect for relaxation, water sports, and romantic getaways.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat - Destination 2 - Maasai Mara -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide2.jpg" alt="Maasai Mara">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Maasai Mara</h3>
+                                    <p>Home of the Great Migration and the Big Five, offering breathtaking safari adventures year-round.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat - Destination 3 - Amboseli -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/slide3.jpg" alt="Amboseli National Park">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Amboseli</h3>
+                                    <p>Famous for large elephant herds with the stunning backdrop of Mount Kilimanjaro.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat - Destination 4 - Samburu -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Samburu</h3>
+                                    <p>A semi-arid wilderness with unique wildlife such as Grevy's zebra and reticulated giraffe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat - Destination 5 - Lake Naivasha -->
+                    <div class="swiper-slide">
+                        <div class="destination-slide-card">
+                            <img src="assets/ocean meditation.jpg" alt="Lake Naivasha">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h3>Lake Naivasha</h3>
+                                    <p>A freshwater lake surrounded by hippos, birds, and lush scenery, ideal for boat rides and nature walks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-        <section class="welcome-section" id="welcome">
-            <div class="decorative-circle"></div>
-            <div class="decorative-circle"></div>
-            <div class="decorative-circle"></div>
-            
-            <div class="welcome-container">
-                <div class="welcome-content">
-                    <p class="greeting-text"><Strong>Born from a vision to redefine travel as a force for good</Strong></p>
-                    <h1 class="main-title">
-                        Welcome To <span class="highlight">Serenesephere</span>
-                    </h1>
-                    <p class="description-text">Serenesephere is a worldwide platform using travel, wellness, and African wisdom to help people heal and grow — while building a movement that connects tradition with modern life for both Africans and the diaspora.
-                    </p>
-                    <a href="#about-us" class="cta-button">More About Us</a>
-                </div>
-                
-                <div class="welcome-image">
-                    <img src="./assets/models-with-long-dresses-on-an-outdoor-pool-2025-01-08-17-29-13-utc.jpg" alt="Workshop presentation" />
-                </div>
-            </div>
-        </section>
 
-<section class="retreats-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Retreat Spotlight</h2>
-      <div class="section-nav">
-        <span class="page-indicator">1 / 2</span>
-        <div class="nav-arrows">
-          <span class="nav-arrow disabled">
-            <i class="fas fa-chevron-left"></i>
-          </span>
-          <span class="nav-arrow">
-            <i class="fas fa-chevron-right"></i>
-          </span>
         </div>
-      </div>
+
+        <div class="destinations-cta">
+            <a href="#destinations" class="btn btn-destinations">View All Destinations</a>
+        </div>
     </div>
-
-    <div class="retreats-grid">
-
-      <!-- Retreat 1 -->
-      <a href="coastalsunsetyogaitenerary.html" class="retreat-card">
-        <div class="retreat-image">
-          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Coastal sunset yoga">
-          <div class="heart-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-        </div>
-        <div class="retreat-content">
-          <h3 class="retreat-title">10-Day Kenya Detox Tour: Wildlife & Wellness</h3>
-          <p>Immerse yourself in wildlife and wellness with farm-to-table tours, cultural experiences, and conservation volunteering.</p>
-          <p><strong>Date:</strong> March 17–27, 2026</p>
-          <div class="retreat-footer">
-            <div class="price-section">
-              <span class="price-amount">$4500</span>
-            </div>
-            <div class="rating-section">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-              <span class="rating-score">4.9</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Retreat 2 -->
-      <a href="kenya-detox-august-ocean.html" class="retreat-card">
-        <div class="retreat-image">
-          <img src="assets/Kenya Full Safari Experience Retreat_ Reclaim Your Wild March 2026.jpg" alt="Kenya savanna with wildlife" loading="lazy">
-          <div class="heart-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-        </div>
-        <div class="retreat-content">
-          <h3 class="retreat-title">10-Day Kenya Detox Tour: Ocean & Digital Detox</h3>
-          <p>Experience a digital detox by the ocean with Maasai Mara safaris, eco-lodge stays, and nourishing detox cuisine.</p>
-          <p><strong>Date:</strong> August 17–26, 2026</p>
-          <div class="retreat-footer">
-            <div class="price-section">
-              <span class="price-amount">$4500</span>
-            </div>
-            <div class="rating-section">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <span class="rating-score">4.95</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Retreat 3 -->
-      <a href="kenya-detox-august-trail.html" class="retreat-card">
-        <div class="retreat-image">
-          <img src="assets/Kenya Kwanzaa Retreat_ Return to Motherland Ceremony August 2026.jpg" alt="Traditional healing ceremony with elders" loading="lazy">
-          <div class="heart-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-        </div>
-        <div class="retreat-content">
-          <h3 class="retreat-title">10-Day Kenya Detox Tour: Trail of Heroes</h3>
-          <p>Reconnect with nature through the Trail of Heroes, regenerative cuisines, community planting, and immersive detox retreats.</p>
-          <p><strong>Date:</strong> August 17–26, 2026</p>
-          <div class="retreat-footer">
-            <div class="price-section">
-              <span class="price-amount">$4500</span>
-            </div>
-            <div class="rating-section">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              <span class="rating-score">4.97</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Retreat 4 -->
-      <a href="kenya-detox-october.html" class="retreat-card">
-        <div class="retreat-image">
-          <img src="assets/medicine.jpg" alt="Sacred plant medicine ceremony setup" loading="lazy">
-          <div class="heart-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-        </div>
-        <div class="retreat-content">
-          <h3 class="retreat-title">10-Day Kenya Detox Tour: Heritage & Wildlife</h3>
-          <p>Engage in heritage walks, cultural storytelling, campfire sessions, and wildlife exploration while enjoying a rejuvenating detox retreat.</p>
-          <p><strong>Date:</strong> October 17–26, 2026</p>
-          <div class="retreat-footer">
-            <div class="price-section">
-              <span class="price-amount">$4500</span>
-            </div>
-            <div class="rating-section">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-              <span class="rating-score">4.9</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
 </section>
 
-
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const retreats = document.querySelectorAll('.retreat-card');
-    const prevBtn = document.querySelectorAll('.nav-arrow')[0];
-    const nextBtn = document.querySelectorAll('.nav-arrow')[1];
-    const pageIndicator = document.querySelector('.page-indicator');
-
-    const cardsPerPage = 4;
-    const totalPages = Math.ceil(retreats.length / cardsPerPage);
-    let currentPage = 1;
-    let autoSlideInterval;
-
-    function updateCarousel() {
-        retreats.forEach((card, index) => {
-            const start = (currentPage - 1) * cardsPerPage;
-            const end = currentPage * cardsPerPage;
-            if (index >= start && index < end) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        prevBtn.classList.toggle('disabled', currentPage === 1);
-        nextBtn.classList.toggle('disabled', currentPage === totalPages);
-        pageIndicator.textContent = `${currentPage} / ${totalPages}`;
-    }
-
-    function startAutoSlide() {
-        // Clear any existing interval to prevent multiple timers
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(() => {
-            if (currentPage < totalPages) {
-                currentPage++;
-            } else {
-                currentPage = 1; // Loop back to the first page
-            }
-            updateCarousel();
-        }, 5000); // 5 seconds
-    }
-
-    function resetAutoSlide() {
-        startAutoSlide();
-    }
-
-    // Event listeners
-    prevBtn.addEventListener('click', function () {
-        if (currentPage > 1) {
-            currentPage--;
-            updateCarousel();
-            resetAutoSlide(); // Reset timer after manual click
+// Inline initialization for destinations swiper
+(function() {
+    function initSwiper() {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.destinations-swiper')) {
+            new Swiper('.destinations-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                loopedSlides: 10,
+                autoplay: {
+                    delay: 1,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                },
+                speed: 5000,
+                allowTouchMove: true,
+                grabCursor: true,
+                centeredSlides: false,
+                freeMode: false,
+                breakpoints: {
+                    480: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 15,
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 7,
+                        spaceBetween: 20,
+                    },
+                    1200: {
+                        slidesPerView: 8,
+                        spaceBetween: 20,
+                    },
+                    1400: {
+                        slidesPerView: 9,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+            console.log('Destinations swiper initialized inline!');
+        } else {
+            setTimeout(initSwiper, 100);
         }
-    });
-
-    nextBtn.addEventListener('click', function () {
-        if (currentPage < totalPages) {
-            currentPage++;
-            updateCarousel();
-            resetAutoSlide(); // Reset timer after manual click
-        }
-    });
-
-    // Initialize on load
-    updateCarousel();
-    startAutoSlide();
-});
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSwiper);
+    } else {
+        initSwiper();
+    }
+})();
 </script>
 
-
-    <section class="ecosystem-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The Serenesephere Ecosystem</h2>
+<!-- Activities & Deals Section -->
+<section class="activities-deals-section">
+    <div class="container">
+        <div class="activities-deals-grid">
+            <!-- Activities Card -->
+            <div class="activity-card">
+                <div class="activity-card-overlay"></div>
+                <div class="activity-card-content">
+                    <h3 class="activity-subtitle">Slow is the New Luxury.</h3>
+                    <h3 class="activity-subtitle">Silence is the New Wealth.</h3>
+                    <p class="activity-description">
+                        We don't offer WiFi or cocktails by the pool. We offer something rarer: time, meaning, and culture. 
+                        We partner with African communities to build 'villages of recovery' where you can trade your notification 
+                        pings for your own heartbeat.
+                    </p>
+                    <p class="activity-description">
+                        Learn to milk a cow, grind millet, and read the sky. This isn't a tour. It's therapy.
+                    </p>
+                    <a href="#experiences" class="btn btn-activity">Discover Our Experiences</a>
+                </div>
             </div>
 
-            <div class="ecosystem-grid">
-                <div class="pillar-card retreats">
-                    <div class="pillar-image">
-                        <img src="assets/Serenesephere Retreats.jpg" alt="Personal transformation" loading="lazy" />
-                    </div>
-                    <div class="pillar-content">
-                        <h3 class="pillar-title">Serenesephere Retreats</h3>
-                        <p class="pillar-description">Immersive transformation journeys in nature's sacred spaces</p>
-                    </div>
-                </div>
-
-                <div class="pillar-card circles">
-                    <div class="pillar-image">
-                        <img src="assets/Serenesephere Circles.jpg" alt="Circle of diverse people" loading="lazy" />
-                    </div>
-                    <div class="pillar-content">
-                        <h3 class="pillar-title">Serenesephere Circles</h3>
-                        <p class="pillar-description">Global healing communities fostering collective wisdom</p>
-                    </div>
-                </div>
-
-                <div class="pillar-card markets">
-                    <div class="pillar-image">
-                        <img src="assets/Serenesephere Markets.jpg" alt="Sprouting plant from soil" loading="lazy" />
-                    </div>
-                    <div class="pillar-content">
-                        <h3 class="pillar-title">Serenesephere Markets</h3>
-                        <p class="pillar-description">Regenerative products rooted in ancestral wisdom</p>
-                    </div>
-                </div>
-
-                <div class="pillar-card global">
-                    <div class="pillar-image">
-                        <img src="assets/Serenesephere Global.jpg" alt="Earth at night satellite view" loading="lazy" />
-                    </div>
-                    <div class="pillar-content">
-                        <h3 class="pillar-title">Serenesephere Global</h3>
-                        <p class="pillar-description">Worldwide diaspora chapters and sister cities</p>
-                    </div>
+            <!-- Deals Card -->
+            <div class="deals-card">
+                <div class="deals-card-overlay"></div>
+                <div class="deals-card-content">
+                    <h3 class="deals-main-title">Experience Regeneration in Africa</h3>
+                    <h2 class="deals-title">Up to 40% Revenue Share!</h2>
+                    <p class="deals-description">
+                        Your journey does more than restore you—it helps regenerate a community. 
+                        We are founded on the principle of reciprocity.
+                    </p>
+                    <p class="deals-tagline">When you heal, you help heal the world.</p>
+                    <a href="#deals" class="btn btn-deals">Discover</a>
                 </div>
             </div>
         </div>
-    </section>
-
-
-<section class="destinations-section" id="destinations">
-  <div class="container">
-    <h2 class="section-title">Destinations Within Kenya</h2>
-
-    <div class="destinations-grid">
-      <!-- Diani Beach -->
-      <div class="destination-card">
-        <div class="destination-image">
-          <img src="assets/slide1.jpg" alt="Diani Beach" loading="lazy">
-        </div>
-        <div class="destination-content">
-          <h3 class="destination-title">Diani Beach</h3>
-          <p>Pristine white sands and turquoise waters, perfect for relaxation, water sports, and romantic getaways.</p>
-        </div>
-      </div>
-
-      <!-- Maasai Mara -->
-      <div class="destination-card">
-        <div class="destination-image">
-          <img src="assets/slide2.jpg" alt="Maasai Mara" loading="lazy">
-        </div>
-        <div class="destination-content">
-          <h3 class="destination-title">Maasai Mara</h3>
-          <p>Home of the Great Migration and the Big Five, offering breathtaking safari adventures year-round.</p>
-        </div>
-      </div>
-
-      <!-- Amboseli -->
-      <div class="destination-card">
-        <div class="destination-image">
-          <img src="assets/slide3.jpg" alt="Amboseli National Park" loading="lazy">
-        </div>
-        <div class="destination-content">
-          <h3 class="destination-title">Amboseli</h3>
-          <p>Famous for large elephant herds with the stunning backdrop of Mount Kilimanjaro.</p>
-        </div>
-      </div>
-
-      <!-- Samburu -->
-      <div class="destination-card">
-        <div class="destination-image">
-          <img src="assets/wildlife.jpg" alt="Samburu National Reserve" loading="lazy">
-        </div>
-        <div class="destination-content">
-          <h3 class="destination-title">Samburu</h3>
-          <p>A semi-arid wilderness with unique wildlife such as Grevy’s zebra and reticulated giraffe.</p>
-        </div>
-      </div>
-
-      <!-- Lake Naivasha -->
-      <div class="destination-card">
-        <div class="destination-image">
-          <img src="assets/Journey of Discovery on Water_ Coastal Retreat June 2026.jpg" alt="Lake Naivasha" loading="lazy">
-        </div>
-        <div class="destination-content">
-          <h3 class="destination-title">Lake Naivasha</h3>
-          <p>A freshwater lake surrounded by hippos, birds, and lush scenery, ideal for boat rides and nature walks.</p>
-        </div>
-      </div>
     </div>
-  </div>
+</section>
+
+<!-- Most Popular Tours Section -->
+<section class="popular-tours-section">
+    <div class="container">
+        <div class="tours-header">
+            <div class="tours-header-left">
+                <span class="tours-subtitle">Explore our Tours</span>
+                <h2 class="tours-title">Most Popular Tours</h2>
+                <p class="tours-description">
+                    This is more than a trip; it's a pilgrimage. A chance to reconnect with the land, 
+                    to heal old wounds, and to remember who you are.
+                </p>
+            </div>
+            <div class="tours-header-right">
+                <a href="#all-destinations" class="btn btn-view-all">View All Destinations</a>
+            </div>
+        </div>
+
+        <div class="tours-grid">
+            <!-- Tour 1 - Digital Detox -->
+            <div class="tour-card">
+                <div class="tour-images-wrapper">
+                    <div class="tour-image-main">
+                        <img src="assets/slide1.jpg" alt="Digital Detox Immersions">
+                        <div class="tour-badge">40% Off</div>
+                        <div class="tour-wishlist">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="tour-thumbnails">
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide2.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide3.jpg" alt="Thumbnail 2">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/wildlife.jpg" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-meta">
+                        <span class="tour-duration"><i class="far fa-clock"></i> 3 days</span>
+                        <span class="tour-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            4.5
+                        </span>
+                    </div>
+                    <h3 class="tour-name">Digital Detox Immersions</h3>
+                    <p class="tour-location"><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                    <p class="tour-excerpt">Unplug and root down in the rhythms of village life.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price">
+                            <span class="price-current">$150.00</span>
+                            <span class="price-old">$250.00</span>
+                        </div>
+                        <a href="#explore" class="btn btn-explore">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 2 - Ancestral Wisdom -->
+            <div class="tour-card">
+                <div class="tour-images-wrapper">
+                    <div class="tour-image-main">
+                        <img src="assets/slide2.jpg" alt="Ancestral Wisdom Retreats">
+                        <div class="tour-badge">40% Off</div>
+                        <div class="tour-wishlist">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="tour-thumbnails">
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide3.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/wildlife.jpg" alt="Thumbnail 2">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide1.jpg" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-meta">
+                        <span class="tour-duration"><i class="far fa-clock"></i> 7 days</span>
+                        <span class="tour-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            5
+                        </span>
+                    </div>
+                    <h3 class="tour-name">Ancestral Wisdom Retreats</h3>
+                    <p class="tour-location"><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                    <p class="tour-excerpt">Learn ancient traditions from the masters who keep them alive.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price">
+                            <span class="price-current">$500.00</span>
+                            <span class="price-old">$750.00</span>
+                        </div>
+                        <a href="#explore" class="btn btn-explore">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 3 - Regenerative Farming -->
+            <div class="tour-card">
+                <div class="tour-images-wrapper">
+                    <div class="tour-image-main">
+                        <img src="assets/slide3.jpg" alt="Regenerative Farming Experiences">
+                        <div class="tour-badge">40% Off</div>
+                        <div class="tour-wishlist">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="tour-thumbnails">
+                        <div class="tour-thumbnail">
+                            <img src="assets/wildlife.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide1.jpg" alt="Thumbnail 2">
+                        </div>
+                        <div class="tour-thumbnail">
+                            <img src="assets/slide2.jpg" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-meta">
+                        <span class="tour-duration"><i class="far fa-clock"></i> 15 days</span>
+                        <span class="tour-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            4.5
+                        </span>
+                    </div>
+                    <h3 class="tour-name">Regenerative Farming Experiences</h3>
+                    <p class="tour-location"><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                    <p class="tour-excerpt">Put your hands in the soil and help restore the earth.</p>
+                    <div class="tour-footer">
+                        <div class="tour-price">
+                            <span class="price-current">$1050.00</span>
+                            <span class="price-old">$1500.00</span>
+                        </div>
+                        <a href="#explore" class="btn btn-explore">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Counter Section -->
+<section class="counter-section">
+    <div class="counter-overlay"></div>
+    <div class="container">
+        <div class="counter-grid">
+            <!-- Counter 1 - Serenesephere Retreats -->
+            <div class="counter-item">
+                <div class="counter-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="counter-number" data-target="500">0</div>
+                <div class="counter-label">Serenesephere Retreats</div>
+            </div>
+
+            <!-- Counter 2 - Serenesephere Circles -->
+            <div class="counter-item">
+                <div class="counter-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <div class="counter-number" data-target="250">0</div>
+                <div class="counter-label">Serenesephere Circles</div>
+            </div>
+
+            <!-- Counter 3 - Serenesephere Markets -->
+            <div class="counter-item">
+                <div class="counter-icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <div class="counter-number" data-target="750">0</div>
+                <div class="counter-label">Serenesephere Markets</div>
+            </div>
+
+            <!-- Counter 4 - Serenesephere Global -->
+            <div class="counter-item">
+                <div class="counter-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="counter-number" data-target="150">0</div>
+                <div class="counter-label">Serenesephere Global</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter-number');
+    const speed = 200; // Animation speed
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+}
+
+// Trigger animation when section is in view
+const counterSection = document.querySelector('.counter-section');
+if (counterSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(counterSection);
+}
+</script>
+
+<!-- Browse by Category Section -->
+<section class="category-section">
+    <div class="container">
+        <div class="category-header">
+            <span class="category-subtitle">Browse by Category</span>
+            <h2 class="category-title">Ready to Begin Your Trip?</h2>
+            <p class="category-description">
+                Take the first step toward stillness, community, and regeneration.
+            </p>
+        </div>
+
+        <div class="category-grid">
+            <!-- Category 1 - History -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide1.jpg" alt="History">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">History</h3>
+                    <p class="category-desc">Academic Exchange</p>
+                </div>
+            </div>
+
+            <!-- Category 2 - Research -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide2.jpg" alt="Research">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Research</h3>
+                    <p class="category-desc">Career Nomad</p>
+                </div>
+            </div>
+
+            <!-- Category 3 - Sister City -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide3.jpg" alt="Sister City">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Sister City Program</h3>
+                    <p class="category-desc">Wellness</p>
+                </div>
+            </div>
+
+            <!-- Category 4 - Wellness -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/wildlife.jpg" alt="Wellness">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Wellness</h3>
+                    <p class="category-desc">Adventure</p>
+                </div>
+            </div>
+
+            <!-- Category 5 - Adventure -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide1.jpg" alt="Adventure">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Adventure</h3>
+                    <p class="category-desc">Beach Life</p>
+                </div>
+            </div>
+
+            <!-- Category 6 - Beach Life -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide2.jpg" alt="Beach Life">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Beach Life</h3>
+                    <p class="category-desc">Wildlife</p>
+                </div>
+            </div>
+
+            <!-- Category 7 - Wildlife -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/wildlife.jpg" alt="Wildlife">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Wildlife</h3>
+                    <p class="category-desc">Foodie</p>
+                </div>
+            </div>
+
+            <!-- Category 8 - Foodie -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide3.jpg" alt="Foodie">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Foodie</h3>
+                    <p class="category-desc">Culture Exchange</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Beliefs Section -->
+<section class="beliefs-section">
+    <div class="beliefs-container">
+        <div class="beliefs-content">
+            <span class="beliefs-subtitle">WHY CHOOSE US</span>
+            <h2 class="beliefs-title">Discover Our Travel Guideline</h2>
+            <p class="beliefs-intro">
+                Our philosophy is rooted in ancient wisdom and modern regeneration.
+            </p>
+            
+            <ul class="beliefs-list">
+                <li class="belief-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>We believe silence is a human right.</span>
+                </li>
+                <li class="belief-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>We believe community is medicine.</span>
+                </li>
+                <li class="belief-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>We believe elders are libraries.</span>
+                </li>
+                <li class="belief-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>We believe the land is our greatest teacher.</span>
+                </li>
+                <li class="belief-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>We believe regeneration is our highest calling.</span>
+                </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-contact">Contact Us</a>
+        </div>
+
+        <div class="beliefs-image">
+            <img src="assets/slide2.jpg" alt="Travel Experience">
+            <div class="beliefs-badge">
+                <span class="badge-label">discover</span>
+                <span class="badge-subtitle">It's Limited Seating! Hurry Up</span>
+                <div class="badge-discount">
+                    <span class="discount-number">45</span>
+                    <span class="discount-percent">% OFF</span>
+                </div>
+                <p class="badge-text">New Experiences in Kenya</p>
+                <a href="#book" class="btn btn-book">Book Now</a>
+            </div>
+        </div>
+    </div>
 </section>
 
     
@@ -710,64 +985,113 @@ document.addEventListener('DOMContentLoaded', function () {
         </section>
     </div>
 
-    
-  <section class="section newsletter-section">
+<!-- Recent Articles & Posts Section -->
+<section class="blog-section">
     <div class="container">
-        <div class="newsletter-content">
-            <h2 class="section-title">Join Our Global Circle</h2>
-            <p class="section-subtitle">
-                Join regenerative journeys that heal you, empower communities, and connect ancient wisdom with modern wellness
+        <div class="blog-header">
+            <span class="blog-subtitle">Our Blogs</span>
+            <h2 class="blog-title">Recent Articles & Posts</h2>
+            <p class="blog-description">
+                Insights, stories, and wisdom from our community and journeys across Africa.
             </p>
+        </div>
 
-            <div class="two-column-layout">
-                <div class="form-column">
-                    <form class="newsletter-form" id="newsletterForm">
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                class="form-input"
-                                placeholder="Your Name"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                type="email"
-                                class="form-input"
-                                placeholder="Your Email Address"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                class="form-input"
-                                placeholder="Your Location (Optional)"
-                            >
-                        </div>
-
-                        <div class="form-checkbox-group">
-                            <input type="checkbox" id="healing-updates" class="form-checkbox" required>
-                            <label for="healing-updates">I'm ready to receive healing wisdom and retreat updates</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-                            Join the Circle
-                        </button>
-                    </form>
+        <div class="blog-grid">
+            <!-- Blog Post 1 - Large -->
+            <div class="blog-card blog-card-large">
+                <div class="blog-image">
+                    <img src="assets/slide1.jpg" alt="Best Places to Visit">
                 </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-author">Admin</span>
+                        <span class="blog-date">Feb 2023</span>
+                        <span class="blog-comments">12 Comment</span>
+                    </div>
+                    <h3 class="blog-post-title">10 Best Places to Visit in Kenya</h3>
+                    <p class="blog-excerpt">
+                        Discover the hidden gems and iconic destinations that make Kenya a transformative 
+                        journey. From the Maasai Mara to coastal paradises, explore the land that heals...
+                    </p>
+                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-                <div class="image-column">
-                    <img src="assets/Join our Globa Circle.jpg" alt="Connecting circles" class="newsletter-image" loading="lazy">
+            <!-- Blog Post 2 - Small -->
+            <div class="blog-card blog-card-small">
+                <div class="blog-image">
+                    <img src="assets/slide2.jpg" alt="Booking a trip">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-author">Admin</span>
+                        <span class="blog-date">Feb 2023</span>
+                        <span class="blog-comments">17 Comment</span>
+                    </div>
+                    <h3 class="blog-post-title">Booking a trip during Corona wise advise</h3>
+                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 - Small -->
+            <div class="blog-card blog-card-small">
+                <div class="blog-image">
+                    <img src="assets/slide3.jpg" alt="Jim Morrison advises">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-author">Admin</span>
+                        <span class="blog-date">Feb 2023</span>
+                        <span class="blog-comments">3 Comment</span>
+                    </div>
+                    <h3 class="blog-post-title">Jim Morrison advises turning out the lights</h3>
+                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Support & Newsletter Section -->
+<section class="support-newsletter-section">
+    <div class="container">
+        <div class="support-newsletter-grid">
+            <!-- Customer Support -->
+            <div class="support-box">
+                <h3 class="support-title">24/7 Customer Support</h3>
+                <p class="support-text">Contact us now to have all of your tour-related question answered.</p>
+                <div class="support-avatars">
+                    <img src="assets/Collins Oswago.png" alt="Support team member" class="avatar">
+                    <img src="assets/Effie Awuor.png" alt="Support team member" class="avatar">
+                    <img src="assets/George Ong'adi.png" alt="Support team member" class="avatar">
+                    <img src="assets/Jochebed Emali.png" alt="Support team member" class="avatar">
+                    <img src="assets/Mack Dawson.png" alt="Support team member" class="avatar">
+                </div>
+                <a href="#chat" class="btn btn-chat">Chat Now</a>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-box">
+                <h3 class="newsletter-title">Sign Up for Our Newsletter</h3>
+                <p class="newsletter-text">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Submit Your Email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-submit">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Illustration -->
+            <div class="support-illustration">
+                <img src="assets/Untitled design (15).png" alt="Travel illustration">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+  
 <script>
     // Smooth scrolling for anchor links (optional — remove if you don't even want this)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -790,7 +1114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="footer-main">
                 <div class="footer-brand">
                    <div class="footer-logo">
-    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" loading="lazy">
+    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
 </div>
 <p class="brand-description">
     Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
