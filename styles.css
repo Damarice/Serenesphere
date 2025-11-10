@@ -4704,3 +4704,690 @@ a:hover,
         font-size: 14px;
     }
 }
+
+
+/* ========================================
+   ENHANCED MOBILE RESPONSIVENESS
+   ======================================== */
+
+/* Mobile-First Base Adjustments */
+@media (max-width: 1024px) {
+    /* Hero Section */
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    /* Destinations Slider */
+    .destinations-header {
+        padding: 0 20px;
+    }
+
+    .destinations-header .section-title {
+        font-size: 36px;
+    }
+
+    /* Activities & Deals */
+    .activities-deals-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .activity-card,
+    .deals-card {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .activity-card-content,
+    .deals-card-content {
+        padding: 35px 40px;
+    }
+
+    /* Tours Section */
+    .tours-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .tours-images-wrapper {
+        height: 250px;
+    }
+
+    .tour-thumbnails {
+        width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Global Typography */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    /* Top Bar */
+    .topbar {
+        padding: 8px 0;
+    }
+
+    .topbar-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .topbar-left {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .topbar-contact {
+        font-size: 12px;
+    }
+
+    /* Navigation */
+    .header {
+        padding: 12px 0;
+    }
+
+    .logo-img {
+        max-height: 45px;
+    }
+
+    /* Features Section */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .feature-title {
+        font-size: 14px;
+    }
+
+    /* Welcome Section */
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .welcome-image {
+        order: -1;
+        height: 300px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .description-text {
+        font-size: 15px;
+    }
+
+    /* Destinations Slider */
+    .destination-slide-card {
+        height: 280px;
+    }
+
+    .destinations-slider-wrapper {
+        padding: 0 20px;
+    }
+
+    .destinations-cta {
+        margin-top: 35px;
+    }
+
+    /* Activities & Deals */
+    .activity-subtitle {
+        font-size: 20px;
+    }
+
+    .activity-description,
+    .deals-description {
+        font-size: 14px;
+    }
+
+    .deals-main-title {
+        font-size: 22px;
+    }
+
+    .deals-title {
+        font-size: 30px;
+    }
+
+    /* Tours Section */
+    .tour-images-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tour-image-main {
+        height: 220px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .tour-thumbnails {
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        gap: 8px;
+    }
+
+    .tour-thumbnail {
+        border-radius: 0;
+    }
+
+    .tour-thumbnail:first-child {
+        border-radius: 0;
+    }
+
+    .tour-thumbnail:last-child {
+        border-radius: 0 0 15px 0;
+    }
+
+    .tour-content {
+        padding: 20px;
+    }
+
+    .tour-name {
+        font-size: 18px;
+    }
+
+    .tour-excerpt {
+        font-size: 13px;
+    }
+
+    /* Counter Section */
+    .counter-section {
+        background-attachment: scroll;
+    }
+
+    .counter-number {
+        font-size: 36px;
+    }
+
+    .counter-label {
+        font-size: 14px;
+    }
+
+    /* Category Section */
+    .category-card {
+        padding: 12px;
+    }
+
+    .category-image {
+        width: 85px;
+        height: 70px;
+    }
+
+    .category-name {
+        font-size: 15px;
+    }
+
+    .category-desc {
+        font-size: 12px;
+    }
+
+    /* Beliefs Section */
+    .beliefs-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .beliefs-image {
+        height: 380px;
+    }
+
+    .belief-item {
+        font-size: 15px;
+    }
+
+    /* Blog Section */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card-large {
+        grid-row: span 1;
+    }
+
+    .blog-card-large .blog-image {
+        height: 250px;
+    }
+
+    .blog-card-small .blog-image {
+        height: 200px;
+    }
+
+    /* Support & Newsletter */
+    .support-newsletter-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .support-illustration {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    /* Newsletter Form */
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    /* Ecosystem Section */
+    .ecosystem-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Destinations Section */
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Stories Section */
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .nav-column {
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Global Adjustments */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 50vh;
+    }
+
+    .btn-tertiary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    /* Features Section */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .feature-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Welcome Section */
+    .greeting-text {
+        font-size: 14px;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .description-text {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    /* Retreats Section */
+    .retreat-card {
+        margin-bottom: 15px;
+    }
+
+    .retreat-title {
+        font-size: 18px;
+    }
+
+    .retreat-content p {
+        font-size: 13px;
+    }
+
+    .price-amount {
+        font-size: 20px;
+    }
+
+    /* Destinations Slider */
+    .destinations-header .section-title {
+        font-size: 26px;
+    }
+
+    .destinations-header .section-description {
+        font-size: 14px;
+    }
+
+    .destination-slide-card {
+        height: 250px;
+    }
+
+    .destination-info h3 {
+        font-size: 18px;
+    }
+
+    .destination-info p {
+        font-size: 13px;
+    }
+
+    /* Activities & Deals */
+    .activity-subtitle {
+        font-size: 18px;
+    }
+
+    .activity-description,
+    .deals-description {
+        font-size: 13px;
+    }
+
+    .deals-main-title {
+        font-size: 20px;
+    }
+
+    .deals-title {
+        font-size: 26px;
+    }
+
+    .activity-card-content,
+    .deals-card-content {
+        padding: 25px;
+    }
+
+    /* Tours Section */
+    .tour-image-main {
+        height: 200px;
+    }
+
+    .tour-thumbnails {
+        height: 70px;
+    }
+
+    .tour-content {
+        padding: 18px;
+    }
+
+    .tour-name {
+        font-size: 17px;
+    }
+
+    .tour-meta {
+        font-size: 12px;
+    }
+
+    .price-current {
+        font-size: 20px;
+    }
+
+    .btn-explore {
+        padding: 9px 20px;
+        font-size: 13px;
+    }
+
+    /* Counter Section */
+    .counter-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .counter-icon i {
+        font-size: 24px;
+    }
+
+    .counter-number {
+        font-size: 32px;
+    }
+
+    .counter-label {
+        font-size: 13px;
+    }
+
+    /* Category Section */
+    .category-card {
+        padding: 10px;
+    }
+
+    .category-image {
+        width: 75px;
+        height: 65px;
+    }
+
+    .category-name {
+        font-size: 14px;
+    }
+
+    .category-desc {
+        font-size: 11px;
+    }
+
+    /* Beliefs Section */
+    .beliefs-title {
+        font-size: 26px;
+    }
+
+    .beliefs-intro {
+        font-size: 14px;
+    }
+
+    .belief-item {
+        font-size: 14px;
+    }
+
+    .beliefs-image {
+        height: 320px;
+    }
+
+    .beliefs-badge {
+        padding: 20px;
+    }
+
+    .discount-number {
+        font-size: 40px;
+    }
+
+    /* Blog Section */
+    .blog-card-large .blog-image,
+    .blog-card-small .blog-image {
+        height: 200px;
+    }
+
+    .blog-content {
+        padding: 18px;
+    }
+
+    .blog-post-title {
+        font-size: 18px;
+    }
+
+    .blog-excerpt {
+        font-size: 13px;
+    }
+
+    /* Support & Newsletter */
+    .support-title,
+    .newsletter-title {
+        font-size: 20px;
+    }
+
+    .support-text,
+    .newsletter-text {
+        font-size: 13px;
+    }
+
+    .support-avatars .avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .newsletter-input {
+        padding: 12px 50px 12px 16px;
+        font-size: 13px;
+    }
+
+    .newsletter-submit {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Ecosystem Section */
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-title {
+        font-size: 18px;
+    }
+
+    /* Footer */
+    .footer-logo img {
+        max-width: 140px;
+    }
+
+    .brand-description {
+        font-size: 13px;
+    }
+
+    .nav-links li {
+        font-size: 13px;
+    }
+
+    .contact-item {
+        font-size: 13px;
+    }
+
+    .partners-slider-wrapper {
+        padding: 0 10px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .hero-section {
+        min-height: 45vh;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .section-title,
+    .tours-title,
+    .category-title,
+    .beliefs-title,
+    .blog-title {
+        font-size: 24px;
+    }
+
+    .destination-slide-card {
+        height: 220px;
+    }
+
+    .activity-card,
+    .deals-card {
+        min-height: 350px;
+    }
+
+    .counter-number {
+        font-size: 28px;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .destination-slide-card {
+        height: 220px;
+    }
+
+    .activity-card,
+    .deals-card {
+        min-height: 320px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn-primary,
+    .btn-tertiary,
+    .btn-destinations,
+    .btn-explore,
+    .btn-activity,
+    .btn-book,
+    .btn-contact,
+    .btn-chat {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .retreat-card:hover,
+    .tour-card:hover,
+    .category-card:hover,
+    .blog-card:hover {
+        transform: none;
+    }
+
+    /* Larger tap areas for navigation */
+    .nav-link {
+        padding: 12px 15px;
+    }
+
+    /* Easier to tap form inputs */
+    .newsletter-input {
+        min-height: 48px;
+    }
+}
