@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .swiper {
+            width: 100%;
+            height: 400px;
+        }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Swiper Test</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/slide1.jpg" alt="Slide 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/slide2.jpg" alt="Slide 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/slide3.jpg" alt="Slide 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/wildlife.jpg" alt="Slide 4">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        console.log('Swiper loaded:', typeof Swiper);
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        console.log('Swiper initialized:', swiper);
+    </script>
+</body>
+</html>

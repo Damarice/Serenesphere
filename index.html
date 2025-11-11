@@ -43,7 +43,7 @@
                 </div>
                 <div class="topbar-contact">
                     <i class="fas fa-phone"></i>
-                    <span>+254 (0) 700 123 456</span>
+                    <span>+1 443-825-6937</span>
                 </div>
             </div>
             <div class="topbar-social">
@@ -63,18 +63,8 @@
             </div>
 
             <ul class="nav-items nav-items-left">
-                <li class="nav-item has-dropdown">
-                    <a href="#retreats" class="nav-link">Retreats</a>
-                    <div class="dropdown-content">
-                        <a href="#kenya-immersion">Nature led Kenya Immersion Retreat March 2026</a>
-                        <a href="#motherland-retreat">Return to Motherland Retreat June 2026</a>
-                        <a href="#iboga-ceremony">Iboga Plant ceremony Retreat August 2026</a>
-                        <a href="#meditate-wild">Meditate in the Wild Retreat October 2026</a>
-                        <a href="#private-retreats">Private Retreats</a>
-                        <a href="#custom-group">Custom Group Retreats</a>
-                        <a href="#intercruise">Intercruise Retreats</a>
-                        <a href="#virtual-experience">Virtual Experience Retreats</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#circles" class="nav-link">Circles</a>
@@ -115,10 +105,8 @@
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#stories" class="nav-link">Stories</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
-                        <a href="#how-we-work">How we Work</a>
-                        <a href="#testimonials">Testimonials</a>
                         <a href="#blog">Blog</a>
                         <a href="#podcast">Podcast</a>
                     </div>
@@ -141,13 +129,8 @@
                         <a href="#global-impact-map-3">Global Impact Map</a>
                     </div>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#contact" class="nav-link">Contact Us</a>
-                    <div class="dropdown-content">
-                        <a href="#get-in-touch">Get In Touch</a>
-                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
-                        <a href="#faq">FAQ</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </nav>
@@ -199,10 +182,8 @@
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="#stories" class="nav-link">Stories</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
-                        <a href="#how-we-work">How we Work</a>
-                        <a href="#testimonials">Testimonials</a>
                         <a href="#blog">Blog</a>
                         <a href="#podcast">Podcast</a>
                     </div>
@@ -225,13 +206,8 @@
                         <a href="#global-impact-map-3">Global Impact Map</a>
                     </div>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#contact" class="nav-link">Contact Us</a>
-                    <div class="dropdown-content">
-                        <a href="#get-in-touch">Get In Touch</a>
-                        <a href="#retreat-booking">Retreat Calendar & Bookings</a>
-                        <a href="#faq">FAQ</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -243,7 +219,7 @@
     <div class="hero-bg-container">
         <iframe 
             class="hero-bg-video" 
-            src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=0&showinfo=0&rel=0&modestbranding=1" 
+            src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=1&showinfo=0&rel=0&modestbranding=1" 
             title="Serenesephere Video" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -419,8 +395,8 @@
     function initSwiper() {
         if (typeof Swiper !== 'undefined' && document.querySelector('.destinations-swiper')) {
             new Swiper('.destinations-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
+                slidesPerView: 'auto',
+                spaceBetween: 25,
                 loop: true,
                 loopedSlides: 10,
                 autoplay: {
@@ -433,28 +409,6 @@
                 grabCursor: true,
                 centeredSlides: false,
                 freeMode: false,
-                breakpoints: {
-                    480: {
-                        slidesPerView: 2.5,
-                        spaceBetween: 15,
-                    },
-                    768: {
-                        slidesPerView: 5,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 7,
-                        spaceBetween: 20,
-                    },
-                    1200: {
-                        slidesPerView: 8,
-                        spaceBetween: 20,
-                    },
-                    1400: {
-                        slidesPerView: 9,
-                        spaceBetween: 20,
-                    },
-                },
             });
             console.log('Destinations swiper initialized inline!');
         } else {
@@ -488,7 +442,7 @@
                     <p class="activity-description">
                         Learn to milk a cow, grind millet, and read the sky. This isn't a tour. It's therapy.
                     </p>
-                    <a href="#experiences" class="btn btn-activity">Discover Our Experiences</a>
+                    <a href="#experiences" class="btn btn-activity">Our Experiences</a>
                 </div>
             </div>
 
@@ -496,11 +450,15 @@
             <div class="deals-card">
                 <div class="deals-card-overlay"></div>
                 <div class="deals-card-content">
-                    <h3 class="deals-main-title">Experience Regeneration in Africa</h3>
+                    <h3 class="deals-main-title">Enjoy Summer Deals</h3>
                     <h2 class="deals-title">Up to 40% Revenue Share!</h2>
                     <p class="deals-description">
                         Your journey does more than restore you—it helps regenerate a community. 
                         We are founded on the principle of reciprocity.
+                    </p>
+                    <p class="deals-description">
+                        This is an investment in your sovereign attention. Our most profound offering—a complete 
+                        digital detox, cultural apprenticeship, and personal transformation.
                     </p>
                     <p class="deals-tagline">When you heal, you help heal the world.</p>
                     <a href="#deals" class="btn btn-deals">Discover</a>
@@ -762,7 +720,7 @@ if (counterSection) {
             <span class="category-subtitle">Browse by Category</span>
             <h2 class="category-title">Ready to Begin Your Trip?</h2>
             <p class="category-description">
-                Take the first step toward stillness, community, and regeneration.
+                Our Serenity-Centered model is built on nine elements of regeneration. Find the journey that speaks to your deepest need for renewal, whether it is spiritual, physical, or communal.
             </p>
         </div>
 
@@ -774,58 +732,69 @@ if (counterSection) {
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">History</h3>
-                    <p class="category-desc">Academic Exchange</p>
+                    <p class="category-desc">Ancestral wisdom & Cultural Preservation</p>
                 </div>
             </div>
 
-            <!-- Category 2 - Research -->
+            <!-- Category 2 - Leadership -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide2.jpg" alt="Research">
+                    <img src="assets/slide2.jpg" alt="Leadership">
                 </div>
                 <div class="category-content">
-                    <h3 class="category-name">Research</h3>
-                    <p class="category-desc">Career Nomad</p>
+                    <h3 class="category-name">Leadership</h3>
+                    <p class="category-desc">Leadership and purpose intensives (vision rituals)</p>
                 </div>
             </div>
 
-            <!-- Category 3 - Sister City -->
+            <!-- Category 3 - Academic Exchange -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide3.jpg" alt="Sister City">
+                    <img src="assets/slide3.jpg" alt="Academic Exchange">
                 </div>
                 <div class="category-content">
-                    <h3 class="category-name">Sister City Program</h3>
-                    <p class="category-desc">Wellness</p>
+                    <h3 class="category-name">Academic Exchange</h3>
+                    <p class="category-desc">Research</p>
                 </div>
             </div>
 
-            <!-- Category 4 - Wellness -->
+            <!-- Category 4 - Career Nomad -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/wildlife.jpg" alt="Wellness">
+                    <img src="assets/wildlife.jpg" alt="Career Nomad">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Career Nomad</h3>
+                    <p class="category-desc">Sister City Program</p>
+                </div>
+            </div>
+
+            <!-- Category 5 - Wellness -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide1.jpg" alt="Wellness">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Wellness</h3>
-                    <p class="category-desc">Adventure</p>
+                    <p class="category-desc">Digital Detox and nervous system regulation</p>
                 </div>
             </div>
 
-            <!-- Category 5 - Adventure -->
+            <!-- Category 6 - Adventure -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide1.jpg" alt="Adventure">
+                    <img src="assets/slide2.jpg" alt="Adventure">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Adventure</h3>
-                    <p class="category-desc">Beach Life</p>
+                    <p class="category-desc">Regenerative Farming & Land based skills</p>
                 </div>
             </div>
 
-            <!-- Category 6 - Beach Life -->
+            <!-- Category 7 - Beach Life -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide2.jpg" alt="Beach Life">
+                    <img src="assets/wildlife.jpg" alt="Beach Life">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Beach Life</h3>
@@ -833,25 +802,47 @@ if (counterSection) {
                 </div>
             </div>
 
-            <!-- Category 7 - Wildlife -->
+            <!-- Category 8 - Nature Connection -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/wildlife.jpg" alt="Wildlife">
+                    <img src="assets/slide3.jpg" alt="Nature Connection">
                 </div>
                 <div class="category-content">
-                    <h3 class="category-name">Wildlife</h3>
-                    <p class="category-desc">Foodie</p>
+                    <h3 class="category-name">Nature Connection</h3>
+                    <p class="category-desc">Nature connection & Ecological Literacy</p>
                 </div>
             </div>
 
-            <!-- Category 8 - Foodie -->
+            <!-- Category 9 - Foodie -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide3.jpg" alt="Foodie">
+                    <img src="assets/slide1.jpg" alt="Foodie">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Foodie</h3>
-                    <p class="category-desc">Culture Exchange</p>
+                    <p class="category-desc">Farm-to-table boarding & Indigenous cooking</p>
+                </div>
+            </div>
+
+            <!-- Category 10 - Culture Exchange -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide2.jpg" alt="Culture Exchange">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Culture Exchange</h3>
+                    <p class="category-desc">Romance</p>
+                </div>
+            </div>
+
+            <!-- Category 11 - Romance -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="assets/slide3.jpg" alt="Romance">
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Romance</h3>
+                    <p class="category-desc">Reconnecting with self and partner through shared stillness</p>
                 </div>
             </div>
         </div>
@@ -865,7 +856,7 @@ if (counterSection) {
             <span class="beliefs-subtitle">WHY CHOOSE US</span>
             <h2 class="beliefs-title">Discover Our Travel Guideline</h2>
             <p class="beliefs-intro">
-                Our philosophy is rooted in ancient wisdom and modern regeneration.
+                We are not a travel agency; we are a movement. We offer what the industrialized world cannot produce:Stillness, Meaning, and Culture. Our guideline is simple: Regeneration Over Extraction. Every journey leaves the land, the community, and the traveler better than before.
             </p>
             
             <ul class="beliefs-list">
@@ -921,18 +912,18 @@ if (counterSection) {
                     <div class="story-card">
                         <div class="text-story">
                             <div class="story-quote">
-                                The Circle practices didn't just heal my anxiety—they reconnected me to my ancestors' wisdom and my community's strength.
+                                "I came tired and depleted. I left with my soul recalibrated. This was not a vacation; it was a homecoming. I finally understood what it meant to be still."
                             </div>
                             <div class="story-author">
                                 <div class="author-avatar avatar-kemi"></div>
                                 <div class="author-info">
-                                    <h4>Kemi M.</h4>
-                                    <span>Lagos Circle Leader</span>
+                                    <h4>Tomas Adison</h4>
+                                    <span>Tech Founder</span>
                                 </div>
                             </div>
                             <div class="story-tags">
-                                <span class="tag">Anxiety Healing</span>
-                                <span class="tag">Community</span>
+                                <span class="tag">Soul Recalibration</span>
+                                <span class="tag">Homecoming</span>
                             </div>
                         </div>
                     </div>
@@ -942,42 +933,22 @@ if (counterSection) {
                     <div class="story-card">
                         <div class="text-story">
                             <div class="story-quote">
-                                I thought I had to choose between my African identity and professional success. The Framework showed me they're inseparable.
+                                "The intentional disconnection was the medicine I needed. Learning to grind millet and sit by the fire was more therapeutic than any spa. I returned with a profound sense of rootedness."
                             </div>
                             <div class="story-author">
                                 <div class="author-avatar avatar-esi"></div>
                                 <div class="author-info">
-                                    <h4>Esi N.</h4>
-                                    <span>London Facilitator</span>
+                                    <h4>Jenny Wilson</h4>
+                                    <span>Trauma Therapist</span>
                                 </div>
                             </div>
                             <div class="story-tags">
-                                <span class="tag">Identity</span>
-                                <span class="tag">Success</span>
+                                <span class="tag">Digital Detox</span>
+                                <span class="tag">Rootedness</span>
                             </div>
                         </div>
                     </div>
 
-                
-                    <!-- Text Story 3 -->
-                    <div class="story-card">
-                        <div class="text-story">
-                            <div class="story-quote">
-                                Our entire organization shifted when we embraced Ubuntu principles. Productivity soared, but more importantly, people felt seen.
-                            </div>
-                            <div class="story-author">
-                                <div class="author-avatar avatar-thabo"></div>
-                                <div class="author-info">
-                                    <h4>Thabo O.</h4>
-                                    <span>Corporate Partner, Cape Town</span>
-                                </div>
-                            </div>
-                            <div class="story-tags">
-                                <span class="tag">Leadership</span>
-                                <span class="tag">Ubuntu</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 
@@ -1000,54 +971,59 @@ if (counterSection) {
             <!-- Blog Post 1 - Large -->
             <div class="blog-card blog-card-large">
                 <div class="blog-image">
-                    <img src="assets/slide1.jpg" alt="Best Places to Visit">
+                    <img src="assets/slide1.jpg" alt="Serenity-Centered Model">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
                         <span class="blog-author">Admin</span>
-                        <span class="blog-date">Feb 2023</span>
-                        <span class="blog-comments">12 Comment</span>
+                        <span class="blog-date">Nov 2025</span>
+                        <span class="blog-comments">24 Comment</span>
                     </div>
-                    <h3 class="blog-post-title">10 Best Places to Visit in Kenya</h3>
+                    <h3 class="blog-post-title">The Serenity-Centered Model: 9 Elements of Vitality Regeneration</h3>
                     <p class="blog-excerpt">
-                        Discover the hidden gems and iconic destinations that make Kenya a transformative 
-                        journey. From the Maasai Mara to coastal paradises, explore the land that heals...
+                        Explore the framework that harnesses African intelligence and ritual to restore internal 
+                        coherence and community connection.
                     </p>
-                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    <a href="blog-detail.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
             <!-- Blog Post 2 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/slide2.jpg" alt="Booking a trip">
+                    <img src="assets/slide2.jpg" alt="Disconnecting is the New Flex">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
                         <span class="blog-author">Admin</span>
-                        <span class="blog-date">Feb 2023</span>
-                        <span class="blog-comments">17 Comment</span>
+                        <span class="blog-date">Nov 2025</span>
+                        <span class="blog-comments">18 Comment</span>
                     </div>
-                    <h3 class="blog-post-title">Booking a trip during Corona wise advise</h3>
-                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="blog-post-title">Why Disconnecting is the New Flex: The Economic Case for Detox Tourism</h3>
+                    <a href="blog-detail.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
             <!-- Blog Post 3 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/slide3.jpg" alt="Jim Morrison advises">
+                    <img src="assets/slide3.jpg" alt="Healing Intergenerational Trauma">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
                         <span class="blog-author">Admin</span>
-                        <span class="blog-date">Feb 2023</span>
-                        <span class="blog-comments">3 Comment</span>
+                        <span class="blog-date">Nov 2025</span>
+                        <span class="blog-comments">32 Comment</span>
                     </div>
-                    <h3 class="blog-post-title">Jim Morrison advises turning out the lights</h3>
-                    <a href="#read-more" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="blog-post-title">Healing Intergenerational Trauma Through Ancestral Journeys</h3>
+                    <a href="blog-detail.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+        </div>
+
+        <!-- View All Blogs Button -->
+        <div class="blog-cta">
+            <a href="blog.html" class="btn btn-view-all-blogs">View All Blogs</a>
         </div>
     </div>
 </section>
@@ -1059,7 +1035,7 @@ if (counterSection) {
             <!-- Customer Support -->
             <div class="support-box">
                 <h3 class="support-title">24/7 Customer Support</h3>
-                <p class="support-text">Contact us now to have all of your tour-related question answered.</p>
+                <p class="support-text">Our team is here to help you choose the journey that aligns with your need for regeneration. We pre-qualify all travelers to ensure values alignment and a truly transformative experience</p>
                 <div class="support-avatars">
                     <img src="assets/Collins Oswago.png" alt="Support team member" class="avatar">
                     <img src="assets/Effie Awuor.png" alt="Support team member" class="avatar">
@@ -1180,7 +1156,7 @@ if (counterSection) {
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+254 704 405 018</span>
+                            <span>+1 443-825-6937</span>
                         </div>
                     </div>
                 </div>

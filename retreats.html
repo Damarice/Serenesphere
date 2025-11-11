@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retreats - Serenesephere</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="retreats.css?v=3">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 443-825-6937</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="whoweare.html">Who We Are</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="retreats-hero">
+            <div class="retreats-hero-overlay"></div>
+            <div class="retreats-hero-content">
+                <p class="retreats-hero-pretitle" style="text-transform: none !important; font-variant: normal !important; font-variant-caps: normal !important;"><span style="text-transform: none !important;">E</span>xplore <span style="text-transform: none !important;">T</span>he <span style="text-transform: none !important;">W</span>orld</p>
+                <h1 class="retreats-hero-title" style="text-transform: none !important; font-variant: normal !important; font-variant-caps: normal !important;"><span style="text-transform: none !important;">F</span>ind <span style="text-transform: none !important;">T</span>he <span style="text-transform: none !important;">N</span>ext <span style="text-transform: none !important;">R</span>etreat</h1>
+                <p class="retreats-hero-description">
+                    We do not offer generic retreats; we offer curated, transformative journeys. Each retreat is chosen for its deep connection to ancestral wisdom, its commitment to ecological health, and the strength of its community partners. Explore the experiences that will lead you back to stillness.
+                </p>
+            </div>
+        </section>
+
+        <!-- Programs Slideshow -->
+        <section class="programs-slideshow">
+            <div class="container programs-container">
+                <div class="programs-header">
+                    <span class="programs-subtitle">Our Programs</span>
+                    <h2 class="programs-main-title">Explore Our Retreat Experiences</h2>
+                </div>
+            </div>
+            <div class="swiper programs-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Program 1 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/slide1.jpg" alt="Digital Detox Immersions">
+                                <div class="program-rating">★ 4.5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Digital Detox Immersions</h3>
+                                <p class="program-duration">10 Days</p>
+                                <p class="program-description">Phone free stay in a rural village focused on nervous system regulation and reconnection to natural rhythm</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/slide2.jpg" alt="Ancestral Wisdom Retreat">
+                                <div class="program-rating">★ 5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Ancestral Wisdom Retreat</h3>
+                                <p class="program-duration">12 Days</p>
+                                <p class="program-description">Deep dives into specific traditions (storytelling, herbalism with local led traditional elders and teachers)</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/slide3.jpg" alt="Regenerative Farming Experience">
+                                <div class="program-rating">★ 4.5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Regenerative Farming Experience</h3>
+                                <p class="program-duration">12 Days</p>
+                                <p class="program-description">Hands on participation in permaculture and agroforestry projects for climate action skills.</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 4 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/wildlife.jpg" alt="Healing Pilgrimage Diaspora">
+                                <div class="program-rating">★ 5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Healing Pilgrimage Diaspora</h3>
+                                <p class="program-duration">12 Days</p>
+                                <p class="program-description">Curated journeys to ancestral lands for intergenerational healing and sense of belonging</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 5 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/ocean meditation.jpg" alt="Leadership & Purpose Intensive">
+                                <div class="program-rating">★ 4.5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Leadership & Purpose Intensive</h3>
+                                <p class="program-duration">12 Days</p>
+                                <p class="program-description">Retreat for changemakers to reconnect with purpose through nature and council circles.</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 6 -->
+                    <div class="swiper-slide">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="assets/slide1.jpg" alt="Regenerative Residency Program">
+                                <div class="program-rating">★ 5</div>
+                            </div>
+                            <div class="program-content">
+                                <div class="program-meta">14 Hotel - 22 Cars - 18 Tours - 95 Activity</div>
+                                <h3 class="program-title">Regenerative Residency Program</h3>
+                                <p class="program-duration">3-6 Months</p>
+                                <p class="program-description">A 3–6 month program for artists, writers, and researchers to live in community while creating work that honors the land and culture. This is a deep commitment to creative and personal regeneration. Apply now for the next intake.</p>
+                                <a href="retreat-detail.html" class="btn-discover">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support & Newsletter Section -->
+        <section class="support-newsletter-section">
+            <div class="container">
+                <div class="support-newsletter-grid">
+                    <!-- Customer Support -->
+                    <div class="support-box">
+                        <h3 class="support-title">24/7 Customer Support</h3>
+                        <p class="support-text">Our team is here to help you choose the journey that aligns with your need for regeneration. We pre-qualify all travelers to ensure values alignment and a truly transformative experience</p>
+                        <div class="support-avatars">
+                            <img src="assets/Collins Oswago.png" alt="Support team member" class="avatar">
+                            <img src="assets/Effie Awuor.png" alt="Support team member" class="avatar">
+                            <img src="assets/George Ong'adi.png" alt="Support team member" class="avatar">
+                            <img src="assets/Jochebed Emali.png" alt="Support team member" class="avatar">
+                            <img src="assets/Mack Dawson.png" alt="Support team member" class="avatar">
+                        </div>
+                        <a href="#chat" class="btn btn-chat">Chat Now</a>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="newsletter-box">
+                        <h3 class="newsletter-title">Sign Up for Our Newsletter</h3>
+                        <p class="newsletter-text">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Submit Your Email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Illustration -->
+                    <div class="support-illustration">
+                        <img src="assets/Untitled design (15).png" alt="Travel illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+                    </div>
+                    <p class="brand-description">
+                        Serenesephere is a global wellness community connecting people with nature-led healing, 
+                        indigenous wisdom, and cultural regeneration.
+                    </p>
+                    <div class="social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-column">
+                    <h4>Retreats</h4>
+                    <ul class="nav-links">
+                        <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
+                        <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
+                        <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
+                        <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
+                        <li><a href="#private-retreats">Private Retreats</a></li>
+                        <li><a href="#custom-group">Custom Group Retreats</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-column">
+                    <h4>Community & Resources</h4>
+                    <ul class="nav-links">
+                        <li><a href="#join-circle">Join Local Circles</a></li>
+                        <li><a href="#global-chapters">Global Chapters</a></li>
+                        <li><a href="#conservation">Conservation Initiatives</a></li>
+                        <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-column">
+                    <h4>About & Contact</h4>
+                    <ul class="nav-links">
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog & Podcast</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@serenesephere.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 443-825-6937</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Programs Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.programs-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                speed: 800,
+                grabCursor: true,
+                centeredSlides: false,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 25
+                    },
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 30
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

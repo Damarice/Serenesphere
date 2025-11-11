@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retreat Details - Serenesephere</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="retreat-detail.css">
+    
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 443-825-6937</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="whoweare.html">Who We Are</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="detail-container">
+            <!-- Left Column - Main Content -->
+            <div class="detail-main">
+                <!-- Hero Image -->
+                <div class="detail-hero-image">
+                    <img src="assets/slide1.jpg" alt="Digital Detox Immersions" id="retreatMainImage">
+                </div>
+
+                <!-- Location and Wishlist -->
+                <div class="detail-header">
+                    <div class="detail-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="retreatLocation">Zanzibar Tanzania</span>
+                    </div>
+                    <button class="wishlist-btn">
+                        <i class="far fa-heart"></i> Add to Wishlist
+                    </button>
+                </div>
+
+                <!-- Title -->
+                <h1 class="detail-title" id="retreatTitle">Digital Detox Immersions</h1>
+
+                <!-- Rating -->
+                <div class="detail-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.5 (51 Reviews)</span>
+                </div>
+
+                <!-- Description -->
+                <div class="detail-description">
+                    <p id="retreatDescription">
+                        Phone free stay in a rural village focused on nervous system regulation and reconnection to natural rhythm. 
+                        This immersive experience takes you away from the digital world and into the heart of authentic village life. 
+                        You'll learn traditional practices, participate in daily rhythms of the community, and discover what it means 
+                        to truly disconnect and reconnect with yourself and nature.
+                    </p>
+                    <p>
+                        Our Digital Detox Immersion is designed for those feeling overwhelmed by constant connectivity. Through guided 
+                        practices in mindfulness, nature connection, and community integration, you'll reset your nervous system and 
+                        rediscover the peace that comes from living in harmony with natural cycles.
+                    </p>
+                </div>
+
+                <!-- Advance Facilities -->
+                <div class="detail-section">
+                    <h2 class="section-heading">What's Included</h2>
+                    <p class="section-text">
+                        This retreat includes comfortable eco-friendly accommodation, three organic meals daily prepared with locally 
+                        sourced ingredients, guided meditation and mindfulness sessions, traditional craft workshops, nature walks with 
+                        local guides, and full integration support before and after your stay.
+                    </p>
+                    <p class="section-text">
+                        You'll also participate in daily community activities such as farming, cooking, storytelling circles, and 
+                        traditional ceremonies. All activities are designed to help you slow down, connect deeply, and experience 
+                        the healing power of simplicity.
+                    </p>
+                </div>
+
+                <!-- Gallery Images -->
+                <div class="detail-gallery">
+                    <div class="gallery-item">
+                        <img src="assets/slide2.jpg" alt="Gallery 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/slide3.jpg" alt="Gallery 2">
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="detail-section">
+                    <h2 class="section-heading">Daily Schedule</h2>
+                    <p class="section-text">
+                        Each day begins at sunrise with meditation and gentle movement. Mornings are spent in community activities 
+                        and learning traditional skills. Afternoons offer time for rest, reflection, and nature connection. Evenings 
+                        gather the community for shared meals, storytelling, and cultural exchange.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column - Sidebar -->
+            <div class="detail-sidebar">
+                <!-- Search Box -->
+                <div class="sidebar-widget search-widget">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Pricing Widget -->
+                <div class="sidebar-widget pricing-widget">
+                    <h3 class="widget-title">Pricing</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="5000" value="2500" class="price-slider">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>$5000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour Information -->
+                <div class="sidebar-widget info-widget">
+                    <h3 class="widget-title">Tour Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Max Guests</span>
+                        <span class="info-value">15</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Minimum Age</span>
+                        <span class="info-value">18+</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Tour Location</span>
+                        <span class="info-value">Kenya</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Language</span>
+                        <span class="info-value">English</span>
+                    </div>
+                </div>
+
+                <!-- Rating Widget -->
+                <div class="sidebar-widget rating-widget">
+                    <h3 class="widget-title">Rating</h3>
+                    <div class="rating-option">
+                        <input type="checkbox" id="rating5">
+                        <label for="rating5">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(51 Reviews)</span>
+                        </label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="checkbox" id="rating4">
+                        <label for="rating4">
+                            <span class="stars">★★★★</span>
+                            <span class="review-count">(1.5 k Reviews)</span>
+                        </label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="checkbox" id="rating3">
+                        <label for="rating3">
+                            <span class="stars">★★★</span>
+                            <span class="review-count">(150 Reviews)</span>
+                        </label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="checkbox" id="rating2">
+                        <label for="rating2">
+                            <span class="stars">★★</span>
+                            <span class="review-count">(25 Reviews)</span>
+                        </label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="checkbox" id="rating1">
+                        <label for="rating1">
+                            <span class="stars">★</span>
+                            <span class="review-count">(08 Reviews)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Book Now Button -->
+                <div class="sidebar-widget">
+                    <a href="#book" class="btn btn-book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+                    </div>
+                    <p class="brand-description">
+                        Serenesephere is a global wellness community connecting people with nature-led healing, 
+                        indigenous wisdom, and cultural regeneration.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

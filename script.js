@@ -142,8 +142,8 @@ function initDestinationsSwiper() {
     if (typeof Swiper !== 'undefined') {
         console.log('Initializing destinations swiper...');
         const destinationsSwiper = new Swiper('.destinations-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            slidesPerView: 'auto',
+            spaceBetween: 25,
             loop: true,
             loopedSlides: 10,
             autoplay: {
@@ -156,28 +156,6 @@ function initDestinationsSwiper() {
             grabCursor: true,
             centeredSlides: false,
             freeMode: false,
-            breakpoints: {
-                480: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 15,
-                },
-                768: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 7,
-                    spaceBetween: 20,
-                },
-                1200: {
-                    slidesPerView: 8,
-                    spaceBetween: 20,
-                },
-                1400: {
-                    slidesPerView: 9,
-                    spaceBetween: 20,
-                },
-            },
         });
         console.log('Destinations swiper initialized successfully!');
         return true;

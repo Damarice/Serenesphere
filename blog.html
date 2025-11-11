@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Serenesephere</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 443-825-6937</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#circles" class="nav-link">Circles</a>
+                    <div class="dropdown-content">
+                        <a href="#join-circle">Join a Local Circle</a>
+                        <a href="#conservation">Conservation Initiatives</a>
+                        <a href="#train-trainer">Train the Trainer Program</a>
+                        <a href="#community-guidelines">Community Guidelines</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#markets" class="nav-link">Markets</a>
+                    <div class="dropdown-content">
+                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
+                        <a href="#wholesale">Wholesale Inquiries</a>
+                        <a href="#digital-modules">Digital Learning Modules</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#chapters" class="nav-link">Chapters</a>
+                    <div class="dropdown-content">
+                        <a href="#us-programs">US Programs</a>
+                        <a href="#global-impact">Global Impact Map</a>
+                        <a href="#sister-cities">Sister Cities Programs</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="index.html" class="logo">
+                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item has-dropdown">
+                    <a href="#about-us" class="nav-link">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="whoweare.html">Who We Are</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#indigenous-knowledge">Indigenous Knowledge Systems</a>
+                        <a href="#cultural-heritage">Cultural Heritage & History</a>
+                        <a href="#publications">Books & Publications</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#connect" class="nav-link">Connect</a>
+                    <div class="dropdown-content">
+                        <a href="#become-partner">Become a Partner</a>
+                        <a href="#champions">Serenesephere Champions</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <div class="blog-hero-overlay"></div>
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title">Blog Grid</h1>
+                <div class="blog-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span>Blog Grid</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="blog-content-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/slide1.jpg" alt="Serenity-Centered Model">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">12 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">The Serenity-Centered Model: 9 Elements of Vitality Regeneration</h3>
+                            <p class="blog-post-excerpt">
+                                Explore the framework that harnesses African intelligence and ritual to restore internal 
+                                coherence and community connection.
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/slide2.jpg" alt="Disconnecting is the New Flex">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">04 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">Why Disconnecting is the New Flex: The Economic Case for Detox Tourism</h3>
+                            <p class="blog-post-excerpt">
+                                Understand the value inversion strategy that positions Africa as the global leader in 
+                                providing meaning, time, and peace.
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/slide3.jpg" alt="Healing Intergenerational Trauma">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">17 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">Homecoming: Healing Intergenerational Trauma Through Ancestral Journeys</h3>
+                            <p class="blog-post-excerpt">
+                                A deep dive into our Diaspora-specific pilgrimages and the reclamation of identity and belonging.
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/wildlife.jpg" alt="Indigenous Knowledge Systems">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">08 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">Indigenous Knowledge Systems</h3>
+                            <p class="blog-post-excerpt">
+                                The origin of the Kwanzaa Celebration to East Africa Cultural Heritage and History
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/ocean meditation.jpg" alt="Cultural Heritage">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">15 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">Cultural Heritage and History</h3>
+                            <p class="blog-post-excerpt">
+                                Exploring the rich tapestry of African cultural heritage and its impact on modern wellness practices.
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 6 -->
+                    <div class="blog-post-card">
+                        <div class="blog-post-image">
+                            <img src="assets/slide1.jpg" alt="Regenerative Travel">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span class="blog-author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="blog-date">Feb 2023</span>
+                                <span class="blog-comments">22 Comment</span>
+                            </div>
+                            <h3 class="blog-post-title">The Future of Regenerative Travel</h3>
+                            <p class="blog-post-excerpt">
+                                How conscious tourism is reshaping the travel industry and creating meaningful connections.
+                            </p>
+                            <a href="blog-detail.html" class="btn-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="blog-pagination">
+                    <button class="pagination-btn pagination-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="pagination-btn pagination-number active">1</button>
+                    <button class="pagination-btn pagination-number">2</button>
+                    <button class="pagination-btn pagination-number">3</button>
+                    <button class="pagination-btn pagination-number">4</button>
+                    <button class="pagination-btn pagination-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support & Newsletter Section -->
+        <section class="support-newsletter-section">
+            <div class="container">
+                <div class="support-newsletter-grid">
+                    <!-- Customer Support -->
+                    <div class="support-box">
+                        <h3 class="support-title">24/7 Customer Support</h3>
+                        <p class="support-text">Our team is here to help you choose the journey that aligns with your need for regeneration. We pre-qualify all travelers to ensure values alignment and a truly transformative experience</p>
+                        <div class="support-avatars">
+                            <img src="assets/Collins Oswago.png" alt="Support team member" class="avatar">
+                            <img src="assets/Effie Awuor.png" alt="Support team member" class="avatar">
+                            <img src="assets/George Ong'adi.png" alt="Support team member" class="avatar">
+                            <img src="assets/Jochebed Emali.png" alt="Support team member" class="avatar">
+                            <img src="assets/Mack Dawson.png" alt="Support team member" class="avatar">
+                        </div>
+                        <a href="#chat" class="btn btn-chat">Chat Now</a>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="newsletter-box">
+                        <h3 class="newsletter-title">Sign Up for Our Newsletter</h3>
+                        <p class="newsletter-text">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Submit Your Email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Illustration -->
+                    <div class="support-illustration">
+                        <img src="assets/Untitled design (15).png" alt="Travel illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+                    </div>
+                    <p class="brand-description">
+                        Serenesephere is a global wellness community connecting people with nature-led healing, 
+                        indigenous wisdom, and cultural regeneration.
+                    </p>
+                    <div class="social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-column">
+                    <h4>Retreats</h4>
+                    <ul class="nav-links">
+                        <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
+                        <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
+                        <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
+                        <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
+                        <li><a href="#private-retreats">Private Retreats</a></li>
+                        <li><a href="#custom-group">Custom Group Retreats</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-column">
+                    <h4>Community & Resources</h4>
+                    <ul class="nav-links">
+                        <li><a href="#join-circle">Join Local Circles</a></li>
+                        <li><a href="#global-chapters">Global Chapters</a></li>
+                        <li><a href="#conservation">Conservation Initiatives</a></li>
+                        <li><a href="#wellness-tools">Wellness Tools & Artifacts</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-column">
+                    <h4>About & Contact</h4>
+                    <ul class="nav-links">
+                        <li><a href="whoweare.html">Who We Are</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="blog.html">Blog & Podcast</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@serenesephere.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 443-825-6937</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
