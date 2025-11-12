@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story - Serenesephere</title>
+    <title>Serenesephere</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,37 +11,367 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-<style>
-    :root {
-        --deep-teal: #0C4F58;
-        --bright-cyan: #30DDE0;
-        --secondary-teal: #2BA6A0;
-        --pure-white: #FFFFFF;
-        --deep-gray: #333333;
-        --light-gray: #F8F9FA;
-        --accent-gray: #666666;
-        --gold-accent: #D4AF37;
-        --font-heading: 'Playfair Display', serif;
-        --font-body: 'Montserrat', sans-serif;
-        --font-secondary: 'Open Sans', sans-serif;
-    }
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js" defer></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    body {
-        font-family: var(--font-body);
-        line-height: 1.6;
-        color: var(--deep-gray);
-        overflow-x: hidden;
-    }
+ <style>
+   /* =======================
+   CSS Variables - Traverze Vibe
+======================= */
+:root {
+  --deep-teal: #0C4F58;
+  --bright-cyan-glow: #30DDE0;
+  --secondary-teal: #2BA6A0;
+  --pure-white: #FFFFFF;
+  --deep-gray: #333333;
+  --light-gray: #F8F9FA;
+  --accent-gray: #666666;
+  --hover-blue: #2BA6A0;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --border-color: #ddd;
+  --text-light: #777;
+  --rating-gold: #f5c518;
+}
 
-</style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--deep-gray);
+  line-height: 1.7;
+  background: var(--deep-teal);
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 50%, var(--deep-teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(48, 221, 224, 0.15) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(43, 166, 160, 0.12) 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.hero-subtitle {
+  color: var(--bright-cyan-glow);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--pure-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-title span {
+  color: var(--bright-cyan-glow);
+}
+
+.hero-description {
+  color: var(--light-gray);
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  animation: fadeInUp 1.2s ease 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   Itinerary Section
+======================= */
+.itinerary-section {
+  padding: 6rem 2rem;
+  background: var(--light-gray);
+  position: relative;
+}
+
+.itinerary-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.itinerary-section .section-title {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--deep-teal);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--secondary-teal);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+/* Grid Layout */
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.itinerary-day {
+  background: var(--pure-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.itinerary-day:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Day Header with Gradient Background */
+.day-header {
+  padding: 3rem 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.day-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.itinerary-day:nth-child(even) .day-header {
+  background: linear-gradient(135deg, var(--secondary-teal) 0%, var(--bright-cyan-glow) 100%);
+}
+
+.itinerary-day:nth-child(3n) .day-header {
+  background: linear-gradient(135deg, var(--deep-teal) 0%, var(--hover-blue) 100%);
+}
+
+.day-number {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.itinerary-day h3 {
+  font-size: 2rem;
+  color: var(--pure-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Day Content */
+.day-content {
+  padding: 2.5rem;
+}
+
+.itinerary-day ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.itinerary-day ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--deep-gray);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+.itinerary-day ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-teal);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.itinerary-day:nth-child(even) ul li::before {
+  color: var(--bright-cyan-glow);
+}
+
+.itinerary-day:nth-child(3n) ul li::before {
+  color: var(--hover-blue);
+}
+
+.itinerary-day ul li:hover {
+  padding-left: 2.5rem;
+  color: var(--deep-teal);
+}
+
+.itinerary-day ul li:hover::before {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .itinerary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .itinerary-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .itinerary-section .section-title {
+    font-size: 2.5rem;
+  }
+
+  .itinerary-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .day-header {
+    padding: 2rem 1.75rem 1.5rem;
+  }
+
+  .itinerary-day h3 {
+    font-size: 1.65rem;
+  }
+
+  .day-content {
+    padding: 2rem 1.75rem;
+  }
+  
+  .itinerary-day ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .itinerary-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .itinerary-day h3 {
+    font-size: 1.5rem;
+  }
+
+  .day-header {
+    padding: 1.75rem 1.5rem 1.25rem;
+  }
+
+  .day-content {
+    padding: 1.75rem 1.5rem;
+  }
+}
+  </style>
 
 </head>
 
@@ -115,16 +445,15 @@
                 </li>
             </ul>
 
-            <a href="index.html" class="logo">
-                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
             </a>
 
             <ul class="nav-items nav-items-right">
                 <li class="nav-item has-dropdown">
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
-                        <a href="ourstory.html">Our Story</a>
-                        <a href="ourmission.html">Our Mission</a>
+                        <a href="whoweare.html">Who We Are</a>
                         <a href="nine-elements.html">The Nine Elements</a>
                     </div>
                 </li>
@@ -209,8 +538,7 @@
                 <li class="nav-item has-dropdown">
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
-                        <a href="ourstory.html">Our Story</a>
-                        <a href="ourmission.html">Our Mission</a>
+                        <a href="whoweare.html">Who We Are</a>
                         <a href="nine-elements.html">The Nine Elements</a>
                     </div>
                 </li>
@@ -253,12 +581,208 @@
         </div>
     </header>
 
+    <main>
+       
+        <section class="hero">
+  <div class="hero-content">
+    <div class="hero-subtitle">Experience Kenya</div>
+    <h1 class="hero-title">10 Days of <span>Culture</span>, Adventure & <span>Discovery</span></h1>
+    <p class="hero-description">Immerse yourself in the vibrant heart of East Africa. From Nairobi's urban energy to the Maasai Mara's untamed wilderness.</p>
+  </div>
+</section>
+
+<section class="itinerary-section" id="itinerary">
+  <div class="container">
+    <h2 class="section-title">Your Journey Awaits</h2>
+    <div class="section-subtitle">Day by Day Itinerary</div>
+    
+    <div class="itinerary-grid">
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 01</div>
+          <h3>Nairobi</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Guests arrive at JKIA (3:00am/4:00am)</li>
+            <li>Breakfast & Lunch at the hotel</li>
+            <li>Meet and greet (12noon or 5:00pm)</li>
+            <li>Soft jazz music/other entertainment</li>
+            <li>Dinner at the hotel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 02</div>
+          <h3>Nairobi → Nyeri</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Visit Nairobi Museum</li>
+            <li>Visit Giraffe Center</li>
+            <li>Tour Ubuntu Kreative Village</li>
+            <li>Lunch at Ubuntu</li>
+            <li>Afternoon drive to Nyeri (1–2 activities)</li>
+            <li>Evening campfire with storytelling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 03</div>
+          <h3>Nyeri → Kisumu → Homabay → Rusinga</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Check in at ecolodges around Mt. Kenya</li>
+            <li>Forest walks</li>
+            <li>Kikuyu/Slave history tour</li>
+            <li>Lunch in Nyeri</li>
+            <li>Flight to Kisumu, transfer to Homabay & Rusinga</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 03 & 04</div>
+          <h3>Rusinga</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Fishing and bird watching</li>
+            <li>Cooking local food onsite</li>
+            <li>Tom Mboya history site</li>
+            <li>Local women craft making</li>
+            <li>Luo dancers (Dudu/Ramogi)</li>
+            <li>Visit Suba cultural center</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 04</div>
+          <h3>Nandi</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Transfer to Nandi</li>
+            <li>Lunch in Nandi</li>
+            <li>Meet athletes & train/jog together</li>
+            <li>Dinner in Nandi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 05</div>
+          <h3>Great Rift Valley</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Tea party along Kericho plantations</li>
+            <li>Visit Lake Nakuru</li>
+            <li>Lunch in Nakuru</li>
+            <li>Check in Naivasha</li>
+            <li>Dinner & bonfire night</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 06</div>
+          <h3>Maasai Mara</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Early transfer to Mara</li>
+            <li>Check in at Salt Lake Eco Lodge</li>
+            <li>Evening safari drive</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 07</div>
+          <h3>Maasai Mara</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Early safari drive & bush breakfast</li>
+            <li>Hot air balloon safari</li>
+            <li>Lunch at the lodge</li>
+            <li>Visit Maasai village & Dumu dance</li>
+            <li>Photography & birding safari</li>
+            <li>Bonfire night</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 08</div>
+          <h3>Nairobi → Watamu</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Drive back to Nairobi, Rift escarpment stopover</li>
+            <li>Shopping for local crafts</li>
+            <li>Transfer to Watamu</li>
+            <li>Beach rest, henna painting, madafu drinks</li>
+            <li>Dinner by the beach</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 09</div>
+          <h3>Watamu</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Morning yoga at the beach</li>
+            <li>Lake conservation project</li>
+            <li>Farm-to-table lunch</li>
+            <li>Evening rest & massage therapy (optional)</li>
+            <li>Boat rides, sunset/star gazing</li>
+            <li>Live taarab music/band</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="itinerary-day">
+        <div class="day-header">
+          <div class="day-number">Day 10</div>
+          <h3>Farewell</h3>
+        </div>
+        <div class="day-content">
+          <ul>
+            <li>Late breakfast/lunch</li>
+            <li>Guest debrief & gift hampers</li>
+            <li>Transfer to SGR/airport</li>
+            <li>Flight to Nairobi → connection to US</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
  <footer class="footer">
         <div class="footer-container">
             <div class="footer-main">
                 <div class="footer-brand">
                    <div class="footer-logo">
-    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+    <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
 </div>
 <p class="brand-description">
     Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
@@ -329,29 +853,69 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Partner Logos Section -->
-            <div class="partners-section">
-                <h3 class="partners-title">Our Trusted Partners</h3>
-                <div class="partners-grid">
-                    <div class="partner-logo">
-                        <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
-                        
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2"> 
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Mundui House Logo.avif" alt="Partner 3">
-                    </div>
-                    <div class="partner-logo">
-                       <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
-                    </div>
-                </div>
+<div class="partners-section">
+    <h3 class="partners-title">Our Trusted Partners</h3>
+    <div class="partners-slider-wrapper">
+        <div class="partners-slider">
+            <div class="partner-logo">
+                <img src="../assets/logos/Bwitiful Logo.jpg" alt="Partner 1">
             </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/Edge Convention Centre logo.webp" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/Mundui House Logo.avif" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/University of Nairobi Logo.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
+            </div>
+            <!-- Repeat logos to create smooth loop -->
+            <div class="partner-logo">
+                <img src="../assets/logos/Bwitiful Logo.jpg" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/Edge Convention Centre logo.webp" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/logos/Mundui House Logo.avif" alt="Partner 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const swiper = new Swiper(".partners-slider", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
+  });
+</script>
+
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Preload critical CSS -->
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="css/main.css" as="style">
     
     <!-- Fonts with optimized loading -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -22,14 +22,14 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
     
     <!-- Swiper CSS and JS - Load before main script -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     
     <!-- Main Script -->
-    <script src="script.js" defer></script>
+    <script src="js/main.js" defer></script>
 
 </head>
 
@@ -64,16 +64,10 @@
 
             <ul class="nav-items nav-items-left">
                 <li class="nav-item">
-                    <a href="retreats.html" class="nav-link">Retreats</a>
+                    <a href="pages/retreats.html" class="nav-link">Retreats</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#circles" class="nav-link">Circles</a>
-                    <div class="dropdown-content">
-                        <a href="#join-circle">Join a Local Circle</a>
-                        <a href="#conservation">Conservation Initiatives</a>
-                        <a href="#train-trainer">Train the Trainer Program</a>
-                        <a href="#community-guidelines">Community Guidelines</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="pages/circles.html" class="nav-link">Circles</a>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#markets" class="nav-link">Markets</a>
@@ -94,21 +88,21 @@
             </ul>
 
             <a href="index.html" class="logo">
-                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+                <img src="assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
             </a>
 
             <ul class="nav-items nav-items-right">
                 <li class="nav-item has-dropdown">
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
-                        <a href="whoweare.html">Who We Are</a>
+                        <a href="pages/whoweare.html">Who We Are</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
-                        <a href="#blog">Blog</a>
-                        <a href="#podcast">Podcast</a>
+                        <a href="pages/blog.html">Blog</a>
+                        <a href="pages/podcast.html">Podcast</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -130,7 +124,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact Us</a>
+                    <a href="pages/contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </nav>
@@ -150,14 +144,8 @@
                         <a href="#virtual-experience">Virtual Experience Retreats</a>
                     </div>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#circles" class="nav-link">Circles</a>
-                    <div class="dropdown-content">
-                        <a href="#join-circle">Join a Local Circle</a>
-                        <a href="#conservation">Conservation Initiatives</a>
-                        <a href="#train-trainer">Train the Trainer Program</a>
-                        <a href="#community-guidelines">Community Guidelines</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="pages/circles.html" class="nav-link">Circles</a>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#markets" class="nav-link">Markets</a>
@@ -178,14 +166,14 @@
                 <li class="nav-item has-dropdown">
                     <a href="#about-us" class="nav-link">About Us</a>
                     <div class="dropdown-content">
-                        <a href="whoweare.html">Who We Are</a>
+                        <a href="pages/whoweare.html">Who We Are</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
                     <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
-                        <a href="#blog">Blog</a>
-                        <a href="#podcast">Podcast</a>
+                        <a href="pages/blog.html">Blog</a>
+                        <a href="pages/podcast.html">Podcast</a>
                     </div>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -207,7 +195,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact Us</a>
+                    <a href="pages/contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -252,7 +240,7 @@
                     <!-- Destination 1 - Diani Beach -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide1.jpg" alt="Diani Beach">
+                            <img src="assets/images/slide1.jpg" alt="Diani Beach">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Diani Beach</h3>
@@ -265,7 +253,7 @@
                     <!-- Destination 2 - Maasai Mara -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide2.jpg" alt="Maasai Mara">
+                            <img src="assets/images/slide2.jpg" alt="Maasai Mara">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Maasai Mara</h3>
@@ -278,7 +266,7 @@
                     <!-- Destination 3 - Amboseli -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide3.jpg" alt="Amboseli National Park">
+                            <img src="assets/images/slide3.jpg" alt="Amboseli National Park">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Amboseli</h3>
@@ -291,7 +279,7 @@
                     <!-- Destination 4 - Samburu -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+                            <img src="assets/images/wildlife.jpg" alt="Samburu National Reserve">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Samburu</h3>
@@ -304,7 +292,7 @@
                     <!-- Destination 5 - Lake Naivasha -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/ocean meditation.jpg" alt="Lake Naivasha">
+                            <img src="assets/images/ocean meditation.jpg" alt="Lake Naivasha">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Lake Naivasha</h3>
@@ -317,7 +305,7 @@
                     <!-- Repeat - Destination 1 - Diani Beach -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide1.jpg" alt="Diani Beach">
+                            <img src="assets/images/slide1.jpg" alt="Diani Beach">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Diani Beach</h3>
@@ -330,7 +318,7 @@
                     <!-- Repeat - Destination 2 - Maasai Mara -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide2.jpg" alt="Maasai Mara">
+                            <img src="assets/images/slide2.jpg" alt="Maasai Mara">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Maasai Mara</h3>
@@ -343,7 +331,7 @@
                     <!-- Repeat - Destination 3 - Amboseli -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/slide3.jpg" alt="Amboseli National Park">
+                            <img src="assets/images/slide3.jpg" alt="Amboseli National Park">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Amboseli</h3>
@@ -356,7 +344,7 @@
                     <!-- Repeat - Destination 4 - Samburu -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/wildlife.jpg" alt="Samburu National Reserve">
+                            <img src="assets/images/wildlife.jpg" alt="Samburu National Reserve">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Samburu</h3>
@@ -369,7 +357,7 @@
                     <!-- Repeat - Destination 5 - Lake Naivasha -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/ocean meditation.jpg" alt="Lake Naivasha">
+                            <img src="assets/images/ocean meditation.jpg" alt="Lake Naivasha">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Lake Naivasha</h3>
@@ -490,7 +478,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/slide1.jpg" alt="Digital Detox Immersions">
+                        <img src="assets/images/slide1.jpg" alt="Digital Detox Immersions">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -498,13 +486,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/slide2.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/slide2.jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/slide3.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/slide3.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/wildlife.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -537,7 +525,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/slide2.jpg" alt="Ancestral Wisdom Retreats">
+                        <img src="assets/images/slide2.jpg" alt="Ancestral Wisdom Retreats">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -545,13 +533,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/slide3.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/slide3.jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/wildlife.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/slide1.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/slide1.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -584,7 +572,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/slide3.jpg" alt="Regenerative Farming Experiences">
+                        <img src="assets/images/slide3.jpg" alt="Regenerative Farming Experiences">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -592,13 +580,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/wildlife.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/slide1.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/slide1.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/slide2.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/slide2.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -728,7 +716,7 @@ if (counterSection) {
             <!-- Category 1 - History -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide1.jpg" alt="History">
+                    <img src="assets/images/slide1.jpg" alt="History">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">History</h3>
@@ -739,7 +727,7 @@ if (counterSection) {
             <!-- Category 2 - Leadership -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide2.jpg" alt="Leadership">
+                    <img src="assets/images/slide2.jpg" alt="Leadership">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Leadership</h3>
@@ -750,7 +738,7 @@ if (counterSection) {
             <!-- Category 3 - Academic Exchange -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide3.jpg" alt="Academic Exchange">
+                    <img src="assets/images/slide3.jpg" alt="Academic Exchange">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Academic Exchange</h3>
@@ -761,7 +749,7 @@ if (counterSection) {
             <!-- Category 4 - Career Nomad -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/wildlife.jpg" alt="Career Nomad">
+                    <img src="assets/images/wildlife.jpg" alt="Career Nomad">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Career Nomad</h3>
@@ -772,7 +760,7 @@ if (counterSection) {
             <!-- Category 5 - Wellness -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide1.jpg" alt="Wellness">
+                    <img src="assets/images/slide1.jpg" alt="Wellness">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Wellness</h3>
@@ -783,7 +771,7 @@ if (counterSection) {
             <!-- Category 6 - Adventure -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide2.jpg" alt="Adventure">
+                    <img src="assets/images/slide2.jpg" alt="Adventure">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Adventure</h3>
@@ -794,7 +782,7 @@ if (counterSection) {
             <!-- Category 7 - Beach Life -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/wildlife.jpg" alt="Beach Life">
+                    <img src="assets/images/wildlife.jpg" alt="Beach Life">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Beach Life</h3>
@@ -805,7 +793,7 @@ if (counterSection) {
             <!-- Category 8 - Nature Connection -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide3.jpg" alt="Nature Connection">
+                    <img src="assets/images/slide3.jpg" alt="Nature Connection">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Nature Connection</h3>
@@ -816,7 +804,7 @@ if (counterSection) {
             <!-- Category 9 - Foodie -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide1.jpg" alt="Foodie">
+                    <img src="assets/images/slide1.jpg" alt="Foodie">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Foodie</h3>
@@ -827,7 +815,7 @@ if (counterSection) {
             <!-- Category 10 - Culture Exchange -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide2.jpg" alt="Culture Exchange">
+                    <img src="assets/images/slide2.jpg" alt="Culture Exchange">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Culture Exchange</h3>
@@ -838,7 +826,7 @@ if (counterSection) {
             <!-- Category 11 - Romance -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/slide3.jpg" alt="Romance">
+                    <img src="assets/images/slide3.jpg" alt="Romance">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Romance</h3>
@@ -886,7 +874,7 @@ if (counterSection) {
         </div>
 
         <div class="beliefs-image">
-            <img src="assets/slide2.jpg" alt="Travel Experience">
+            <img src="assets/images/slide2.jpg" alt="Travel Experience">
             <div class="beliefs-badge">
                 <span class="badge-label">discover</span>
                 <span class="badge-subtitle">It's Limited Seating! Hurry Up</span>
@@ -971,7 +959,7 @@ if (counterSection) {
             <!-- Blog Post 1 - Large -->
             <div class="blog-card blog-card-large">
                 <div class="blog-image">
-                    <img src="assets/slide1.jpg" alt="Serenity-Centered Model">
+                    <img src="assets/images/slide1.jpg" alt="Serenity-Centered Model">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -991,7 +979,7 @@ if (counterSection) {
             <!-- Blog Post 2 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/slide2.jpg" alt="Disconnecting is the New Flex">
+                    <img src="assets/images/slide2.jpg" alt="Disconnecting is the New Flex">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -1007,7 +995,7 @@ if (counterSection) {
             <!-- Blog Post 3 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/slide3.jpg" alt="Healing Intergenerational Trauma">
+                    <img src="assets/images/slide3.jpg" alt="Healing Intergenerational Trauma">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -1037,11 +1025,11 @@ if (counterSection) {
                 <h3 class="support-title">24/7 Customer Support</h3>
                 <p class="support-text">Our team is here to help you choose the journey that aligns with your need for regeneration. We pre-qualify all travelers to ensure values alignment and a truly transformative experience</p>
                 <div class="support-avatars">
-                    <img src="assets/Collins Oswago.png" alt="Support team member" class="avatar">
-                    <img src="assets/Effie Awuor.png" alt="Support team member" class="avatar">
-                    <img src="assets/George Ong'adi.png" alt="Support team member" class="avatar">
-                    <img src="assets/Jochebed Emali.png" alt="Support team member" class="avatar">
-                    <img src="assets/Mack Dawson.png" alt="Support team member" class="avatar">
+                    <img src="assets/team/Collins Oswago.png" alt="Support team member" class="avatar">
+                    <img src="assets/team/Effie Awuor.png" alt="Support team member" class="avatar">
+                    <img src="assets/team/George Ong'adi.png" alt="Support team member" class="avatar">
+                    <img src="assets/team/Jochebed Emali.png" alt="Support team member" class="avatar">
+                    <img src="assets/team/Mack Dawson.png" alt="Support team member" class="avatar">
                 </div>
                 <a href="#chat" class="btn btn-chat">Chat Now</a>
             </div>
@@ -1060,7 +1048,7 @@ if (counterSection) {
 
             <!-- Illustration -->
             <div class="support-illustration">
-                <img src="assets/Untitled design (15).png" alt="Travel illustration">
+                <img src="assets/images/Untitled design (15).png" alt="Travel illustration">
             </div>
         </div>
     </div>
@@ -1166,29 +1154,29 @@ if (counterSection) {
     <div class="partners-slider-wrapper">
         <div class="partners-slider">
             <div class="partner-logo">
-                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
+                <img src="assets/logos/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
+                <img src="assets/logos/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
+                <img src="assets/logos/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/University of Nairobi Logo.png" alt="Partner 4" loading="lazy">
+                <img src="assets/logos/University of Nairobi Logo.png" alt="Partner 4" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5" loading="lazy">
+                <img src="assets/logos/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5" loading="lazy">
             </div>
             <!-- Repeat logos to create smooth loop -->
             <div class="partner-logo">
-                <img src="assets/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
+                <img src="assets/logos/Bwitiful Logo.jpg" alt="Partner 1" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
+                <img src="assets/logos/Edge Convention Centre logo.webp" alt="Partner 2" loading="lazy">
             </div>
             <div class="partner-logo">
-                <img src="assets/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
+                <img src="assets/logos/Mundui House Logo.avif" alt="Partner 3" loading="lazy">
             </div>
         </div>
     </div>

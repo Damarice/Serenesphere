@@ -2729,11 +2729,11 @@ img[loading="lazy"].loaded {
 }
 
 .activity-card {
-    background-image: url('assets/slide1.jpg');
+    background-image: url('../assets/images/slide1.jpg');
 }
 
 .deals-card {
-    background-image: url('assets/slide2.jpg');
+    background-image: url('../assets/images/slide2.jpg');
 }
 
 .activity-card:hover,
@@ -3380,7 +3380,7 @@ img[loading="lazy"].loaded {
 .counter-section {
     position: relative;
     padding: 80px 0;
-    background-image: url('assets/slide1.jpg');
+    background-image: url('../assets/images/slide1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

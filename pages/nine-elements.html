@@ -11,23 +11,21 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js" defer></script>
 <style>
     :root {
         --deep-teal: #0C4F58;
         --bright-cyan: #30DDE0;
         --secondary-teal: #2BA6A0;
         --pure-white: #FFFFFF;
+        --deep-gray: #333333;
         --light-gray: #F8F9FA;
         --accent-gray: #666666;
         --gold-accent: #D4AF37;
         --font-heading: 'Playfair Display', serif;
         --font-body: 'Montserrat', sans-serif;
-        --gradient-primary: linear-gradient(135deg, #0C4F58 0%, #2BA6A0 50%, #30DDE0 100%);
-        --gradient-gold: linear-gradient(45deg, #D4AF37 0%, #F4E4A6 100%);
-        --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12);
+        --font-secondary: 'Open Sans', sans-serif;
     }
 
     * {
@@ -38,147 +36,12 @@
 
     body {
         font-family: var(--font-body);
-        color: var(--accent-gray);
-        line-height: 1.7;
-        background: var(--pure-white);
+        line-height: 1.6;
+        color: var(--deep-gray);
+        overflow-x: hidden;
     }
 
-    /* Hero Section */
-    .hero {
-        min-height: 60vh;
-        background: var(--gradient-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
-    }
-
-    .hero h1 {
-        font-family: var(--font-heading);
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        color: var(--pure-white);
-        z-index: 1;
-        max-width: 800px;
-        animation: fadeUp 1s ease-out;
-    }
-
-    /* Sections */
-    section {
-        padding: 4rem 1.5rem;
-    }
-
-    .section-light {
-        background: var(--light-gray);
-    }
-
-    .container {
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .mission-card {
-        background: var(--pure-white);
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: var(--shadow-soft);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-    }
-
-    .mission-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-hover);
-    }
-
-    .mission-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: var(--gradient-primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem auto;
-        color: var(--pure-white);
-        font-size: 1.8rem;
-        box-shadow: var(--shadow-soft);
-    }
-
-    h2 {
-        font-family: var(--font-heading);
-        color: var(--deep-teal);
-        margin-bottom: 0.75rem;
-    }
-
-    p {
-        font-size: 1.1rem;
-    }
-
-    .highlight {
-        color: var(--deep-teal);
-        font-weight: 600;
-    }
-
-    .gradient-text {
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-    }
-
-    /* CTA */
-    .cta-section {
-        text-align: center;
-        padding: 3rem 1rem;
-        background: var(--gradient-primary);
-        color: var(--pure-white);
-    }
-
-    .cta-button {
-        background: var(--gradient-gold);
-        padding: 1rem 2.5rem;
-        border-radius: 50px;
-        color: var(--deep-teal);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.1rem;
-        box-shadow: var(--shadow-soft);
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
-
-    .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-hover);
-    }
-
-    /* Animation */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .mission-card {
-            text-align: center;
-        }
-    }
-</style
+</style>
 
 </head>
 
@@ -252,8 +115,8 @@
                 </li>
             </ul>
 
-            <a href="index.html" class="logo">
-                <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
             </a>
 
             <ul class="nav-items nav-items-right">
@@ -390,58 +253,12 @@
         </div>
     </header>
 
-    <!-- Hero -->
-<section class="hero">
-    <h1>Our Mission</h1>
-</section>
-
-<!-- Mission -->
-<section>
-    <div class="container">
-        <div class="mission-card">
-            <div class="mission-icon"><i class="fas fa-leaf"></i></div>
-            <h2>Our Sacred Purpose</h2>
-            <p>
-                To <span class="highlight">restore sacred serenity</span> through the authentic integration of African Indigenous knowledge, offering holistic and regenerative wellness experiences that empower individuals, uplift communities, and heal ecosystems—locally and globally.
-            </p>
-            <br>
-            <p>
-                We exist to reconnect <span class="gradient-text">displaced souls, diaspora leaders, and social impact changemakers</span> with ancestral wisdom, creating a ripple of transformation that is deeply rooted, inclusive, and enduring.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Vision -->
-<section class="section-light">
-    <div class="container">
-        <div class="mission-card">
-            <div class="mission-icon"><i class="fas fa-globe"></i></div>
-            <h2>Our Vision</h2>
-            <p>
-                We envision a world where <span class="highlight">serenity is not an escape, but a return</span>. To root. To ritual. To radical repair.
-            </p>
-            <br>
-            <p>
-                A global movement where ancient wisdom and modern innovation converge to create a harmonious and regenerative future for all. In the <span class="gradient-text">SereniSphere™</span>, healing isn't just personal—it's communal, ecological, and ancestral.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <h2>Begin Your Journey Today</h2>
-    <br>
-    <a href="#" class="cta-button">Start Now →</a>
-</section>
-
  <footer class="footer">
         <div class="footer-container">
             <div class="footer-main">
                 <div class="footer-brand">
                    <div class="footer-logo">
-    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+    <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
 </div>
 <p class="brand-description">
     Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
@@ -518,20 +335,20 @@
                 <h3 class="partners-title">Our Trusted Partners</h3>
                 <div class="partners-grid">
                     <div class="partner-logo">
-                        <img src="assets/Bwitiful Logo.jpg" alt="Partner 1">
+                        <img src="../assets/logos/Bwitiful Logo.jpg" alt="Partner 1">
                         
                     </div>
                     <div class="partner-logo">
-                        <img src="assets/Edge Convention Centre logo.webp" alt="Partner 2"> 
+                        <img src="../assets/logos/Edge Convention Centre logo.webp" alt="Partner 2"> 
                     </div>
                     <div class="partner-logo">
-                        <img src="assets/Mundui House Logo.avif" alt="Partner 3">
+                        <img src="../assets/logos/Mundui House Logo.avif" alt="Partner 3">
                     </div>
                     <div class="partner-logo">
-                       <img src="assets/University of Nairobi Logo.png" alt="Partner 4">
+                       <img src="../assets/logos/University of Nairobi Logo.png" alt="Partner 4">
                     </div>
                     <div class="partner-logo">
-                        <img src="assets/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
+                        <img src="../assets/logos/Victoria-Sands-Lodge-Logo-2.png" alt="Partner 5">
                     </div>
                 </div>
             </div>

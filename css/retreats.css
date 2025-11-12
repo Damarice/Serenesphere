@@ -15,7 +15,7 @@
     height: 60vh;
     min-height: 500px;
     background: linear-gradient(rgba(100, 150, 180, 0.4), rgba(100, 150, 180, 0.4)), 
-                url('assets/slide1.jpg') center/cover no-repeat;
+                url('../assets/images/slide1.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -554,7 +554,7 @@
     position: relative;
     padding: 8rem 0;
     background: linear-gradient(rgba(12, 79, 88, 0.85), rgba(12, 79, 88, 0.85)), 
-                url('assets/slide2.jpg') center/cover no-repeat fixed;
+                url('../assets/images/slide2.jpg') center/cover no-repeat fixed;
     text-align: center;
     color: var(--pure-white);
 }

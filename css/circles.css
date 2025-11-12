@@ -1,21 +1,21 @@
 /* ========================================
-   Podcast Page Styles
+   Circles Page Styles
    ======================================== */
 
 /* Hero Section */
-.podcast-hero {
+.circles-hero {
     position: relative;
     height: 50vh;
     min-height: 400px;
     background: linear-gradient(rgba(30, 60, 90, 0.6), rgba(30, 60, 90, 0.6)), 
-                url('assets/slide2.jpg') center/cover no-repeat;
+                url('../assets/images/wildlife.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 155px;
 }
 
-.podcast-hero-overlay {
+.circles-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,14 +24,14 @@
     background: rgba(30, 60, 90, 0.3);
 }
 
-.podcast-hero-content {
+.circles-hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
     color: var(--pure-white);
 }
 
-.podcast-hero-title {
+.circles-hero-title {
     font-family: var(--font-body);
     font-size: 4rem;
     font-weight: 700;
@@ -39,7 +39,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.podcast-breadcrumb {
+.circles-breadcrumb {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -47,59 +47,59 @@
     gap: 0.75rem;
 }
 
-.podcast-breadcrumb a {
+.circles-breadcrumb a {
     color: var(--pure-white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.podcast-breadcrumb a:hover {
+.circles-breadcrumb a:hover {
     color: var(--bright-cyan-glow);
 }
 
-.podcast-breadcrumb .separator {
+.circles-breadcrumb .separator {
     color: var(--pure-white);
 }
 
-.podcast-breadcrumb span:last-child {
+.circles-breadcrumb span:last-child {
     color: var(--bright-cyan-glow);
 }
 
-/* Podcast Content Section */
-.podcast-content-section {
+/* Circles Content Section */
+.circles-content-section {
     padding: 6rem 0;
     background: var(--light-gray);
 }
 
-.podcast-intro {
+.circles-intro {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 4rem;
 }
 
-.podcast-intro .section-title {
+.circles-intro h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     color: var(--deep-teal);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.podcast-intro .section-description {
+.circles-intro p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--accent-gray);
 }
 
-/* Podcast Grid */
-.podcast-grid {
+/* Circles Grid */
+.circles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.podcast-card {
+.circle-card {
     background: var(--pure-white);
     border-radius: 12px;
     overflow: hidden;
@@ -107,110 +107,110 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.podcast-card:hover {
-    transform: translateY(-5px);
+.circle-card:hover {
+    transform: translateY(-8px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.podcast-video {
+.circle-image {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
+    height: 300px;
     overflow: hidden;
 }
 
-.podcast-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.circle-image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Subscribe Section */
-.podcast-subscribe {
-    text-align: center;
-    margin-top: 4rem;
+.circle-card:hover .circle-image img {
+    transform: scale(1.1);
 }
 
-.subscribe-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 3rem;
-    border-radius: 50px;
-    text-decoration: none;
+.circle-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(12, 79, 88, 0.9), transparent);
+    padding: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.circle-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
     color: var(--pure-white);
-    font-weight: 700;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    background: #ff0000;
-    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.subscribe-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4);
+.circle-content {
+    padding: 2rem;
 }
 
-.subscribe-btn i {
-    font-size: 1.5rem;
+.circle-content p {
+    color: var(--accent-gray);
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .podcast-hero {
+    .circles-hero {
         height: 40vh;
         min-height: 300px;
     }
 
-    .podcast-hero-title {
+    .circles-hero-title {
         font-size: 2.5rem;
     }
 
-    .podcast-breadcrumb {
+    .circles-breadcrumb {
         font-size: 0.95rem;
     }
 
-    .podcast-content-section {
+    .circles-content-section {
         padding: 4rem 0;
     }
 
-    .podcast-grid {
+    .circles-intro h2 {
+        font-size: 2rem;
+    }
+
+    .circles-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .podcast-intro .section-title {
-        font-size: 2rem;
+    .circle-image {
+        height: 250px;
     }
 
-    .subscribe-btn {
-        width: 90%;
-        max-width: 350px;
-        justify-content: center;
-        font-size: 1.1rem;
-        padding: 1rem 2rem;
+    .circle-title {
+        font-size: 1.5rem;
+    }
+
+    .circle-content {
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .podcast-hero-title {
+    .circles-hero-title {
         font-size: 2rem;
     }
 
-    .podcast-breadcrumb {
+    .circles-breadcrumb {
         font-size: 0.9rem;
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    .podcast-breadcrumb .separator {
+    .circles-breadcrumb .separator {
         display: none;
-    }
-
-    .subscribe-btn {
-        font-size: 1rem;
     }
 }

@@ -36,7 +36,7 @@ body.contact-page .has-dropdown .nav-link {
     height: 50vh;
     min-height: 400px;
     background: linear-gradient(rgba(30, 60, 90, 0.6), rgba(30, 60, 90, 0.6)), 
-                url('assets/slide3.jpg') center/cover no-repeat;
+                url('../assets/images/slide3.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
