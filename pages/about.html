@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Serenesephere</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    
+    <!-- Main Script -->
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-left">
+                <div class="topbar-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@serenesephere.com</span>
+                </div>
+                <div class="topbar-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 443-825-6937</span>
+                </div>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-items nav-items-left">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="circles.html" class="nav-link">Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </li>
+            </ul>
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-items nav-items-right">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">About Us</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="circles.html" class="nav-link">Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">About Us</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+            <h1 class="about-hero-title">About Us</h1>
+            <div class="about-breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="separator">/</span>
+                <span>About</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Company Section -->
+        <section class="about-company-section">
+            <div class="container">
+                <div class="about-company-grid">
+                    <!-- Left Side - Images -->
+                    <div class="about-company-images">
+                        <div class="secondary-image-wrapper">
+                            <img src="../assets/images/slide2.jpg" alt="Community gathering" class="secondary-image">
+                        </div>
+                        <div class="main-image-wrapper">
+                            <img src="../assets/images/slide1.jpg" alt="Happy travelers" class="main-image">
+                            <div class="video-badge">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="badge-number">8+</span>
+                            <span class="badge-text">Years<br>Experience</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Content -->
+                    <div class="about-company-content">
+                        <span class="section-subtitle">About Company</span>
+                        <h2 class="section-title">We are not a travel company; we are a Regenerative Movement.</h2>
+                        <p class="section-description">
+                            Serenesephere specializes in Serenity-Centered Journeys that offer a radical alternative to conventional tourism. In a world that demands speed, we sell slowness. In a world of noise, we sell peace. Our mission is to create immersive, community-led experiences that reconnect travelers to the rhythms of the earth, the wisdom of ancestors, and the stillness within themselves—while regenerating the land, culture, and economies of African communities.
+                        </p>
+
+                        <!-- Stats -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3 class="stat-number">12+</h3>
+                                <p class="stat-label">Total Locations</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">9+</h3>
+                                <p class="stat-label">Travel Activities</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">5+</h3>
+                                <p class="stat-label">Tour Packages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nine Elements Section -->
+        <section class="nine-elements-section">
+            <div class="container">
+                <div class="nine-elements-header">
+                    <span class="section-subtitle">Holistic Wellness Framework</span>
+                    <h2 class="section-title">Our Nine Elements of Serenity</h2>
+                    <p class="section-description">
+                        The 9 Elements of Serenity form the holistic framework for our Vitality Regeneration model. Derived from African intelligence and ritual, this system addresses the full spectrum of human well-being.
+                    </p>
+                </div>
+
+                <div class="nine-elements-diagram">
+                    <!-- Center Circle -->
+                    <div class="center-circle">
+                        <h3>Serenity Framework</h3>
+                        <p>Complete Wellness</p>
+                    </div>
+
+                    <!-- Element 1 - Spiritual (Top - 12 o'clock) -->
+                    <div class="element-circle element-1">
+                        <div class="element-icon">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <h4>Spiritual</h4>
+                        <p>Ancestral rituals and sacred storytelling</p>
+                    </div>
+
+                    <!-- Element 2 - Mental (Top Right - 1-2 o'clock) -->
+                    <div class="element-circle element-2">
+                        <div class="element-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Mental</h4>
+                        <p>Mindfulness, cognitive rest, and clarity</p>
+                    </div>
+
+                    <!-- Element 3 - Physical (Right Upper - 2-3 o'clock) -->
+                    <div class="element-circle element-3">
+                        <div class="element-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>Physical</h4>
+                        <p>Somatic movement and body</p>
+                    </div>
+
+                    <!-- Element 4 - Aspirational (Right - 3 o'clock) -->
+                    <div class="element-circle element-4">
+                        <div class="element-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Aspirational</h4>
+                        <p>Lifelong learning and staying positive</p>
+                    </div>
+
+                    <!-- Element 5 - Financial (Right Lower - 4-5 o'clock) -->
+                    <div class="element-circle element-5">
+                        <div class="element-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h4>Financial</h4>
+                        <p>Village co-ops and sustainable economics</p>
+                    </div>
+
+                    <!-- Element 6 - Environmental (Bottom Right - 5-6 o'clock) -->
+                    <div class="element-circle element-6">
+                        <div class="element-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Environmental</h4>
+                        <p>Earth rituals and eco-therapy</p>
+                    </div>
+
+                    <!-- Element 7 - Occupational (Bottom - 6 o'clock) -->
+                    <div class="element-circle element-7">
+                        <div class="element-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Occupational</h4>
+                        <p>Artisans and eco-literacy</p>
+                    </div>
+
+                    <!-- Element 8 - Social (Bottom Left - 7-8 o'clock) -->
+                    <div class="element-circle element-8">
+                        <div class="element-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Social</h4>
+                        <p>Community bonding and shared experience</p>
+                    </div>
+
+                    <!-- Element 9 - Nutritional (Left - 9-10 o'clock) -->
+                    <div class="element-circle element-9">
+                        <div class="element-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h4>Nutritional</h4>
+                        <p>Herbal medicine and conscious cooking</p>
+                    </div>
+
+                    <!-- Connection Lines -->
+                    <svg class="connection-lines" viewBox="0 0 800 800">
+                        <!-- Line to element 1: Spiritual (0° - top) -->
+                        <line x1="400" y1="400" x2="400" y2="88" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 2: Mental (40° - upper right) -->
+                        <line x1="400" y1="400" x2="601" y2="161" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 3: Physical (80° - right upper) -->
+                        <line x1="400" y1="400" x2="707" y2="346" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 4: Aspirational (120° - right lower) -->
+                        <line x1="400" y1="400" x2="670" y2="556" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 5: Financial (160° - lower right) -->
+                        <line x1="400" y1="400" x2="506" y2="694" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 6: Environmental (200° - lower left) -->
+                        <line x1="400" y1="400" x2="294" y2="694" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 7: Occupational (240° - left lower) -->
+                        <line x1="400" y1="400" x2="130" y2="556" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 8: Social (280° - left upper) -->
+                        <line x1="400" y1="400" x2="93" y2="346" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                        <!-- Line to element 9: Nutritional (320° - upper left) -->
+                        <line x1="400" y1="400" x2="199" y2="161" stroke="#d4a574" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us-section">
+            <div class="container">
+                <div class="why-choose-grid">
+                    <!-- Left Column - Content -->
+                    <div class="why-choose-content">
+                        <span class="section-subtitle">WHY CHOOSE US</span>
+                        <h2 class="section-title">Discover Our Travel Guideline</h2>
+                        <p class="section-description">
+                            Our commitment is to a high-accountability model rooted in reciprocity and respect. We are guided by the principle that Community is the Medicine and that Ancestral Wisdom is Living Technology. We offer a value proposition that transcends luxury, focusing on profound, lasting transformation.
+                        </p>
+
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Professional Tour Guide: Elders as Teachers</h4>
+                                    <p>Our guides are local knowledge-holders, cultural translators, and community partners.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Quality you can trust: Intentional Simplicity</h4>
+                                    <p>Our quality is measured by the depth of your transformation, not the thread count of the sheets.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Exceptional flexibility: High-Accountability Model</h4>
+                                    <p>We require humility and participation, not passive consumption.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Award-winning support: Serenity Guide Mentorship</h4>
+                                    <p>Personalized support from pre-trip coaching to post-journey integration.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Regeneration Over Extraction</h4>
+                                    <p>Every dollar supports cultural preservation and ecological restoration.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    </div>
+
+                    <!-- Right Column - Image with Offer -->
+                    <div class="why-choose-image">
+                        <img src="../assets/images/slide1.jpg" alt="Travel Experience">
+                        <div class="offer-badge">
+                            <span class="badge-label">discover</span>
+                            <p class="badge-text">IT'S LIMITED SEATING! HURRY UP</p>
+                            <div class="discount-badge">
+                                <span class="discount-number">45</span>
+                                <span class="discount-percent">% OFF</span>
+                            </div>
+                            <h3 class="offer-title">The Homecoming Journey</h3>
+                            <p class="offer-subtitle">Diaspora Pilgrimage</p>
+                            <a href="#book" class="btn btn-book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="services-grid">
+                    <!-- Service 1 - Flight Booking -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3 class="service-title">Flight Booking</h3>
+                        <p class="service-description">We assist with flight logistics to ensure smooth transition to your point of arrival.</p>
+                    </div>
+
+                    <!-- Service 2 - Amazing Tour -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="service-title">Amazing Tour</h3>
+                        <p class="service-description">Our core offering is the serenity centered multi day immersive experience</p>
+                    </div>
+
+                    <!-- Service 3 - Hotel Booking -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3 class="service-title">Hotel Booking</h3>
+                        <p class="service-description">We arrange stay in trusted, low impact eco lodges and authentic community stays</p>
+                    </div>
+
+                    <!-- Service 4 - Customer Care 24/7 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="service-title">Customer Care 24/7</h3>
+                        <p class="service-description">Our team is here to help you choose the journey that aligns with your need for regeneration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <span class="section-subtitle">Our Team</span>
+                <h2 class="section-title">Our Amazing Team Players</h2>
+                <p class="team-intro">Our team is composed of cultural translators, strategic leaders, local operations experts, and a circle of elite advisors including herbalists, elders, and therapists. We are co-creators of the Serenity-Centered Global Framework, dedicated to spreading the message of Vitality Regeneration and Rooted Living.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/Collins Oswago.png" alt="Collins Oswago">
+                        </div>
+                        <h3>Collins Oswago</h3>
+                        <p class="team-role">Chief Executive Officer (CEO)</p>
+                        <p class="team-location">Location: USA</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Roles:</p>
+                            <ul class="team-responsibilities">
+                                <li>Sets the overall company vision, long-term strategy, and global brand identity.</li>
+                                <li>Primary lead for major investors, international partnerships, and the diaspora community.</li>
+                                <li>Fosters the company culture and ensures all teams are aligned with the core mission.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/Jochebed Emali.png" alt="Jochebed Emali">
+                        </div>
+                        <h3>Jochebed Emali</h3>
+                        <p class="team-role">Chief Operating Officer (COO)</p>
+                        <p class="team-location">Location: Kenya</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Roles:</p>
+                            <ul class="team-responsibilities">
+                                <li>Manages all in-country finances, legal compliance, and team execution.</li>
+                                <li>Oversees the quality and integrity of all guest experiences and partnerships in Kenya.</li>
+                                <li>Serves as the strategic lead for scaling operations across East Africa.</li>
+                                <li>Develops and executes the global brand narrative and marketing strategy.</li>
+                                <li>Manages all digital presence to attract the target audience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/Mack Dawson.png" alt="Mack Dawson">
+                        </div>
+                        <h3>Mack Dawson</h3>
+                        <p class="team-role">Global Director of Mutualism and Holistic Innovations</p>
+                        <p class="team-location">Location: USA</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Roles:</p>
+                            <ul class="team-responsibilities">
+                                <li>Designs the transformative curriculum, flow, and therapeutic goals of each detox tour itinerary.</li>
+                                <li>Sources, trains, and manages a roster of world-class wellness practitioners.</li>
+                                <li>Develops the specific themes, rituals, and "homework" for retreats.</li>
+                                <li>Gathers guest feedback to scientifically and intuitively improve program efficacy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/George Ong'adi.png" alt="George Ong'adi">
+                        </div>
+                        <h3>George Ong'adi</h3>
+                        <p class="team-role">Director of Learning & Digital Integration</p>
+                        <p class="team-location">Location: Kenya</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Responsibilities:</p>
+                            <ul class="team-responsibilities">
+                                <li>Partners with the Wellness Architect to design the educational syllabus for each retreat.</li>
+                                <li>Leads the creation of digital content that explains the cultural significance of experiences.</li>
+                                <li>Selects and manages the software that facilitates learning and connection.</li>
+                                <li>Establishes ethical protocols for safeguarding indigenous knowledge.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/Victor Aresi (1).png" alt="Victor Aresi">
+                        </div>
+                        <h3>Victor Aresi</h3>
+                        <p class="team-role">Head of Ground Operations & Sustainability</p>
+                        <p class="team-location">Location: Kenya</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Roles:</p>
+                            <ul class="team-responsibilities">
+                                <li>Manages all on-the-ground logistics: transport, lodge bookings, activity scheduling.</li>
+                                <li>Implements rigorous safety, security, and risk management protocols.</li>
+                                <li>Ensures all operations exceed sustainability and eco-conscious standards.</li>
+                                <li>Leads and mentors the Kenyan logistics team, including guides and coordinators.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="../assets/team/Effie Awuor.png" alt="Effie Awuor">
+                        </div>
+                        <h3>Effie Awuor</h3>
+                        <p class="team-role">Client Relations and Luxury Travel Specialist</p>
+                        <p class="team-location">Location: Kenya</p>
+                        <div class="team-details">
+                            <p class="team-responsibilities-title">Key Roles:</p>
+                            <ul class="team-responsibilities">
+                                <li>Serves as the primary point of contact for guests from booking through post-trip follow-up.</li>
+                                <li>Manages the pre-trip onboarding process, ensuring guests are prepared.</li>
+                                <li>Is present during retreats to handle any guest needs, feedback, or special requests.</li>
+                                <li>Leads post-trip engagement, gathering testimonials and fostering alumni community.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Promotional Section -->
+        <section class="promo-section">
+            <div class="container-fluid">
+                <div class="promo-grid">
+                    <!-- Promo 1 - Summer Escapes -->
+                    <div class="promo-card promo-orange">
+                        <div class="promo-overlay-orange"></div>
+                        <img src="../assets/images/slide1.jpg" alt="Summer Escapes" class="promo-bg">
+                        <div class="promo-content-center">
+                            <span class="promo-label">Summer Escapes</span>
+                            <div class="promo-discount">
+                                <span class="discount-number">45</span>
+                                <span class="discount-text">% OFF</span>
+                            </div>
+                            <p class="promo-description">on Regenerative Residency Program</p>
+                            <a href="#book" class="btn btn-promo">Book Now →</a>
+                        </div>
+                    </div>
+
+                    <!-- Promo 2 - Unplug Reconnect -->
+                    <div class="promo-card promo-blue">
+                        <div class="promo-overlay"></div>
+                        <img src="../assets/images/slide2.jpg" alt="Beach Relaxation" class="promo-bg">
+                        <div class="promo-content-center">
+                            <span class="promo-tag">happy holiday</span>
+                            <h3 class="promo-title">Unplug. Reconnect. Regenerate.</h3>
+                            <a href="#read" class="btn btn-promo-white">Read more →</a>
+                        </div>
+                    </div>
+
+                    <!-- Promo 3 - Let Curiosity Book -->
+                    <div class="promo-card promo-purple">
+                        <div class="promo-overlay"></div>
+                        <img src="../assets/images/slide3.jpg" alt="Travel Adventure" class="promo-bg">
+                        <div class="promo-content-center">
+                            <span class="promo-tag">happy holiday</span>
+                            <h3 class="promo-title">Let Your Curiosity Do The Booking.</h3>
+                            <a href="#read" class="btn btn-promo-white">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories & Inspirations Section -->
+        <div class="stories-inspirations">
+            <section class="section flagship-section">
+                <div class="container">
+                    <h2>Stories & Inspirations</h2>
+                    
+                    <div class="stories-grid">
+                        <!-- Text Story 1 -->
+                        <div class="story-card">
+                            <div class="text-story">
+                                <div class="story-quote">
+                                    "I came tired and depleted. I left with my soul recalibrated. This was not a vacation; it was a homecoming. I finally understood what it meant to be still."
+                                </div>
+                                <div class="story-author">
+                                    <div class="author-avatar avatar-kemi"></div>
+                                    <div class="author-info">
+                                        <h4>Tomas Adison</h4>
+                                        <span>Tech Founder</span>
+                                    </div>
+                                </div>
+                                <div class="story-tags">
+                                    <span class="tag">Soul Recalibration</span>
+                                    <span class="tag">Homecoming</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text Story 2 -->
+                        <div class="story-card">
+                            <div class="text-story">
+                                <div class="story-quote">
+                                    "The intentional disconnection was the medicine I needed. Learning to grind millet and sit by the fire was more therapeutic than any spa. I returned with a profound sense of rootedness."
+                                </div>
+                                <div class="story-author">
+                                    <div class="author-avatar avatar-esi"></div>
+                                    <div class="author-info">
+                                        <h4>Jenny Wilson</h4>
+                                        <span>Trauma Therapist</span>
+                                    </div>
+                                </div>
+                                <div class="story-tags">
+                                    <span class="tag">Digital Detox</span>
+                                    <span class="tag">Rootedness</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Support & Newsletter Section -->
+    <section class="support-newsletter-section">
+        <div class="container">
+            <div class="support-newsletter-grid">
+                <!-- Customer Support -->
+                <div class="support-box">
+                    <h3 class="support-title">24/7 Customer Support</h3>
+                    <p class="support-text">Our team is here to help you choose the journey that aligns with your need for regeneration. We pre-qualify all travelers to ensure values alignment and a truly transformative experience</p>
+                    <div class="support-avatars">
+                        <img src="../assets/team/Collins Oswago.png" alt="Support team member" class="avatar">
+                        <img src="../assets/team/Effie Awuor.png" alt="Support team member" class="avatar">
+                        <img src="../assets/team/George Ong'adi.png" alt="Support team member" class="avatar">
+                        <img src="../assets/team/Jochebed Emali.png" alt="Support team member" class="avatar">
+                        <img src="../assets/team/Mack Dawson.png" alt="Support team member" class="avatar">
+                    </div>
+                    <a href="contact.html" class="btn btn-chat">Chat Now</a>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="newsletter-box">
+                    <h3 class="newsletter-title">Sign Up for Our Newsletter</h3>
+                    <p class="newsletter-text">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Submit Your Email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Illustration -->
+                <div class="support-illustration">
+                    <img src="../assets/images/Untitled design (15).png" alt="Travel illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+                    </div>
+                    <p class="brand-description">
+                        Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
+                    </p>
+
+                    <div class="social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links">
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-column">
+                    <h4>Retreats</h4>
+                    <ul class="nav-links">
+                        <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
+                        <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
+                        <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
+                        <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
+                        <li><a href="#private-retreats">Private Retreats</a></li>
+                        <li><a href="#custom-group">Custom Group Retreats</a></li>
+                        <li><a href="#intercruise">Intercruise Retreats</a></li>
+                        <li><a href="#virtual-experience">Virtual Experience Retreats</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-column">
+                    <h4>Community & Resources</h4>
+                    <ul class="nav-links">
+                        <li><a href="circles.html">Join Local Circles</a></li>
+                        <li><a href="chapters.html">Global Chapters</a></li>
+                        <li><a href="#us-programs">US Programs</a></li>
+                        <li><a href="#sister-cities">Sister Cities Programs</a></li>
+                        <li><a href="#train-trainer">Train the Trainer Program</a></li>
+                        <li><a href="#conservation">Conservation Initiatives</a></li>
+                        <li><a href="markets.html">Wellness Tools & Artifacts</a></li>
+                        <li><a href="#digital-modules">Digital Learning Modules</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-column">
+                    <h4>About & Contact</h4>
+                    <ul class="nav-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="resources.html">The Nine Elements</a></li>
+                        <li><a href="#how-we-work">How We Work</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="blog.html">Blog & Podcast</a></li>
+                        <li><a href="#become-partner">Become a Partner</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@Serenesephere.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 443-825-6937</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serenesephere. All rights reserved. Return. Reconnect. Regenerate.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

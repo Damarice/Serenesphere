@@ -1,0 +1,446 @@
+/* ========================================
+   Chapters Page Styles
+   ======================================== */
+
+/* Hero Section */
+.chapters-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(100, 150, 180, 0.4), rgba(100, 150, 180, 0.4)), 
+                url('../assets/images/global.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 155px;
+}
+
+.chapters-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 150, 180, 0.2);
+}
+
+.chapters-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--pure-white);
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.chapters-hero-pretitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapters-hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapters-hero-description {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Chapters Grid Section */
+.chapters-grid-section {
+    padding: 80px 0 40px 0;
+    background: #f8f9fa;
+}
+
+.chapters-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.chapters-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Chapter Card */
+.chapter-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.chapter-card-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.chapter-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.chapter-card:hover .chapter-card-image img {
+    transform: scale(1.1);
+}
+
+.chapter-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 30px 20px 20px;
+}
+
+.chapter-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chapter-card-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter-card-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chapters-hero {
+        margin-top: 120px;
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .chapters-hero-pretitle {
+        font-size: 1.5rem;
+    }
+    
+    .chapters-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .chapters-hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .chapters-grid-section {
+        padding: 60px 0;
+    }
+    
+    .chapters-intro {
+        margin-bottom: 40px;
+    }
+    
+    .chapters-intro p {
+        font-size: 1rem;
+    }
+    
+    .chapters-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .chapter-card-image {
+        height: 280px;
+    }
+    
+    .chapter-card-title {
+        font-size: 1.5rem;
+    }
+    
+    .chapter-card-content {
+        padding: 25px;
+    }
+    
+    .chapter-card-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chapters-hero-pretitle {
+        font-size: 1.2rem;
+    }
+    
+    .chapters-hero-title {
+        font-size: 2rem;
+    }
+    
+    .chapters-hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .chapter-card-image {
+        height: 250px;
+    }
+    
+    .chapter-card-content {
+        padding: 20px;
+    }
+}
+
+
+/* Contact Form Section */
+.chapters-contact-section {
+    padding: 40px 0 80px 0;
+    background: #f8f9fa;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Left Side - Contact Info */
+.contact-info-box {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #0c4f58;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.contact-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #ff6b35;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact-info-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #0c4f58;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Right Side - Form */
+.contact-form-box {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chapters-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0c4f58;
+    background: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 45px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit-form {
+    background: #ff6b35;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-submit-form:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chapters-contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info-box,
+    .contact-form-box {
+        padding: 40px 30px;
+    }
+
+    .contact-form-title {
+        font-size: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-box,
+    .contact-form-box {
+        padding: 30px 20px;
+    }
+
+    .contact-form-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-icon i {
+        font-size: 1.2rem;
+    }
+
+    .btn-submit-form {
+        width: 100%;
+        text-align: center;
+    }
+}

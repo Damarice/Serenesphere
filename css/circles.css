@@ -163,6 +163,7 @@
     .circles-hero {
         height: 40vh;
         min-height: 300px;
+        margin-top: 120px;
     }
 
     .circles-hero-title {
