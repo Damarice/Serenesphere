@@ -30,14 +30,8 @@
     <!-- Footer Styles -->
     <link rel="stylesheet" href="css/footer.css">
     
-    <!-- Mobile Responsive Styles -->
-    <link rel="stylesheet" href="css/mobile-responsive.css">
-    
-    <!-- Performance Optimizations -->
-    <link rel="stylesheet" href="css/performance-optimizations.css">
-    
-    <!-- Critical Fixes -->
-    <link rel="stylesheet" href="css/fixes.css">
+    <!-- Mobile Only Fixes (Desktop Untouched) -->
+    <link rel="stylesheet" href="css/mobile-only-fixes.css">
     
     <!-- Swiper CSS and JS - Load before main script -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
@@ -48,6 +42,9 @@
     
     <!-- Mobile Menu Init -->
     <script src="js/mobile-menu-init.js" defer></script>
+    
+    <!-- Fast Loading (Images & Video) -->
+    <script src="js/fast-loading.js"></script>
     
     <!-- Performance Script -->
     <script src="js/performance.js" defer></script>
@@ -1184,52 +1181,7 @@ if (counterSection) {
         </div>
     </footer>
 
-<script>
-// Optimized video loading - skip on mobile for better performance
-window.addEventListener('load', function() {
-    const isMobile = window.innerWidth <= 768;
-    const isSlowConnection = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
-    
-    // Skip video on mobile or slow connections
-    if (isMobile || isSlowConnection) {
-        const videoPlaceholder = document.getElementById('video-placeholder');
-        if (videoPlaceholder) {
-            videoPlaceholder.style.background = 'linear-gradient(135deg, #0C4F58 0%, #2BA6A0 100%)';
-        }
-        return;
-    }
-    
-    // Load video on desktop with good connection
-    setTimeout(function() {
-        const videoIframe = document.querySelector('.hero-bg-video');
-        const videoPlaceholder = document.getElementById('video-placeholder');
-        
-        if (videoIframe && videoIframe.dataset.src) {
-            videoIframe.src = videoIframe.dataset.src;
-            videoIframe.style.display = 'block';
-            if (videoPlaceholder) {
-                setTimeout(function() {
-                    videoPlaceholder.style.opacity = '0';
-                    videoPlaceholder.style.transition = 'opacity 1s ease';
-                    setTimeout(function() {
-                        videoPlaceholder.style.display = 'none';
-                    }, 1000);
-                }, 500);
-            }
-        }
-    }, 2000);
-});
 
-// Pause animations during fast scrolling
-let scrollTimer;
-window.addEventListener('scroll', function() {
-    document.body.classList.add('disable-animations');
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
-        document.body.classList.remove('disable-animations');
-    }, 100);
-}, { passive: true });
-</script>
 
 </body>
 </html>
