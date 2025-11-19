@@ -21,6 +21,9 @@
     
     <!-- Main Script -->
     <script src="../js/main.js" defer></script>
+    
+    <!-- Performance Script -->
+    <script src="../js/performance.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +51,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -64,13 +67,8 @@
                 <li class="nav-item">
                     <a href="markets.html" class="nav-link">Markets</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#chapters" class="nav-link">Chapters</a>
-                    <div class="dropdown-content">
-                        <a href="#us-programs">US Programs</a>
-                        <a href="#global-impact">Global Impact Map</a>
-                        <a href="#sister-cities">Sister Cities Programs</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
                 </li>
             </ul>
 
@@ -83,17 +81,53 @@
                     <a href="about.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
                         <a href="blog.html">Blog</a>
                         <a href="podcast.html">Podcast</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li><li class="nav-item">
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </nav>
+
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="circles.html" class="nav-link">Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -117,7 +151,7 @@
                     <!-- Blog Post 1 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/slide1.jpg" alt="Serenity-Centered Model">
+                            <img src="../assets/images/Cultural Heritage.jpg" alt="Serenity-Centered Model" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">
@@ -137,7 +171,7 @@
                     <!-- Blog Post 2 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/slide2.jpg" alt="Disconnecting is the New Flex">
+                            <img src="../assets/images/The Economic Case for Detox Tourism.jpg" alt="Disconnecting is the New Flex" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">
@@ -157,7 +191,7 @@
                     <!-- Blog Post 3 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/slide3.jpg" alt="Healing Intergenerational Trauma">
+                            <img src="../assets/images/Healing Intergenerational Trauma Through Ancestral Journeys.jpg" alt="Healing Intergenerational Trauma" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">
@@ -176,7 +210,7 @@
                     <!-- Blog Post 4 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/wildlife.jpg" alt="Indigenous Knowledge Systems">
+                            <img src="../assets/images/Indigenous Knowledge Systems.jpg" alt="Indigenous Knowledge Systems" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">
@@ -195,7 +229,7 @@
                     <!-- Blog Post 5 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/ocean meditation.jpg" alt="Cultural Heritage">
+                            <img src="../assets/images/Cultural Heritage.jpg" alt="Cultural Heritage" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">
@@ -214,7 +248,7 @@
                     <!-- Blog Post 6 -->
                     <div class="blog-post-card">
                         <div class="blog-post-image">
-                            <img src="../assets/images/slide1.jpg" alt="Regenerative Travel">
+                            <img src="../assets/images/Future of Regerative Travels.jpg" alt="Regenerative Travel" loading="lazy">
                         </div>
                         <div class="blog-post-content">
                             <div class="blog-post-meta">

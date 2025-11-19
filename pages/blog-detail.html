@@ -21,6 +21,9 @@
     
     <!-- Main Script -->
     <script src="../js/main.js" defer></script>
+    
+    <!-- Performance Script -->
+    <script src="../js/performance.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +51,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -61,19 +64,11 @@
                 <li class="nav-item">
                     <a href="circles.html" class="nav-link">Circles</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#markets" class="nav-link">Markets</a>
-                    <div class="dropdown-content">
-                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
-                        <a href="#wholesale">Wholesale Inquiries</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#chapters" class="nav-link">Chapters</a>
-                    <div class="dropdown-content">
-                        <a href="#us-programs">US Programs</a>
-                        <a href="#global-impact">Global Impact Map</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
                 </li>
             </ul>
 
@@ -86,17 +81,53 @@
                     <a href="about.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
                         <a href="blog.html">Blog</a>
                         <a href="podcast.html">Podcast</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li><li class="nav-item">
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </nav>
+
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="circles.html" class="nav-link">Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -105,7 +136,7 @@
             <article class="blog-detail-main">
                 <!-- Featured Image -->
                 <div class="blog-detail-image">
-                    <img src="../assets/images/slide1.jpg" alt="Blog Post" id="blogImage">
+                    <img src="../assets/images/Cultural Heritage.jpg" alt="Blog Post" id="blogImage" loading="lazy">
                 </div>
 
                 <!-- Meta Information -->
@@ -255,7 +286,7 @@
                     <div class="recent-posts">
                         <div class="recent-post-item">
                             <div class="recent-post-image">
-                                <img src="../assets/images/slide2.jpg" alt="Recent post">
+                                <img src="../assets/images/The Economic Case for Detox Tourism.jpg" alt="Recent post" loading="lazy">
                             </div>
                             <div class="recent-post-content">
                                 <h4>Why Disconnecting is the New Flex</h4>
@@ -264,7 +295,7 @@
                         </div>
                         <div class="recent-post-item">
                             <div class="recent-post-image">
-                                <img src="../assets/images/slide3.jpg" alt="Recent post">
+                                <img src="../assets/images/Healing Intergenerational Trauma Through Ancestral Journeys.jpg" alt="Recent post" loading="lazy">
                             </div>
                             <div class="recent-post-content">
                                 <h4>Healing Intergenerational Trauma</h4>
@@ -273,7 +304,7 @@
                         </div>
                         <div class="recent-post-item">
                             <div class="recent-post-image">
-                                <img src="../assets/images/wildlife.jpg" alt="Recent post">
+                                <img src="../assets/images/Indigenous Knowledge Systems.jpg" alt="Recent post" loading="lazy">
                             </div>
                             <div class="recent-post-content">
                                 <h4>Indigenous Knowledge Systems</h4>

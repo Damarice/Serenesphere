@@ -30,6 +30,9 @@
     
     <!-- Main Script -->
     <script src="js/main.js" defer></script>
+    
+    <!-- Performance Script -->
+    <script src="js/performance.js" defer></script>
 
 </head>
 
@@ -139,13 +142,15 @@
 <section class="hero-section" id="hero">
     <!-- Background Video -->
     <div class="hero-bg-container">
+        <div id="video-placeholder" style="width: 100%; height: 100%; background: linear-gradient(135deg, #0C4F58 0%, #2BA6A0 100%); position: absolute; top: 0; left: 0;"></div>
         <iframe 
             class="hero-bg-video" 
-            src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=1&showinfo=0&rel=0&modestbranding=1" 
+            data-src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" 
             title="Serenesephere Video" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
+            allowfullscreen
+            style="display: none;">
         </iframe>
     </div>
 
@@ -174,7 +179,7 @@
                     <!-- Destination 1 - Diani Beach -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide1.jpg" alt="Diani Beach">
+                            <img src="assets/images/tropical-beach-background-at-Diani-Beach.jpg" alt="Diani Beach">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Diani Beach</h3>
@@ -187,7 +192,7 @@
                     <!-- Destination 2 - Maasai Mara -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide2.jpg" alt="Maasai Mara">
+                            <img src="assets/images/group-of-elephants-marching-on-the-sandy-ground-2025-02-03-07-49-27-utc.jpeg" alt="Maasai Mara">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Maasai Mara</h3>
@@ -200,7 +205,7 @@
                     <!-- Destination 3 - Amboseli -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide3.jpg" alt="Amboseli National Park">
+                            <img src="assets/images/african-elephant-namibia-2025-03-18-14-43-40-utc.jpg" alt="Amboseli National Park">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Amboseli</h3>
@@ -213,7 +218,7 @@
                     <!-- Destination 4 - Samburu -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/wildlife.jpg" alt="Samburu National Reserve">
+                            <img src="assets/images/young-woman-looking-at-the-mountain-wearing-a-col-2024-12-05-01-57-17-utc.jpg" alt="Samburu National Reserve">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Samburu</h3>
@@ -226,7 +231,7 @@
                     <!-- Destination 5 - Lake Naivasha -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/ocean meditation.jpg" alt="Lake Naivasha">
+                            <img src="assets/images/lake-bogoria-hannington-baringo-county-great-rift-2025-11-13-04-14-34-utc.jpg" alt="Lake Naivasha">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Lake Naivasha</h3>
@@ -239,7 +244,7 @@
                     <!-- Repeat - Destination 1 - Diani Beach -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide1.jpg" alt="Diani Beach">
+                            <img src="assets/images/tropical-coast-sunbeds-and-palm-trees-in-tanzania-2024-10-23-07-50-59-utc.jpg" alt="Diani Beach">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Diani Beach</h3>
@@ -252,7 +257,7 @@
                     <!-- Repeat - Destination 2 - Maasai Mara -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide2.jpg" alt="Maasai Mara">
+                            <img src="assets/images/a-beautiful-and-breathtaking-wildlife-in-the-world-2025-02-20-07-06-38-utc.jpg" alt="Maasai Mara">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Maasai Mara</h3>
@@ -265,7 +270,7 @@
                     <!-- Repeat - Destination 3 - Amboseli -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/slide3.jpg" alt="Amboseli National Park">
+                            <img src="assets/images/african-elephant-namibia-2025-03-18-14-43-40-utc.jpg" alt="Amboseli National Park">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Amboseli</h3>
@@ -278,7 +283,7 @@
                     <!-- Repeat - Destination 4 - Samburu -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/wildlife.jpg" alt="Samburu National Reserve">
+                            <img src="assets/images/tribal-community-members-engaged-in-a-vibrant-cult-2025-04-03-08-16-09-utc.jpg" alt="Samburu National Reserve">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Samburu</h3>
@@ -291,7 +296,7 @@
                     <!-- Repeat - Destination 5 - Lake Naivasha -->
                     <div class="swiper-slide">
                         <div class="destination-slide-card">
-                            <img src="assets/images/ocean meditation.jpg" alt="Lake Naivasha">
+                            <img src="assets/images/lake-bogoria-hannington-baringo-county-great-rift-2025-11-13-04-14-34-utc.jpg" alt="Lake Naivasha">
                             <div class="destination-overlay">
                                 <div class="destination-info">
                                     <h3>Lake Naivasha</h3>
@@ -312,7 +317,7 @@
 </section>
 
 <script>
-// Inline initialization for destinations swiper
+// Inline initialization for destinations swiper - Optimized
 (function() {
     function initSwiper() {
         if (typeof Swiper !== 'undefined' && document.querySelector('.destinations-swiper')) {
@@ -320,19 +325,24 @@
                 slidesPerView: 'auto',
                 spaceBetween: 25,
                 loop: true,
-                loopedSlides: 10,
+                loopedSlides: 5,
                 autoplay: {
-                    delay: 1,
+                    delay: 3000,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter: false,
+                    pauseOnMouseEnter: true,
                 },
-                speed: 5000,
+                speed: 1000,
                 allowTouchMove: true,
                 grabCursor: true,
                 centeredSlides: false,
                 freeMode: false,
+                lazy: {
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 2,
+                },
+                watchSlidesProgress: true,
+                watchSlidesVisibility: true,
             });
-            console.log('Destinations swiper initialized inline!');
         } else {
             setTimeout(initSwiper, 100);
         }
@@ -352,6 +362,7 @@
         <div class="activities-deals-grid">
             <!-- Activities Card -->
             <div class="activity-card">
+                <img src="assets/images/Slow is the New Luxury.jpg" alt="Slow is the New Luxury" class="activity-card-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
                 <div class="activity-card-overlay"></div>
                 <div class="activity-card-content">
                     <h3 class="activity-subtitle">Slow is the New Luxury.</h3>
@@ -370,6 +381,7 @@
 
             <!-- Deals Card -->
             <div class="deals-card">
+                <img src="assets/images/Enjoy Summer Deals Upto 40%25 Revenue Share.jpg" alt="Enjoy Summer Deals" class="deals-card-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
                 <div class="deals-card-overlay"></div>
                 <div class="deals-card-content">
                     <h3 class="deals-main-title">Enjoy Summer Deals</h3>
@@ -412,7 +424,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/images/slide1.jpg" alt="Digital Detox Immersions">
+                        <img src="assets/images/a-tourist-visiting-the-donana-natural-park-huelva-2024-12-09-03-48-42-utc.jpg" alt="Digital Detox Immersions">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -420,13 +432,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide2.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/Fireside-Chat.jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide3.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/Future of regenerative travel.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/Photo A2.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -459,7 +471,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/images/slide2.jpg" alt="Ancestral Wisdom Retreats">
+                        <img src="assets/images/Photo A.jpg" alt="Ancestral Wisdom Retreats">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -467,13 +479,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide3.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/Photo A (1).jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/kenya-hand-made-bracelets-beads-details-texture-pa-2025-03-18-23-15-12-utc.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide1.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/leg-shakers-dance-rythm-musical-instruments-kenya-2025-06-30-23-44-32-utc.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -506,7 +518,7 @@
             <div class="tour-card">
                 <div class="tour-images-wrapper">
                     <div class="tour-image-main">
-                        <img src="assets/images/slide3.jpg" alt="Regenerative Farming Experiences">
+                        <img src="assets/images/black-man-enjoying-homemade-food-at-festive-dinner-2025-03-10-05-44-47-utc.jpg" alt="Regenerative Farming Experiences">
                         <div class="tour-badge">40% Off</div>
                         <div class="tour-wishlist">
                             <i class="far fa-heart"></i>
@@ -514,13 +526,13 @@
                     </div>
                     <div class="tour-thumbnails">
                         <div class="tour-thumbnail">
-                            <img src="assets/images/wildlife.jpg" alt="Thumbnail 1">
+                            <img src="assets/images/hand-holding-a-traditional-glass-of-turkish-black-2025-01-15-13-28-09-utc.jpg" alt="Thumbnail 1">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide1.jpg" alt="Thumbnail 2">
+                            <img src="assets/images/organic-produce-2025-04-04-09-50-53-utc.jpg" alt="Thumbnail 2">
                         </div>
                         <div class="tour-thumbnail">
-                            <img src="assets/images/slide2.jpg" alt="Thumbnail 3">
+                            <img src="assets/images/Photo A34.jpg" alt="Thumbnail 3">
                         </div>
                     </div>
                 </div>
@@ -650,7 +662,7 @@ if (counterSection) {
             <!-- Category 1 - History -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide1.jpg" alt="History">
+                    <img src="assets/images/History.jpg" alt="History">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">History</h3>
@@ -661,7 +673,7 @@ if (counterSection) {
             <!-- Category 2 - Leadership -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide2.jpg" alt="Leadership">
+                    <img src="assets/images/healing.jpg" alt="Leadership">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Leadership</h3>
@@ -672,7 +684,7 @@ if (counterSection) {
             <!-- Category 3 - Academic Exchange -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide3.jpg" alt="Academic Exchange">
+                    <img src="assets/images/slide2.jpg" alt="Academic Exchange">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Academic Exchange</h3>
@@ -683,7 +695,7 @@ if (counterSection) {
             <!-- Category 4 - Career Nomad -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/wildlife.jpg" alt="Career Nomad">
+                    <img src="assets/images/Sister City Programs.jpg" alt="Career Nomad">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Career Nomad</h3>
@@ -694,7 +706,7 @@ if (counterSection) {
             <!-- Category 5 - Wellness -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide1.jpg" alt="Wellness">
+                    <img src="assets/images/Wellness.jpg" alt="Wellness">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Wellness</h3>
@@ -705,7 +717,7 @@ if (counterSection) {
             <!-- Category 6 - Adventure -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide2.jpg" alt="Adventure">
+                    <img src="assets/images/Adventure.jpg" alt="Adventure">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Adventure</h3>
@@ -716,7 +728,7 @@ if (counterSection) {
             <!-- Category 7 - Beach Life -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/wildlife.jpg" alt="Beach Life">
+                    <img src="assets/images/Beach Life.jpg" alt="Beach Life">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Beach Life</h3>
@@ -727,7 +739,7 @@ if (counterSection) {
             <!-- Category 8 - Nature Connection -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide3.jpg" alt="Nature Connection">
+                    <img src="assets/images/Wildlife.jpg" alt="Nature Connection">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Nature Connection</h3>
@@ -738,7 +750,7 @@ if (counterSection) {
             <!-- Category 9 - Foodie -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide1.jpg" alt="Foodie">
+                    <img src="assets/images/Foodie.jpg" alt="Foodie">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Foodie</h3>
@@ -749,7 +761,7 @@ if (counterSection) {
             <!-- Category 10 - Culture Exchange -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide2.jpg" alt="Culture Exchange">
+                    <img src="assets/images/Exchange Programs.jpg" alt="Culture Exchange">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Culture Exchange</h3>
@@ -760,7 +772,7 @@ if (counterSection) {
             <!-- Category 11 - Romance -->
             <div class="category-card">
                 <div class="category-image">
-                    <img src="assets/images/slide3.jpg" alt="Romance">
+                    <img src="assets/images/Romance....young-couple-traveler-looking-beautiful-landscape-Chalbi Desert-2025-03-10-00-56-54-utc.jpg" alt="Romance">
                 </div>
                 <div class="category-content">
                     <h3 class="category-name">Romance</h3>
@@ -808,7 +820,7 @@ if (counterSection) {
         </div>
 
         <div class="beliefs-image">
-            <img src="assets/images/slide2.jpg" alt="Travel Experience">
+            <img src="assets/images/Discover Our Travel Guideline.jpg" alt="Travel Experience">
             <div class="beliefs-badge">
                 <span class="badge-label">discover</span>
                 <span class="badge-subtitle">It's Limited Seating! Hurry Up</span>
@@ -893,7 +905,7 @@ if (counterSection) {
             <!-- Blog Post 1 - Large -->
             <div class="blog-card blog-card-large">
                 <div class="blog-image">
-                    <img src="assets/images/slide1.jpg" alt="Serenity-Centered Model">
+                    <img src="assets/images/Cultural Heritage.jpg" alt="Serenity-Centered Model">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -913,7 +925,7 @@ if (counterSection) {
             <!-- Blog Post 2 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/images/slide2.jpg" alt="Disconnecting is the New Flex">
+                    <img src="assets/images/The Economic Case for Detox Tourism.jpg" alt="Disconnecting is the New Flex">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -929,7 +941,7 @@ if (counterSection) {
             <!-- Blog Post 3 - Small -->
             <div class="blog-card blog-card-small">
                 <div class="blog-image">
-                    <img src="assets/images/slide3.jpg" alt="Healing Intergenerational Trauma">
+                    <img src="assets/images/Healing Intergenerational Trauma Through Ancestral Journeys.jpg" alt="Healing Intergenerational Trauma">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">
@@ -1012,7 +1024,7 @@ if (counterSection) {
             <div class="footer-main">
                 <div class="footer-brand">
                    <div class="footer-logo">
-    <img src="assets/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
+    <img src="assets/logos/Serenesephere 2D logo PNG.png" alt="Serenesephere Logo">
 </div>
 <p class="brand-description">
     Serenesephere is a global wellness community connecting people with nature-led healing, indigenous wisdom, and cultural regeneration.
@@ -1152,5 +1164,40 @@ if (counterSection) {
             </div>
         </div>
     </footer>
+
+<script>
+// Lazy load hero video after page is interactive
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const videoIframe = document.querySelector('.hero-bg-video');
+        const videoPlaceholder = document.getElementById('video-placeholder');
+        
+        if (videoIframe && videoIframe.dataset.src) {
+            videoIframe.src = videoIframe.dataset.src;
+            videoIframe.style.display = 'block';
+            if (videoPlaceholder) {
+                setTimeout(function() {
+                    videoPlaceholder.style.opacity = '0';
+                    videoPlaceholder.style.transition = 'opacity 1s ease';
+                    setTimeout(function() {
+                        videoPlaceholder.style.display = 'none';
+                    }, 1000);
+                }, 500);
+            }
+        }
+    }, 1000);
+});
+
+// Pause animations during fast scrolling
+let scrollTimer;
+window.addEventListener('scroll', function() {
+    document.body.classList.add('disable-animations');
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+        document.body.classList.remove('disable-animations');
+    }, 100);
+}, { passive: true });
+</script>
+
 </body>
 </html>

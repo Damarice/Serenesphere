@@ -21,6 +21,9 @@
     
     <!-- Main Script -->
     <script src="../js/main.js" defer></script>
+    
+    <!-- Performance Script -->
+    <script src="../js/performance.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +51,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-controls="mobileMenuOverlay" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -61,19 +64,11 @@
                 <li class="nav-item">
                     <a href="circles.html" class="nav-link">Circles</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#markets" class="nav-link">Markets</a>
-                    <div class="dropdown-content">
-                        <a href="#wellness-tools">Wellness Tools & Artifacts</a>
-                        <a href="#wholesale">Wholesale Inquiries</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
                 </li>
-                <li class="nav-item has-dropdown">
-                    <a href="#chapters" class="nav-link">Chapters</a>
-                    <div class="dropdown-content">
-                        <a href="#us-programs">US Programs</a>
-                        <a href="#global-impact">Global Impact Map</a>
-                    </div>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
                 </li>
             </ul>
 
@@ -86,17 +81,53 @@
                     <a href="about.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <div class="dropdown-content">
                         <a href="blog.html">Blog</a>
                         <a href="podcast.html">Podcast</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li><li class="nav-item">
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
         </nav>
+
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay">
+            <ul class="nav-items-mobile">
+                <li class="nav-item">
+                    <a href="retreats.html" class="nav-link">Retreats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="circles.html" class="nav-link">Circles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="markets.html" class="nav-link">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Blog</a>
+                        <a href="podcast.html">Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -105,7 +136,7 @@
             <div class="detail-main">
                 <!-- Hero Image -->
                 <div class="detail-hero-image">
-                    <img src="../assets/images/slide1.jpg" alt="Digital Detox Immersions" id="retreatMainImage">
+                    <img src="../assets/images/a-tourist-visiting-the-donana-natural-park-huelva-2024-12-09-03-48-42-utc.jpg" alt="Digital Detox Immersions" id="retreatMainImage" loading="lazy">
                 </div>
 
                 <!-- Location and Wishlist -->
@@ -167,10 +198,10 @@
                 <!-- Gallery Images -->
                 <div class="detail-gallery">
                     <div class="gallery-item">
-                        <img src="../assets/images/slide2.jpg" alt="Gallery 1">
+                        <img src="../assets/images/Photo A.jpg" alt="Gallery 1" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="../assets/images/slide3.jpg" alt="Gallery 2">
+                        <img src="../assets/images/black-man-enjoying-homemade-food-at-festive-dinner-2025-03-10-05-44-47-utc.jpg" alt="Gallery 2" loading="lazy">
                     </div>
                 </div>
 
