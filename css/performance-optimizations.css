@@ -1,0 +1,136 @@
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Lazy Loading Images */
+img {
+    loading: lazy;
+}
+
+/* Optimize image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Reduce video quality on mobile */
+@media (max-width: 768px) {
+    .hero-bg-video,
+    iframe {
+        filter: blur(0.5px);
+        transform: scale(1.01);
+    }
+}
+
+/* Disable video on slow connections */
+@media (prefers-reduced-data: reduce) {
+    .hero-bg-video,
+    iframe {
+        display: none !important;
+    }
+    
+    .hero-bg-container {
+        background: linear-gradient(135deg, #0C4F58 0%, #2BA6A0 100%) !important;
+    }
+}
+
+/* Optimize animations on mobile */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* Remove white space before hero sections */
+.hero-section,
+.about-hero,
+.blog-hero,
+.contact-hero,
+.retreat-hero,
+.resources-hero,
+.markets-hero,
+.circles-hero,
+.chapters-hero,
+.podcast-hero {
+    margin-top: 155px !important;
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .about-hero,
+    .blog-hero,
+    .contact-hero,
+    .retreat-hero,
+    .resources-hero,
+    .markets-hero,
+    .circles-hero,
+    .chapters-hero,
+    .podcast-hero {
+        margin-top: 80px !important;
+    }
+}
+
+
+/* Image Loading Optimization */
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px;
+}
+
+/* Reduce image quality on mobile */
+@media (max-width: 768px) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Optimize background images */
+[style*="background-image"] {
+    background-size: cover;
+    background-position: center;
+    will-change: auto;
+}
+
+/* Disable heavy effects on mobile */
+@media (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+        box-shadow: none !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+    }
+    
+    /* Keep only essential shadows */
+    .category-name,
+    .category-desc {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .card,
+    .tour-card,
+    .blog-card,
+    [class*="-card"] {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* Optimize fonts on mobile */
+@media (max-width: 768px) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeSpeed;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
