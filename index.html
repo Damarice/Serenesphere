@@ -24,14 +24,8 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/main.css">
     
-    <!-- Sections Styles -->
-    <link rel="stylesheet" href="css/sections.css">
-    
     <!-- Footer Styles -->
     <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Mobile Responsive Styles -->
-    <link rel="stylesheet" href="css/mobile-responsive.css">
     
     <!-- Swiper CSS and JS - Load before main script -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
@@ -154,11 +148,12 @@
         <div id="video-placeholder" style="width: 100%; height: 100%; background: linear-gradient(135deg, #0C4F58 0%, #2BA6A0 100%); position: absolute; top: 0; left: 0;"></div>
         <iframe 
             class="hero-bg-video" 
-            data-src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" 
+            data-src="https://www.youtube.com/embed/QIQRXwBJI30?autoplay=1&mute=1&loop=1&playlist=QIQRXwBJI30&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&quality=small" 
             title="Serenesephere Video" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen
+            loading="lazy"
             style="display: none;">
         </iframe>
     </div>
@@ -1174,39 +1169,7 @@ if (counterSection) {
         </div>
     </footer>
 
-<script>
-// Lazy load hero video after page is interactive
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        const videoIframe = document.querySelector('.hero-bg-video');
-        const videoPlaceholder = document.getElementById('video-placeholder');
-        
-        if (videoIframe && videoIframe.dataset.src) {
-            videoIframe.src = videoIframe.dataset.src;
-            videoIframe.style.display = 'block';
-            if (videoPlaceholder) {
-                setTimeout(function() {
-                    videoPlaceholder.style.opacity = '0';
-                    videoPlaceholder.style.transition = 'opacity 1s ease';
-                    setTimeout(function() {
-                        videoPlaceholder.style.display = 'none';
-                    }, 1000);
-                }, 500);
-            }
-        }
-    }, 1000);
-});
 
-// Pause animations during fast scrolling
-let scrollTimer;
-window.addEventListener('scroll', function() {
-    document.body.classList.add('disable-animations');
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
-        document.body.classList.remove('disable-animations');
-    }, 100);
-}, { passive: true });
-</script>
 
 </body>
 </html>
