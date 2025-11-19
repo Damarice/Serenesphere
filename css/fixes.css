@@ -1,0 +1,542 @@
+/* ========================================
+   CRITICAL FIXES
+   ======================================== */
+
+/* Fix Category Font Visibility */
+.category-name {
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+}
+
+.category-desc {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: 500 !important;
+}
+
+.category-content {
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3)) !important;
+    padding: 2.5rem 1.5rem !important;
+}
+
+/* Fix Newsletter Section - Unified Design */
+.newsletter-box {
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 100%) !important;
+    color: white !important;
+}
+
+.newsletter-title {
+    color: white !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.newsletter-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.05rem !important;
+}
+
+.newsletter-form {
+    display: flex !important;
+    gap: 0.5rem !important;
+    background: white;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.newsletter-input {
+    flex: 1 !important;
+    padding: 12px 20px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-size: 1rem !important;
+    outline: none !important;
+    background: transparent !important;
+}
+
+.newsletter-submit {
+    width: 50px !important;
+    height: 50px !important;
+    background: var(--deep-teal) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    flex-shrink: 0 !important;
+}
+
+.newsletter-submit:hover {
+    background: var(--secondary-teal) !important;
+    transform: scale(1.1) !important;
+}
+
+
+/* Mobile Newsletter Fixes */
+@media (max-width: 768px) {
+    .newsletter-box {
+        padding: 2rem 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .newsletter-title {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .newsletter-text {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+    
+    .newsletter-form {
+        flex-direction: row !important;
+        width: 100%;
+    }
+    
+    .newsletter-input {
+        padding: 10px 15px !important;
+    }
+    
+    .newsletter-submit {
+        width: 45px !important;
+        height: 45px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .newsletter-text {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Remove all white space before hero sections */
+body {
+    padding-top: 0 !important;
+}
+
+main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure no gap between header and hero */
+.header + main,
+.header + .hero-section,
+.header + section {
+    margin-top: 0 !important;
+}
+
+
+/* ========================================
+   RETREATS PAGE LAYOUT FIXES
+   ======================================== */
+
+/* Fix retreats page content alignment */
+.retreats-page .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .retreats-page .container {
+        padding: 0 1rem;
+    }
+    
+    /* Fix retreat cards layout */
+    .retreat-card {
+        margin-bottom: 2rem;
+    }
+    
+    .retreat-image {
+        height: 220px !important;
+    }
+    
+    .retreat-content {
+        padding: 1.5rem !important;
+    }
+    
+    .retreat-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .retreat-description {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Fix all page content misalignment */
+@media (max-width: 768px) {
+    /* Ensure all content is properly contained */
+    * {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Fix any overflowing elements */
+    .row,
+    .grid,
+    [class*="grid"],
+    [class*="container"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Fix images that might overflow */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+/* ========================================
+   REMOVE WHITE SPACE BEFORE HERO SECTIONS
+   ======================================== */
+
+/* Reset all margins and padding at the top */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    padding-top: 0 !important;
+}
+
+/* Ensure header is at the very top */
+.topbar {
+    margin: 0 !important;
+}
+
+.header {
+    margin: 0 !important;
+}
+
+/* Remove any spacing before main content */
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* All hero sections should start right after header */
+section:first-of-type,
+.hero-section,
+.about-hero,
+.blog-hero,
+.contact-hero,
+.retreat-hero,
+.retreats-hero,
+.resources-hero,
+.markets-hero,
+.circles-hero,
+.chapters-hero,
+.podcast-hero {
+    margin-top: 155px !important;
+    padding-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    section:first-of-type,
+    .hero-section,
+    .about-hero,
+    .blog-hero,
+    .contact-hero,
+    .retreat-hero,
+    .retreats-hero,
+    .resources-hero,
+    .markets-hero,
+    .circles-hero,
+    .chapters-hero,
+    .podcast-hero {
+        margin-top: 80px !important;
+    }
+}
+
+/* Remove any default browser spacing */
+* {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Ensure no gap between elements */
+.header + * {
+    margin-top: 0 !important;
+}
+
+
+/* ========================================
+   MOBILE TOGGLE FIXES FOR ALL PAGES
+   ======================================== */
+
+/* Ensure mobile toggle is always visible on mobile */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1003;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--deep-teal);
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    /* Animated hamburger to X */
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+        background: white;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+        background: white;
+    }
+    
+    /* Mobile menu overlay */
+    .mobile-menu-overlay {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--deep-gray), var(--deep-teal));
+        z-index: 1002;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        padding-top: 100px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mobile-menu-overlay.active {
+        transform: translateX(0) !important;
+    }
+    
+    /* Mobile menu items */
+    .nav-items-mobile {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-items-mobile .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-items-mobile .nav-link {
+        display: block;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        text-align: left;
+        color: var(--pure-white);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-items-mobile .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--bright-cyan-glow);
+        padding-left: 2.5rem;
+    }
+    
+    /* Dropdown in mobile menu */
+    .nav-items-mobile .has-dropdown > .nav-link {
+        position: relative;
+    }
+    
+    .nav-items-mobile .has-dropdown > .nav-link::after {
+        content: '\f107';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 2rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-items-mobile .has-dropdown.active > .nav-link::after {
+        transform: rotate(180deg);
+    }
+    
+    .nav-items-mobile .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-items-mobile .has-dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .nav-items-mobile .dropdown-content a {
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 3rem;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.9);
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav-items-mobile .dropdown-content a:hover {
+        background-color: rgba(48, 221, 224, 0.1);
+        padding-left: 3.5rem;
+    }
+    
+    /* Lock body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden !important;
+        position: fixed;
+        width: 100%;
+    }
+    
+    /* Hide desktop nav on mobile */
+    .nav-items-left,
+    .nav-items-right {
+        display: none !important;
+    }
+}
+
+
+/* ========================================
+   ENSURE MOBILE TOGGLE WORKS ON ALL PAGES
+   ======================================== */
+
+/* Force mobile menu to be properly positioned */
+@media (max-width: 768px) {
+    /* Ensure toggle button is always on top */
+    .mobile-menu-toggle {
+        position: fixed !important;
+        right: 1rem !important;
+        top: 40px !important;
+        z-index: 1003 !important;
+    }
+    
+    /* When menu is active, keep toggle visible */
+    .mobile-menu-toggle.active {
+        position: fixed !important;
+        right: 1rem !important;
+        top: 40px !important;
+    }
+    
+    /* Ensure overlay covers everything */
+    .mobile-menu-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Ensure logo is visible on mobile */
+    .logo {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        margin-left: 1rem !important;
+        z-index: 1001 !important;
+    }
+    
+    .logo img {
+        height: 50px !important;
+    }
+    
+    /* Header adjustments for mobile */
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1001 !important;
+        height: 80px !important;
+    }
+    
+    .nav-container {
+        height: 80px !important;
+        padding: 0 1rem !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Topbar on mobile */
+    .topbar {
+        position: static !important;
+        height: auto !important;
+        padding: 0.5rem 0 !important;
+    }
+    
+    .topbar-container {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .topbar-left {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        align-items: center !important;
+    }
+    
+    .topbar-contact {
+        font-size: 0.75rem !important;
+    }
+    
+    .topbar-social {
+        justify-content: center !important;
+    }
+}
+
+/* Smooth transitions for mobile menu */
+.mobile-menu-toggle,
+.mobile-menu-toggle span,
+.mobile-menu-overlay {
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Ensure menu items are clickable */
+@media (max-width: 768px) {
+    .nav-items-mobile .nav-link {
+        cursor: pointer !important;
+        user-select: none !important;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-items-mobile .nav-link:active {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+}

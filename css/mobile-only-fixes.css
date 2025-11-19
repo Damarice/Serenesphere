@@ -1,0 +1,89 @@
+/* ========================================
+   MOBILE ONLY FIXES - DESKTOP UNTOUCHED
+   ======================================== */
+
+/* These styles ONLY apply to mobile devices (768px and below) */
+/* Desktop layout remains completely unchanged */
+
+@media (max-width: 768px) {
+    /* Hero Section Mobile Only */
+    .hero-section {
+        height: 60vh !important;
+        min-height: 400px !important;
+    }
+    
+    .hero-content {
+        top: 50px !important;
+    }
+    
+    .cta-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .btn, .btn-tertiary {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+    
+    /* Category Font Visibility - Mobile Only */
+    .category-name {
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+        font-weight: 700 !important;
+    }
+    
+    .category-desc {
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+    }
+    
+    /* Newsletter Mobile Only */
+    .newsletter-box {
+        background: linear-gradient(135deg, var(--deep-teal) 0%, var(--secondary-teal) 100%) !important;
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .newsletter-title {
+        color: white !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .newsletter-text {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    /* Mobile Menu Toggle - Mobile Only */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-items-left,
+    .nav-items-right {
+        display: none !important;
+    }
+    
+    /* Remove white space - Mobile Only */
+    .hero-section,
+    [class*="hero"] {
+        margin-top: 80px !important;
+    }
+    
+    /* Content Alignment - Mobile Only */
+    .container {
+        padding: 0 1rem !important;
+    }
+    
+    section {
+        padding: 3rem 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh !important;
+        min-height: 350px !important;
+    }
+}
+
+/* Desktop remains completely unchanged - no styles above 768px */
