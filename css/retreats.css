@@ -78,7 +78,7 @@
 .programs-slideshow {
     padding: 6rem 0 4rem;
     background: var(--light-gray);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .programs-container {
@@ -88,8 +88,8 @@
 }
 
 .programs-header {
-    text-align: left;
-    margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .programs-subtitle {
@@ -100,7 +100,6 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
-    text-align: left;
 }
 
 .programs-main-title {
@@ -108,33 +107,40 @@
     font-size: 2.5rem;
     color: var(--deep-teal);
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .programs-swiper {
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
+    overflow: visible;
+}
+
+.programs-swiper .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
 }
 
 .programs-swiper .swiper-slide {
     width: 380px;
     height: auto;
+    display: flex;
 }
 
 .program-card {
     background: var(--pure-white);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .program-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .program-image {

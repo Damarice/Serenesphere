@@ -175,7 +175,7 @@
                     <div class="swiper-slide">
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="../assets/images/slide1.jpg" alt="Digital Detox Immersions">
+                                <img src="../assets/images/a-tourist-visiting-the-donana-natural-park-huelva-2024-12-09-03-48-42-utc.jpg" alt="Digital Detox Immersions">
                                 <div class="program-rating">★ 4.5</div>
                             </div>
                             <div class="program-content">
@@ -192,7 +192,7 @@
                     <div class="swiper-slide">
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="../assets/images/slide2.jpg" alt="Ancestral Wisdom Retreat">
+                                <img src="../assets/images/Photo A.jpg" alt="Ancestral Wisdom Retreat">
                                 <div class="program-rating">★ 5</div>
                             </div>
                             <div class="program-content">
@@ -209,7 +209,7 @@
                     <div class="swiper-slide">
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="../assets/images/slide3.jpg" alt="Regenerative Farming Experience">
+                                <img src="../assets/images/black-man-enjoying-homemade-food-at-festive-dinner-2025-03-10-05-44-47-utc.jpg" alt="Regenerative Farming Experience">
                                 <div class="program-rating">★ 4.5</div>
                             </div>
                             <div class="program-content">
@@ -260,7 +260,7 @@
                     <div class="swiper-slide">
                         <div class="program-card">
                             <div class="program-image">
-                                <img src="../assets/images/slide1.jpg" alt="Regenerative Residency Program">
+                                <img src="../assets/images/a-tourist-visiting-the-donana-natural-park-huelva-2024-12-09-03-48-42-utc.jpg" alt="Regenerative Residency Program">
                                 <div class="program-rating">★ 5</div>
                             </div>
                             <div class="program-content">
@@ -430,5 +430,43 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    // Initialize Programs Swiper
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Swiper !== 'undefined') {
+            new Swiper('.programs-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                loop: true,
+                centeredSlides: false,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                speed: 800,
+                grabCursor: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        centeredSlides: true,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 25,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        centeredSlides: false,
+                    }
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>
