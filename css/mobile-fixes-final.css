@@ -15,52 +15,22 @@ html, body {
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
-    /* Simple fix - just remove white space */
-    .hero-section {
+    /* Remove white space above hero section */
+    .hero-section,
+    main > section:first-child,
+    main > .hero-section {
         margin-top: 0 !important;
+        padding-top: 80px !important;
     }
     
-    /* All other hero sections */
-    .retreats-hero,
-    .blog-hero,
-    .about-hero,
-    .contact-hero,
-    .circles-hero,
-    .chapters-hero,
-    .markets-hero,
-    .podcast-hero,
-    .resources-hero,
-    .hero {
-        margin-top: 155px !important;
-    }
-    
-    /* Logo visibility */
-    .logo,
-    .logo-img {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    /* Mobile menu toggle visibility */
-    .mobile-menu-toggle {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    /* FOOTER - Ensure proper spacing at bottom */
-    .footer {
-        margin-top: 3rem !important;
-        padding-top: 3rem !important;
-        padding-bottom: 2rem !important;
-    }
-    
-    /* LAST SECTIONS - Proper bottom spacing */
-    section:last-of-type,
-    main > section:last-child {
+    /* Ensure header doesn't create gap */
+    .header {
         margin-bottom: 0 !important;
-        padding-bottom: 3rem !important;
+    }
+    
+    main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
     
     /* Force all containers to be responsive */

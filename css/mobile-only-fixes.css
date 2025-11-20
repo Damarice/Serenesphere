@@ -10,7 +10,6 @@
     .hero-section {
         height: 60vh !important;
         min-height: 400px !important;
-        margin-top: 0 !important;
     }
     
     .hero-content {
@@ -65,8 +64,10 @@
     }
     
     /* Remove white space - Mobile Only */
-    .hero-section {
+    .hero-section,
+    [class*="hero"] {
         margin-top: 0 !important;
+        padding-top: 80px !important;
     }
     
     /* Content Alignment - Mobile Only */
