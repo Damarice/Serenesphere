@@ -1,0 +1,50 @@
+/* ========================================
+   DESTINATION CARDS - ALWAYS SHOW CAPTIONS
+   ======================================== */
+
+/* Make destination overlay always visible */
+.destination-overlay {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+/* Ensure text is always visible */
+.destination-info {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.destination-info h3 {
+    color: white !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.destination-info p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Hover effect - slightly enhance */
+.destination-slide-card:hover .destination-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%) !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .destination-info h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .destination-info p {
+        font-size: 0.9rem !important;
+    }
+    
+    .destination-overlay {
+        padding: 20px 15px !important;
+    }
+}
