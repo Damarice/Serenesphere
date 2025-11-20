@@ -2,36 +2,51 @@
    DESTINATION CARDS - ALWAYS SHOW CAPTIONS
    ======================================== */
 
-/* Make destination overlay always visible */
-.destination-overlay {
+/* CRITICAL: Override the hidden state - make overlay always visible */
+.destination-slide-card .destination-overlay {
     transform: translateY(0) !important;
     opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 /* Ensure text is always visible */
-.destination-info {
+.destination-slide-card .destination-info {
     opacity: 1 !important;
     transform: translateY(0) !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
-.destination-info h3 {
+.destination-slide-card .destination-info h3 {
     color: white !important;
     font-size: 1.8rem !important;
     font-weight: 700 !important;
     margin-bottom: 0.5rem !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.destination-info p {
+.destination-slide-card .destination-info p {
     color: rgba(255, 255, 255, 0.95) !important;
     font-size: 1rem !important;
     line-height: 1.5 !important;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-/* Hover effect - slightly enhance */
+/* Hover effect - slightly enhance but keep visible */
 .destination-slide-card:hover .destination-overlay {
+    transform: translateY(0) !important;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%) !important;
+    opacity: 1 !important;
+}
+
+.destination-slide-card:hover .destination-info {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }
 
 /* Mobile responsiveness */
