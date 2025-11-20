@@ -7,7 +7,7 @@
     position: relative;
     height: 50vh;
     min-height: 400px;
-    background: linear-gradient(rgba(30, 60, 90, 0.6), rgba(30, 60, 90, 0.6)), 
+    background: linear-gradient(rgba(12, 79, 88, 0.6), rgba(12, 79, 88, 0.6)), 
                 url('../assets/images/Hero\ Section-\ Contact.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(30, 60, 90, 0.3);
+    background: rgba(12, 79, 88, 0.3);
 }
 
 .contact-hero-content {
@@ -136,13 +136,13 @@
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .contact-icon i {
@@ -232,7 +232,7 @@
 }
 
 .btn-send-message {
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
     color: white;
     padding: 16px 50px;
     border: none;
@@ -243,13 +243,13 @@
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: flex-start;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-send-message:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
-    background: linear-gradient(135deg, #ff8c5a 0%, #ff6b35 100%);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
 }
 
 /* FAQ Section */

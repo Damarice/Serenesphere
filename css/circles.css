@@ -7,7 +7,7 @@
     position: relative;
     height: 50vh;
     min-height: 400px;
-    background: linear-gradient(rgba(30, 60, 90, 0.6), rgba(30, 60, 90, 0.6)), 
+    background: linear-gradient(rgba(12, 79, 88, 0.6), rgba(12, 79, 88, 0.6)), 
                 url('../assets/images/wildlife.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(30, 60, 90, 0.3);
+    background: rgba(12, 79, 88, 0.3);
 }
 
 .circles-hero-content {

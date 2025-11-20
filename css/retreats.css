@@ -14,7 +14,7 @@
     position: relative;
     height: 60vh;
     min-height: 500px;
-    background: linear-gradient(rgba(100, 150, 180, 0.4), rgba(100, 150, 180, 0.4)), 
+    background: linear-gradient(rgba(43, 166, 160, 0.4), rgba(43, 166, 160, 0.4)), 
                 url('../assets/images/Hero\ Section\ retreat.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(100, 150, 180, 0.2);
+    background: rgba(43, 166, 160, 0.2);
 }
 
 .retreats-hero-content {
@@ -158,7 +158,7 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: #ff6b35;
+    background: #D4AF37;
     color: var(--pure-white);
     padding: 0.5rem 1rem;
     border-radius: 8px;
