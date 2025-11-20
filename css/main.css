@@ -18,9 +18,6 @@ ity and Deals Card Images */
 .activity-card {
     background-image: none !important;
 }
-.deals-card {
-    background-image: none !important;
-}
 
 
 /* Fix z-index stacking for images to appear */
