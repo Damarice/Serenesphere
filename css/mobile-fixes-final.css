@@ -15,22 +15,57 @@ html, body {
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
-    /* Remove white space above hero section */
+    /* Remove white space above hero section - CRITICAL FIX */
+    body {
+        padding-top: 0 !important;
+    }
+    
     .hero-section,
     main > section:first-child,
-    main > .hero-section {
+    main > .hero-section,
+    section.hero-section,
+    #hero {
         margin-top: 0 !important;
-        padding-top: 80px !important;
+        padding-top: 0 !important;
     }
     
     /* Ensure header doesn't create gap */
     .header {
         margin-bottom: 0 !important;
+        position: fixed !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+    }
+    
+    .topbar {
+        position: fixed !important;
+        top: 0 !important;
+        z-index: 1001 !important;
     }
     
     main {
         margin-top: 0 !important;
         padding-top: 0 !important;
+    }
+    
+    /* Push content below fixed header */
+    main > .hero-section:first-child,
+    main > section:first-child {
+        padding-top: 140px !important;
+    }
+    
+    /* Fix all hero sections across all pages */
+    .retreats-hero,
+    .blog-hero,
+    .about-hero,
+    .contact-hero,
+    .circles-hero,
+    .chapters-hero,
+    .markets-hero,
+    .podcast-hero,
+    .resources-hero,
+    .hero {
+        margin-top: 0 !important;
     }
     
     /* Force all containers to be responsive */

@@ -10,6 +10,7 @@
     .hero-section {
         height: 60vh !important;
         min-height: 400px !important;
+        margin-top: 0 !important;
     }
     
     .hero-content {
