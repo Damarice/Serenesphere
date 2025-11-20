@@ -65,10 +65,8 @@
     }
     
     /* Remove white space - Mobile Only */
-    .hero-section,
-    [class*="hero"] {
+    .hero-section {
         margin-top: 0 !important;
-        padding-top: 80px !important;
     }
     
     /* Content Alignment - Mobile Only */
