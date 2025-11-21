@@ -22,11 +22,29 @@
         display: flex;
     }
     
-    .logo-img {
-        max-height: 50px;
+    /* Make logo clickable and visible */
+    .logo {
+        display: block;
+        z-index: 1000;
     }
     
-    /* ===== HERO SECTIONS ===== */
+    .logo-img {
+        max-height: 50px;
+        cursor: pointer;
+    }
+    
+    /* Remove white space between header and hero */
+    .header {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    main {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    /* ===== HERO SECTIONS - CONSISTENT HEIGHT & CENTERED ===== */
     .hero-section,
     .blog-hero,
     .contact-hero,
@@ -36,8 +54,45 @@
     .markets-hero,
     .resources-hero,
     .podcast-hero {
-        min-height: 50vh;
-        padding: 60px 20px 40px;
+        min-height: 60vh;
+        height: 60vh;
+        padding: 80px 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    /* Center all hero content */
+    .hero-content,
+    .blog-hero-content,
+    .contact-hero-content,
+    .retreats-hero-content,
+    .chapters-hero-content,
+    .circles-hero-content,
+    .markets-hero-content,
+    .resources-hero-content,
+    .podcast-hero-content {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Fix hero content overlap */
+    .hero-section + section,
+    .blog-hero + section,
+    .contact-hero + section,
+    .retreats-hero + section,
+    .chapters-hero + section,
+    .circles-hero + section,
+    .markets-hero + section,
+    .resources-hero + section,
+    .podcast-hero + section {
+        margin-top: 0;
+        padding-top: 40px;
+        position: relative;
+        z-index: 10;
+        background: white;
     }
     
     .hero-title,
@@ -103,13 +158,42 @@
         gap: 30px;
     }
     
+    /* Left align footer content on mobile */
     .footer-brand,
     .nav-column {
-        text-align: center;
+        text-align: left;
     }
     
+    .footer-logo img {
+        max-width: 150px;
+        height: auto;
+    }
+    
+    /* Make partner logos bigger and visible */
     .partners-slider {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .partner-logo {
+        padding: 15px;
+        background: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .partner-logo img {
+        max-width: 120px;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
     }
     
     /* ===== BLOG SPECIFIC ===== */
@@ -149,11 +233,36 @@
         grid-template-columns: 1fr;
     }
     
+    .contact-content-section {
+        padding-top: 40px;
+    }
+    
     /* ===== ABOUT SPECIFIC ===== */
     .about-content-grid,
     .team-grid,
     .values-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Make about images responsive */
+    .about-image,
+    .about-image img,
+    .company-image,
+    .company-image img,
+    .mission-image,
+    .mission-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    
+    .about-section img,
+    .company-section img,
+    .mission-section img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
     
     /* ===== COUNTER SECTION ===== */
@@ -216,6 +325,41 @@
         display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+    }
+    
+    /* ===== CHAPTERS PAGE FIXES ===== */
+    .chapters-grid-section {
+        padding-top: 40px;
+    }
+    
+    .chapter-card-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .chapter-card-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== CIRCLES PAGE FIXES ===== */
+    .circles-hero-content {
+        text-align: center;
+    }
+    
+    .circles-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .circle-card-image img {
+        width: 100%;
+        height: auto;
     }
 }
 
