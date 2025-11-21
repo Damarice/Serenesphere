@@ -1,0 +1,45 @@
+/* ========================================
+   HOMEPAGE MOBILE FIX - Remove White Space
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Remove ALL spacing on homepage */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .topbar {
+        display: none !important;
+    }
+    
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        padding: 10px 0 !important;
+        z-index: 1000 !important;
+        background: rgba(12, 79, 88, 0.95) !important;
+    }
+    
+    main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .hero-section {
+        margin: 0 !important;
+        padding-top: 60px !important;
+        min-height: 100vh !important;
+        height: 100vh !important;
+    }
+    
+    .hero-bg-container {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+}
