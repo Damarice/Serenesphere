@@ -4,9 +4,10 @@
 
 @media (max-width: 768px) {
     /* Remove ALL spacing on homepage */
-    body {
+    html, body {
         margin: 0 !important;
         padding: 0 !important;
+        overflow-x: hidden !important;
     }
     
     .topbar {
@@ -22,47 +23,87 @@
         padding: 10px 0 !important;
         z-index: 1000 !important;
         background: rgba(12, 79, 88, 0.95) !important;
+        height: 60px !important;
+    }
+    
+    .nav-container {
+        height: 60px !important;
+        padding: 0 1rem !important;
     }
     
     main {
         margin: 0 !important;
         padding: 0 !important;
+        padding-top: 60px !important;
     }
     
+    /* CRITICAL: Remove all spacing from hero */
     .hero-section {
         margin: 0 !important;
-        margin-top: 60px !important;
         padding: 0 !important;
-        min-height: 60vh !important;
-        height: 60vh !important;
+        height: 50vh !important;
+        min-height: 50vh !important;
+        max-height: 50vh !important;
         overflow: hidden !important;
+        position: relative !important;
+        display: block !important;
     }
     
+    /* Video container - fill hero completely */
     .hero-bg-container {
+        position: absolute !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
         bottom: 0 !important;
-        height: 100% !important;
-    }
-    
-    .hero-bg-video,
-    .hero-bg-container iframe {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
+    /* Video placeholder - no black background */
+    #video-placeholder {
+        display: none !important;
+    }
+    
+    /* Video iframe - cover entire container */
+    .hero-bg-video,
+    .hero-bg-container iframe {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Button positioning */
     .hero-content {
         position: absolute !important;
-        bottom: 20% !important;
+        bottom: 15% !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         top: auto !important;
         width: 90% !important;
+        z-index: 10 !important;
     }
     
     .cta-buttons {
-        margin-top: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Remove spacing from next section */
+    .top-destinations-section {
+        margin: 0 !important;
+        padding: 1.5rem 0 !important;
     }
 }
