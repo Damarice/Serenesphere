@@ -35,17 +35,31 @@
     
     /* Remove white space between header and hero */
     .header {
-        margin-bottom: 0;
-        padding-bottom: 0;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
     
     main {
-        margin-top: 0;
-        padding-top: 0;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
     
-    /* ===== HERO SECTIONS - CONSISTENT HEIGHT & CENTERED ===== */
-    .hero-section,
+    body {
+        padding-top: 0 !important;
+    }
+    
+    /* ===== HOMEPAGE HERO - DIFFERENT ===== */
+    .hero-section {
+        min-height: 70vh;
+        height: 70vh;
+        padding: 100px 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0 !important;
+    }
+    
+    /* ===== OTHER PAGES HERO - CONSISTENT HEIGHT & CENTERED ===== */
     .blog-hero,
     .contact-hero,
     .retreats-hero,
@@ -54,13 +68,13 @@
     .markets-hero,
     .resources-hero,
     .podcast-hero {
-        min-height: 60vh;
-        height: 60vh;
-        padding: 80px 20px 40px;
+        min-height: 40vh;
+        height: 40vh;
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0;
+        margin-top: 0 !important;
     }
     
     /* Center all hero content */
@@ -76,6 +90,10 @@
         text-align: center;
         width: 100%;
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Fix hero content overlap */
@@ -88,18 +106,51 @@
     .markets-hero + section,
     .resources-hero + section,
     .podcast-hero + section {
-        margin-top: 0;
-        padding-top: 40px;
+        margin-top: 0 !important;
+        padding-top: 50px !important;
         position: relative;
         z-index: 10;
         background: white;
     }
     
+    /* Hero titles responsive */
     .hero-title,
     .blog-hero-title,
     .contact-hero-title,
-    .retreats-hero-title {
-        font-size: 2rem;
+    .retreats-hero-title,
+    .chapters-hero-title,
+    .circles-hero-title,
+    .markets-hero-title,
+    .resources-hero-title,
+    .podcast-hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    
+    /* Hero pretitle/subtitle responsive */
+    .retreats-hero-pretitle,
+    .hero-pretitle,
+    .section-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Hero description responsive */
+    .retreats-hero-description,
+    .hero-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5;
+    }
+    
+    /* Breadcrumb responsive */
+    .blog-breadcrumb,
+    .contact-breadcrumb,
+    .retreats-breadcrumb,
+    .chapters-breadcrumb,
+    .circles-breadcrumb,
+    .markets-breadcrumb {
+        font-size: 0.85rem;
     }
     
     /* ===== GRIDS ===== */
@@ -170,23 +221,37 @@
     }
     
     /* Make partner logos bigger and visible */
+    .partners-section {
+        padding: 30px 0;
+        overflow: hidden;
+    }
+    
+    .partners-slider-wrapper {
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    
     .partners-slider {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        padding: 10px;
     }
     
     .partner-logo {
-        padding: 15px;
+        padding: 20px;
         background: white;
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 100px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     
     .partner-logo img {
-        max-width: 120px;
-        max-height: 80px;
+        max-width: 100%;
+        max-height: 70px;
         width: auto;
         height: auto;
         object-fit: contain;
@@ -250,19 +315,44 @@
     .company-image,
     .company-image img,
     .mission-image,
-    .mission-image img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
+    .mission-image img,
+    .about-hero + section img,
+    .about-content img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
         object-fit: cover;
+        display: block;
     }
     
     .about-section img,
     .company-section img,
-    .mission-section img {
+    .mission-section img,
+    .about-grid img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+    
+    /* About page specific */
+    .about-content-section {
+        padding-top: 50px;
+    }
+    
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-text,
+    .about-image-wrapper {
+        width: 100%;
+    }
+    
+    .about-image-wrapper img {
         width: 100%;
         height: auto;
-        max-width: 100%;
+        border-radius: 8px;
     }
     
     /* ===== COUNTER SECTION ===== */
@@ -329,22 +419,46 @@
     
     /* ===== CHAPTERS PAGE FIXES ===== */
     .chapters-grid-section {
-        padding-top: 40px;
+        padding-top: 50px !important;
+        margin-top: 0 !important;
+    }
+    
+    .chapters-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .chapter-card {
+        margin-bottom: 30px;
     }
     
     .chapter-card-image {
         width: 100%;
         height: auto;
+        margin-bottom: 20px;
     }
     
     .chapter-card-image img {
         width: 100%;
         height: auto;
         object-fit: cover;
+        display: block;
+    }
+    
+    .chapter-card-content {
+        padding: 20px 0;
     }
     
     .contact-form-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .chapters-contact-section {
+        padding-top: 50px;
+        margin-top: 40px;
     }
     
     /* ===== CIRCLES PAGE FIXES ===== */
