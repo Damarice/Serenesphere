@@ -67,7 +67,7 @@
 
 /* About Company Section */
 .about-company-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background: white;
 }
 
@@ -186,7 +186,7 @@
 
 /* Why Choose Us Section */
 .why-choose-us-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background: white;
 }
 
@@ -360,7 +360,7 @@
 
 /* Services Section */
 .services-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #f8f9fa;
 }
 
@@ -439,7 +439,7 @@
 
 /* Nine Elements Section */
 .nine-elements-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background: #f8f9fa;
 }
 
@@ -673,7 +673,7 @@
 
 /* Mission Section */
 .mission-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #f8f9fa;
 }
 
@@ -701,7 +701,7 @@
 
 /* Values Section */
 .values-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: white;
     text-align: center;
 }
@@ -756,7 +756,7 @@
 
 /* Story Section */
 .story-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                 url('../assets/images/slide2.jpg') center/cover fixed;
     color: white;
@@ -781,7 +781,7 @@
 
 /* Team Section */
 .team-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background: white;
     text-align: center;
 }
@@ -897,22 +897,41 @@
     }
 
     .about-company-images {
-        max-width: 500px;
+        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
-        height: 400px;
+        height: 350px;
+        position: relative;
+        padding: 0 20px;
     }
 
     .main-image-wrapper {
-        width: 280px;
-        height: 280px;
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
     }
 
     .secondary-image-wrapper {
-        width: 65%;
+        width: 60%;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
     }
 
     .secondary-image {
-        height: 350px;
+        height: 300px;
+        border-radius: 15px;
+    }
+    
+    .video-badge {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .video-badge i {
+        font-size: 1.4rem;
     }
 
     .section-title {
@@ -1053,36 +1072,49 @@
     }
 
     .about-company-images {
-        height: 350px;
+        height: 300px;
+        padding: 0 15px;
     }
 
     .main-image-wrapper {
-        width: 240px;
-        height: 240px;
+        width: 160px;
+        height: 160px;
+        left: 15px;
     }
 
     .secondary-image-wrapper {
-        width: 70%;
+        width: 55%;
+        right: 15px;
     }
 
     .secondary-image {
-        height: 300px;
+        height: 250px;
+        border-radius: 12px;
     }
 
     .experience-badge {
-        width: 80px;
-        height: 80px;
-        padding: 15px;
-        bottom: 20px;
-        left: 10px;
+        width: 70px;
+        height: 70px;
+        padding: 12px;
+        bottom: 15px;
+        left: 15px;
     }
 
     .badge-number {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .badge-text {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+    }
+    
+    .video-badge {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .video-badge i {
+        font-size: 1.2rem;
     }
 
     .section-title {
@@ -1429,7 +1461,7 @@
 
 /* Stories & Inspirations Section */
 .stories-inspirations-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background: #f8f9fa;
 }
 

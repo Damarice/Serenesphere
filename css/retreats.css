@@ -76,7 +76,7 @@
 
 /* Programs Slideshow Section */
 .programs-slideshow {
-    padding: 6rem 0 4rem;
+    padding: 3rem 0 2rem;
     background: var(--light-gray);
     overflow: visible;
 }
@@ -240,7 +240,7 @@
 
 /* Upcoming Retreats Section */
 .upcoming-retreats {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--light-gray);
 }
 
@@ -388,7 +388,7 @@
 
 /* Custom Retreats Section */
 .custom-retreats {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--pure-white);
 }
 
@@ -440,7 +440,7 @@
 
 /* What's Included Section */
 .whats-included {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--light-gray);
 }
 
@@ -495,7 +495,7 @@
 
 /* Testimonials Section */
 .retreats-testimonials {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--pure-white);
 }
 
@@ -558,7 +558,7 @@
 /* CTA Section */
 .retreats-cta {
     position: relative;
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: linear-gradient(rgba(12, 79, 88, 0.85), rgba(12, 79, 88, 0.85)), 
                 url('../assets/images/slide2.jpg') center/cover no-repeat fixed;
     text-align: center;

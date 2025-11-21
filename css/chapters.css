@@ -60,13 +60,13 @@
 
 /* Chapters Grid Section */
 .chapters-grid-section {
-    padding: 80px 0 40px 0;
+    padding: 40px 0 30px 0;
     background: #f8f9fa;
 }
 
 .chapters-intro {
     max-width: 900px;
-    margin: 0 auto 60px;
+    margin: 0 auto 30px;
     text-align: center;
 }
 
@@ -232,7 +232,7 @@
 
 /* Contact Form Section */
 .chapters-contact-section {
-    padding: 40px 0 80px 0;
+    padding: 30px 0 40px 0;
     background: #f8f9fa;
 }
 

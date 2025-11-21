@@ -1,0 +1,68 @@
+/* ========================================
+   HOMEPAGE SPACING FIX - Remove Excessive Black Space
+   ======================================== */
+
+/* Remove spacing before hero (after header) */
+.hero-section {
+    margin-top: 155px !important;
+    padding-top: 0 !important;
+}
+
+/* Remove spacing after hero video */
+.top-destinations-section {
+    padding: 2rem 0 !important;
+    margin-top: 0 !important;
+}
+
+.destinations-header {
+    margin-bottom: 2rem !important;
+}
+
+/* Reduce ecosystem section spacing */
+.ecosystem-section {
+    padding: 3rem 0 !important;
+}
+
+/* Reduce retreats section spacing */
+.retreats-section {
+    padding: 2rem 1rem !important;
+}
+
+/* Reduce features section spacing */
+.features-section {
+    padding: 30px 0 !important;
+}
+
+/* Reduce welcome section spacing */
+.welcome-section {
+    padding: 2rem 0 !important;
+}
+
+.welcome-container {
+    padding: 2rem 2rem !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 80px !important;
+    }
+    
+    .top-destinations-section,
+    .ecosystem-section,
+    .retreats-section {
+        padding: 1.5rem 0 !important;
+    }
+    
+    .destinations-header {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .welcome-section {
+        padding: 1.5rem 0 !important;
+    }
+    
+    .welcome-container {
+        padding: 1rem !important;
+    }
+}
