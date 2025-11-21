@@ -51,6 +51,12 @@
     
     <!-- Performance Script -->
     <script src="js/performance.js" defer></script>
+    
+    <!-- WordPress Blog Integration -->
+    <script src="js/wordpress-blog.js" defer></script>
+    
+    <!-- WordPress Retreats Integration -->
+    <script src="js/wordpress-retreats.js" defer></script>
 
     <link rel="stylesheet" href="css/mobile-responsive-enhanced.css">
     <link rel="stylesheet" href="css/mobile-fixes-final.css">
@@ -101,7 +107,7 @@
 
             <ul class="nav-items nav-items-left">
                 <li class="nav-item">
-                    <a href="pages/retreats.html" class="nav-link">Retreats</a>
+                    <a href="/wp/retreats/" class="nav-link">Retreats</a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/circles.html" class="nav-link">Circles</a>
@@ -141,7 +147,7 @@
         <div id="mobileMenuOverlay" class="mobile-menu-overlay">
             <ul class="nav-items-mobile">
                 <li class="nav-item">
-                    <a href="pages/retreats.html" class="nav-link">Retreats</a>
+                    <a href="/wp/retreats/" class="nav-link">Retreats</a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/circles.html" class="nav-link">Circles</a>
@@ -436,7 +442,7 @@
                 </p>
             </div>
             <div class="tours-header-right">
-                <a href="pages/retreats.html" class="btn btn-view-all">View All Destinations</a>
+                <a href="/wp/retreats/" class="btn btn-view-all">View All Destinations</a>
             </div>
         </div>
 
@@ -941,7 +947,7 @@ if (counterSection) {
 
         <!-- View All Blogs Button -->
         <div class="blog-cta">
-            <a href="blog.html" class="btn btn-view-all-blogs">View All Blogs</a>
+            <a href="/wp/" class="btn btn-view-all-blogs">View All Blogs</a>
         </div>
     </div>
 </section>
@@ -969,8 +975,11 @@ if (counterSection) {
             <div class="newsletter-box">
                 <h3 class="newsletter-title">Sign Up for Our Newsletter</h3>
                 <p class="newsletter-text">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Submit Your Email" class="newsletter-input" required>
+                <form class="newsletter-form" action="https://serenesephere.us4.list-manage.com/subscribe/post?u=00e1f64ba86cde8a0e5b9e4e8&amp;id=5b17d21e5e&amp;f_id=00daa4e2f0" method="post" target="_blank">
+                    <input type="email" name="EMAIL" placeholder="Submit Your Email" class="newsletter-input" required>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_00e1f64ba86cde8a0e5b9e4e8_5b17d21e5e" tabindex="-1" value="">
+                    </div>
                     <button type="submit" class="newsletter-submit">
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -1031,14 +1040,14 @@ if (counterSection) {
                 <div class="nav-column">
                     <h4>Retreats</h4>
                     <ul class="nav-links">
-                        <li><a href="#kenya-immersion">Nature Led Kenya Immersion March 2026</a></li>
-                        <li><a href="#motherland-retreat">Return to Motherland June 2026</a></li>
-                        <li><a href="#iboga-ceremony">Iboga Plant Ceremony August 2026</a></li>
-                        <li><a href="#meditate-wild">Meditate in the Wild October 2026</a></li>
-                        <li><a href="#private-retreats">Private Retreats</a></li>
-                        <li><a href="#custom-group">Custom Group Retreats</a></li>
-                        <li><a href="#intercruise">Intercruise Retreats</a></li>
-                        <li><a href="#virtual-experience">Virtual Experience Retreats</a></li>
+                        <li><a href="/wp/retreats/">Nature Led Kenya Immersion March 2026</a></li>
+                        <li><a href="/wp/retreats/">Return to Motherland June 2026</a></li>
+                        <li><a href="/wp/retreats/">Iboga Plant Ceremony August 2026</a></li>
+                        <li><a href="/wp/retreats/">Meditate in the Wild October 2026</a></li>
+                        <li><a href="/wp/retreats/">Private Retreats</a></li>
+                        <li><a href="/wp/retreats/">Custom Group Retreats</a></li>
+                        <li><a href="/wp/retreats/">Intercruise Retreats</a></li>
+                        <li><a href="/wp/retreats/">Virtual Experience Retreats</a></li>
                     </ul>
                 </div>
                 
@@ -1064,7 +1073,7 @@ if (counterSection) {
                         <li><a href="#nine-elements">The Nine Elements</a></li>
                         <li><a href="#how-we-work">How We Work</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#blog">Blog & Podcast</a></li>
+                        <li><a href="/wp/">Blog & Podcast</a></li>
                         <li><a href="#become-partner">Become a Partner</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
