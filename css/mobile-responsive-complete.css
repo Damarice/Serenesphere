@@ -6,6 +6,17 @@
 /* Base Mobile Styles (768px and below) */
 @media (max-width: 768px) {
     
+    /* ===== REMOVE ALL WHITE SPACE ===== */
+    * {
+        margin-top: 0 !important;
+    }
+    
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
     /* ===== LAYOUT ===== */
     .container {
         padding-left: 20px;
@@ -34,29 +45,36 @@
     }
     
     /* Remove white space between header and hero */
+    .topbar {
+        margin: 0 !important;
+    }
+    
     .header {
-        margin-bottom: 0 !important;
+        margin: 0 !important;
         padding-bottom: 0 !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
     
     main {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    
-    body {
-        padding-top: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     /* ===== HOMEPAGE HERO - DIFFERENT ===== */
     .hero-section {
-        min-height: 70vh;
-        height: 70vh;
-        padding: 100px 20px 40px;
+        min-height: 100vh;
+        height: 100vh;
+        padding-top: 120px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0 !important;
+        margin: 0 !important;
     }
     
     /* ===== OTHER PAGES HERO - CONSISTENT HEIGHT & CENTERED ===== */
@@ -68,13 +86,16 @@
     .markets-hero,
     .resources-hero,
     .podcast-hero {
-        min-height: 40vh;
-        height: 40vh;
-        padding: 20px;
+        min-height: 50vh;
+        height: 50vh;
+        padding-top: 120px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0 !important;
+        margin: 0 !important;
     }
     
     /* Center all hero content */
@@ -87,13 +108,14 @@
     .markets-hero-content,
     .resources-hero-content,
     .podcast-hero-content {
-        text-align: center;
+        text-align: center !important;
         width: 100%;
         max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 20px;
     }
     
     /* Fix hero content overlap */
@@ -106,11 +128,12 @@
     .markets-hero + section,
     .resources-hero + section,
     .podcast-hero + section {
-        margin-top: 0 !important;
-        padding-top: 50px !important;
+        margin: 0 !important;
+        padding-top: 60px !important;
         position: relative;
         z-index: 10;
         background: white;
+        clear: both;
     }
     
     /* Hero titles responsive */
@@ -124,8 +147,9 @@
     .resources-hero-title,
     .podcast-hero-title {
         font-size: 1.75rem !important;
-        line-height: 1.3;
-        margin-bottom: 15px;
+        line-height: 1.3 !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
     }
     
     /* Hero pretitle/subtitle responsive */
@@ -133,14 +157,19 @@
     .hero-pretitle,
     .section-subtitle {
         font-size: 0.9rem !important;
-        margin-bottom: 10px;
+        margin-bottom: 10px !important;
+        text-align: center !important;
     }
     
     /* Hero description responsive */
     .retreats-hero-description,
-    .hero-description {
+    .hero-description,
+    .chapters-hero-description {
         font-size: 0.95rem !important;
-        line-height: 1.5;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
     }
     
     /* Breadcrumb responsive */
@@ -151,6 +180,7 @@
     .circles-breadcrumb,
     .markets-breadcrumb {
         font-size: 0.85rem;
+        text-align: center !important;
     }
     
     /* ===== GRIDS ===== */
@@ -321,22 +351,27 @@
         width: 100% !important;
         height: auto !important;
         max-width: 100% !important;
+        min-width: 100% !important;
         object-fit: cover;
-        display: block;
+        display: block !important;
     }
     
     .about-section img,
     .company-section img,
     .mission-section img,
-    .about-grid img {
+    .about-grid img,
+    .about-content-section img {
         width: 100% !important;
         height: auto !important;
         max-width: 100% !important;
+        min-width: 100% !important;
+        display: block !important;
     }
     
     /* About page specific */
     .about-content-section {
-        padding-top: 50px;
+        padding-top: 60px;
+        overflow: hidden;
     }
     
     .about-content-grid {
@@ -349,10 +384,15 @@
         width: 100%;
     }
     
-    .about-image-wrapper img {
-        width: 100%;
-        height: auto;
+    .about-image-wrapper,
+    .about-image-wrapper img,
+    .about-content-section .blog-image,
+    .about-content-section .blog-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
         border-radius: 8px;
+        display: block !important;
     }
     
     /* ===== COUNTER SECTION ===== */
