@@ -19,10 +19,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/footer.css">
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="../css/mobile-only-fixes.css">
->>>>>>> dbec5f59aa11f59d4ea76005af900eabd1a6ffe1
     
     <!-- Main Script -->
     <script src="../js/main.js" defer></script>
@@ -35,8 +32,14 @@
     
     <!-- Performance Script -->
     <script src="../js/performance.js" defer></script>
-    <link rel="stylesheet" href="../css/mobile-responsive-enhanced.css">
-    <link rel="stylesheet" href="../css/mobile-fixes-final.css">
+    
+    <!-- Contact Form Script -->
+    <script src="../js/contact-form.js" defer></script>
+    
+    <!-- Navigation Fix -->
+    <script src="../js/navigation-fix.js" defer></script>
+    
+    <link rel="stylesheet" href="../css/mobile-responsive-complete.css">
     
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -234,34 +237,34 @@
                         <form class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" placeholder="First Name*" required>
+                                    <input type="text" name="firstName" placeholder="First Name*" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="Last Name*" required>
+                                    <input type="text" name="lastName" placeholder="Last Name*" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="tel" placeholder="Phone Number*" required>
+                                    <input type="tel" name="phone" placeholder="Phone Number*" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" placeholder="Email Address*" required>
+                                    <input type="email" name="email" placeholder="Email Address*" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <select required>
+                                <select name="service" required>
                                     <option value="">Discuss About Service</option>
-                                    <option value="retreat">Retreat Inquiry</option>
-                                    <option value="circle">Join a Circle</option>
-                                    <option value="partnership">Partnership</option>
-                                    <option value="other">Other</option>
+                                    <option value="Retreat Inquiry">Retreat Inquiry</option>
+                                    <option value="Join a Circle">Join a Circle</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <textarea placeholder="Your Message" rows="6" required></textarea>
+                                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
                             </div>
 
                             <button type="submit" class="btn-send-message">Send Message</button>

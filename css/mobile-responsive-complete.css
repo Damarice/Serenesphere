@@ -1,0 +1,291 @@
+/* ========================================
+   COMPLETE MOBILE RESPONSIVENESS
+   Comprehensive mobile fixes for all pages
+   ======================================== */
+
+/* Base Mobile Styles (768px and below) */
+@media (max-width: 768px) {
+    
+    /* ===== LAYOUT ===== */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* ===== NAVIGATION ===== */
+    .nav-items-left,
+    .nav-items-right {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .logo-img {
+        max-height: 50px;
+    }
+    
+    /* ===== HERO SECTIONS ===== */
+    .hero-section,
+    .blog-hero,
+    .contact-hero,
+    .retreats-hero,
+    .chapters-hero,
+    .circles-hero,
+    .markets-hero,
+    .resources-hero,
+    .podcast-hero {
+        min-height: 50vh;
+        padding: 60px 20px 40px;
+    }
+    
+    .hero-title,
+    .blog-hero-title,
+    .contact-hero-title,
+    .retreats-hero-title {
+        font-size: 2rem;
+    }
+    
+    /* ===== GRIDS ===== */
+    .tours-grid,
+    .blog-grid,
+    .destinations-grid,
+    .contact-main-grid,
+    .chapters-grid,
+    .circles-grid,
+    .markets-grid,
+    .resources-grid,
+    .support-newsletter-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* ===== CARDS ===== */
+    .tour-card,
+    .blog-card,
+    .destination-card,
+    .chapter-card,
+    .circle-card,
+    .market-card,
+    .resource-card {
+        margin-bottom: 20px;
+    }
+    
+    /* ===== FORMS ===== */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select,
+    .newsletter-input {
+        font-size: 16px; /* Prevents iOS zoom */
+    }
+    
+    /* ===== BUTTONS ===== */
+    .btn,
+    .btn-send-message,
+    .btn-explore,
+    .btn-discover,
+    .btn-chat {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-brand,
+    .nav-column {
+        text-align: center;
+    }
+    
+    .partners-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* ===== BLOG SPECIFIC ===== */
+    .blog-card-large,
+    .blog-card-small {
+        width: 100%;
+    }
+    
+    .blog-detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-detail-sidebar {
+        margin-top: 40px;
+    }
+    
+    /* ===== RETREAT SPECIFIC ===== */
+    .programs-swiper .swiper-slide {
+        width: 90%;
+    }
+    
+    .detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-sidebar {
+        margin-top: 30px;
+    }
+    
+    /* ===== CONTACT SPECIFIC ===== */
+    .contact-info-section,
+    .contact-form-section {
+        padding: 20px;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== ABOUT SPECIFIC ===== */
+    .about-content-grid,
+    .team-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== COUNTER SECTION ===== */
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* ===== ACTIVITIES & DEALS ===== */
+    .activities-deals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== BELIEFS SECTION ===== */
+    .beliefs-container {
+        flex-direction: column;
+    }
+    
+    .beliefs-content,
+    .beliefs-image {
+        width: 100%;
+    }
+    
+    /* ===== SUPPORT & NEWSLETTER ===== */
+    .support-newsletter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .support-illustration {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    
+    /* ===== IMAGES ===== */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* ===== TYPOGRAPHY ===== */
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+    }
+    
+    /* ===== SPACING ===== */
+    section {
+        padding: 40px 20px;
+    }
+    
+    /* ===== TABLES ===== */
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .counter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partners-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tours-grid,
+    .blog-grid,
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+    }
+    
+    .topbar {
+        display: none;
+    }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    a,
+    button,
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
