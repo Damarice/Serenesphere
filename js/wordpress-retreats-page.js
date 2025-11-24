@@ -4,16 +4,52 @@
     
     const WP_API_URL = '/wp/wp-json/wp/v2';
     
-    // Fetch retreat posts from WordPress
+    // Fetch retreat posts from WordPress custom post type
     async function fetchRetreats() {
+        // Try custom post type first
+        let apiUrl = `${WP_API_URL}/retreats?per_page=10&_embed`;
+        console.log('WordPress Retreats: Trying custom post type:', apiUrl);
+        
         try {
-            const response = await fetch(`${WP_API_URL}/posts?categories=retreats&per_page=10&_embed`);
-            if (!response.ok) {
-                throw new Error('Failed to fetch retreats');
+            let response = await fetch(apiUrl);
+            console.log('WordPress Retreats: Custom post type response:', response.status);
+            
+            // If custom post type doesn't exist (404), try regular posts
+            if (response.status === 404) {
+                console.log('WordPress Retreats: Custom post type not found, trying regular posts...');
+                apiUrl = `${WP_API_URL}/posts?per_page=10&_embed`;
+                response = await fetch(apiUrl);
+                console.log('WordPress Retreats: Regular posts response:', response.status);
             }
-            return await response.json();
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('WordPress Retreats: API Error:', response.status, errorText);
+                throw new Error(`Failed to fetch retreats: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            console.log('WordPress Retreats: Data received:', data.length, 'posts');
+            
+            // Filter for retreat-related posts if using regular posts
+            if (apiUrl.includes('/posts?')) {
+                const retreatPosts = data.filter(post => {
+                    const title = post.title.rendered.toLowerCase();
+                    const content = post.content.rendered.toLowerCase();
+                    return title.includes('retreat') || content.includes('retreat');
+                });
+                console.log('WordPress Retreats: Filtered to', retreatPosts.length, 'retreat posts');
+                return retreatPosts;
+            }
+            
+            return data;
         } catch (error) {
-            console.error('Error fetching retreats:', error);
+            console.error('WordPress Retreats: Fetch error:', error);
+            console.log('WordPress Retreats: Please check:');
+            console.log('1. Custom post type "retreats" exists in WordPress');
+            console.log('2. "Show in REST API" is enabled in CPT UI settings');
+            console.log('3. At least one retreat is published');
+            console.log('4. Try accessing:', window.location.origin + apiUrl);
             return [];
         }
     }
@@ -36,24 +72,33 @@
     
     // Get custom field value
     function getCustomField(retreat, fieldName, defaultValue = '') {
-        return retreat.acf && retreat.acf[fieldName] ? retreat.acf[fieldName] : defaultValue;
+        // Check if ACF fields exist and are not empty
+        if (retreat.acf && Object.keys(retreat.acf).length > 0 && retreat.acf[fieldName]) {
+            return retreat.acf[fieldName];
+        }
+        return defaultValue;
     }
     
     // Add WordPress retreats to the grid
     async function addWordPressRetreats() {
+        console.log('WordPress Retreats: Starting to fetch...');
+        
         const programsGrid = document.querySelector('.programs-grid');
         if (!programsGrid) {
-            console.log('Programs grid not found');
+            console.error('WordPress Retreats: Programs grid not found! Looking for .programs-grid');
+            console.log('Available grids:', document.querySelectorAll('[class*="grid"]'));
             return;
         }
         
+        console.log('WordPress Retreats: Grid found, fetching retreats...');
         const retreats = await fetchRetreats();
+        
         if (retreats.length === 0) {
-            console.log('No WordPress retreats found');
+            console.warn('WordPress Retreats: No retreats returned from API');
             return;
         }
         
-        console.log(`Found ${retreats.length} WordPress retreats`);
+        console.log(`WordPress Retreats: Found ${retreats.length} retreats`, retreats);
         
         // Add WordPress retreats to the beginning of the grid
         // Reverse to maintain correct order when inserting at beginning
@@ -92,22 +137,14 @@
         console.log('WordPress retreats added to grid');
     }
     
-    // Initialize when DOM is ready - DEFERRED for performance
-    const initWordPressRetreats = () => {
-        // Use requestIdleCallback to not block main thread
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => {
-                addWordPressRetreats();
-            }, { timeout: 2000 });
-        } else {
-            // Fallback: delay by 500ms to let page render first
-            setTimeout(addWordPressRetreats, 500);
-        }
-    };
-    
+    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initWordPressRetreats);
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('WordPress Retreats: DOM loaded, initializing...');
+            setTimeout(addWordPressRetreats, 1000);
+        });
     } else {
-        initWordPressRetreats();
+        console.log('WordPress Retreats: DOM already loaded, initializing...');
+        setTimeout(addWordPressRetreats, 1000);
     }
 })();
