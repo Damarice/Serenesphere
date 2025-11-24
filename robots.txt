@@ -1,0 +1,16 @@
+# Robots.txt for Serenesephere
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+
+# Allow crawling of CSS and JS
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://serenesephere.com/sitemap.xml
