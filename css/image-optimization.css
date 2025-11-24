@@ -1,0 +1,145 @@
+/* ========================================
+   IMAGE OPTIMIZATION & PERFORMANCE
+   ======================================== */
+
+/* Optimize image rendering */
+img {
+    /* Better image rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    
+    /* Prevent layout shift */
+    max-width: 100%;
+    height: auto;
+    
+    /* GPU acceleration */
+    transform: translateZ(0);
+    will-change: transform;
+    
+    /* Smooth loading transition */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show images when loaded */
+img.loaded,
+img[loading="lazy"] {
+    opacity: 1;
+}
+
+/* Optimize background images */
+[style*="background-image"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+}
+
+/* Reduce animations during scroll for better performance */
+.is-scrolling * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+/* Low performance mode - reduce visual effects */
+.low-performance * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.low-performance img {
+    filter: none !important;
+}
+
+/* Optimize video container */
+.hero-bg-container {
+    contain: layout style paint;
+    will-change: transform;
+}
+
+/* Optimize card hover effects */
+.retreat-card,
+.pillar-card,
+.destination-slide-card {
+    contain: layout style paint;
+}
+
+/* Reduce repaints on hover */
+.retreat-card:hover,
+.pillar-card:hover {
+    will-change: transform;
+}
+
+/* Optimize swiper performance */
+.swiper-slide {
+    will-change: transform;
+}
+
+/* Prevent layout shifts */
+.hero-section,
+.features-section,
+.ecosystem-section {
+    contain: layout;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-display: swap;
+}
+
+/* Skeleton loading for images */
+img:not(.loaded) {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Optimize critical rendering path */
+.above-fold {
+    contain: layout style;
+}
+
+/* Defer non-critical content */
+.below-fold {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
+}
+
+/* Optimize iframe loading */
+iframe {
+    loading: lazy;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize for slow connections */
+@media (prefers-reduced-data: reduce) {
+    img {
+        content-visibility: auto;
+    }
+    
+    video,
+    iframe {
+        display: none;
+    }
+}
