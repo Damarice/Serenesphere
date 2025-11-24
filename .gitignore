@@ -22,3 +22,4 @@ build/
 # Scripts (temporary)
 update-paths.ps1
 update-page-paths.ps1
+"utput Checking if logo image file exists and is accessible..." 
