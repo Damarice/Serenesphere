@@ -77,10 +77,22 @@
         }).join('');
     }
     
-    // Initialize when DOM is ready
+    // Initialize when DOM is ready - DEFERRED for performance
+    const initWordPressBlog = () => {
+        // Use requestIdleCallback to not block main thread
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                fetchBlogPosts();
+            }, { timeout: 2000 });
+        } else {
+            // Fallback: delay by 500ms to let page render first
+            setTimeout(fetchBlogPosts, 500);
+        }
+    };
+    
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+        document.addEventListener('DOMContentLoaded', initWordPressBlog);
     } else {
-        fetchBlogPosts();
+        initWordPressBlog();
     }
 })();

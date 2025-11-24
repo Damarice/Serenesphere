@@ -1,0 +1,103 @@
+/* ========================================
+   COMBINED FIXES - All fixes in one file for better performance
+   ======================================== */
+
+/* Logo Fix - Ensure logo is always visible */
+.logo,
+.logo img,
+.logo-img,
+a.logo,
+a.logo img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.logo {
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.logo img,
+.logo-img {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Desktop - Logo centered in header */
+@media (min-width: 769px) {
+    .logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 100 !important;
+    }
+    
+    .logo img,
+    .logo-img {
+        height: 100px !important;
+        width: auto !important;
+    }
+    
+    .header {
+        overflow: visible !important;
+    }
+    
+    .nav-container {
+        overflow: visible !important;
+        position: relative !important;
+    }
+}
+
+/* Mobile - Logo on the left */
+@media (max-width: 768px) {
+    .logo {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        margin-left: 1rem !important;
+        z-index: 100 !important;
+    }
+    
+    .logo img,
+    .logo-img {
+        height: 50px !important;
+        width: auto !important;
+    }
+}
+
+/* Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded,
+img.loaded {
+    opacity: 1;
+}
+
+/* Performance: Reduce animations during scroll */
+.is-scrolling * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    pointer-events: none;
+}
+
+/* Performance: Optimize will-change */
+.header,
+.nav-container,
+.logo {
+    will-change: auto;
+}

@@ -22,8 +22,9 @@
             videoPlaceholder.style.display = 'block';
         }
     } else {
-        // Load video only on desktop with delay
-        setTimeout(function() {
+        // Load video only on desktop with delay - OPTIMIZED
+        // Use requestIdleCallback for better performance
+        const loadVideo = () => {
             const videoIframe = document.querySelector('.hero-bg-video');
             const videoPlaceholder = document.getElementById('video-placeholder');
             
@@ -41,7 +42,14 @@
                     }, 1000);
                 }
             }
-        }, 3000); // Load after 3 seconds on desktop
+        };
+        
+        // Use requestIdleCallback if available, otherwise setTimeout
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadVideo, { timeout: 2000 });
+        } else {
+            setTimeout(loadVideo, 2000);
+        }
     }
     
     // 2. AGGRESSIVE IMAGE LAZY LOADING
@@ -70,11 +78,14 @@
     
     // Convert all images to lazy load
     function setupLazyLoading() {
-        const images = document.querySelectorAll('img:not([data-src])');
+        const images = document.querySelectorAll('img:not([data-src]):not(.logo-img):not(.logo img)');
         
         images.forEach(img => {
-            // Skip if already loaded or is logo
-            if (img.complete || img.classList.contains('logo-img')) {
+            // Skip if already loaded or is logo or in logo container
+            if (img.complete || 
+                img.classList.contains('logo-img') || 
+                img.closest('.logo') ||
+                img.alt.toLowerCase().includes('logo')) {
                 return;
             }
             

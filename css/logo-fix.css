@@ -1,0 +1,30 @@
+/* ========================================
+   LOGO VISIBILITY FIX - CLEAN
+   ======================================== */
+
+/* CRITICAL: Override lazy loading script - ensure logo is always visible */
+.logo,
+.logo img,
+.logo-img,
+a.logo,
+a.logo img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Remove any background colors */
+.logo {
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.logo img,
+.logo-img {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+}

@@ -1,0 +1,58 @@
+/* ========================================
+   LOGO FIX - CLEAN VERSION
+   ======================================== */
+
+/* Desktop - Logo centered in header */
+@media (min-width: 769px) {
+    .logo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 100 !important;
+    }
+    
+    .logo img,
+    .logo-img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 100px !important;
+        width: auto !important;
+    }
+    
+    .header {
+        overflow: visible !important;
+    }
+    
+    .nav-container {
+        overflow: visible !important;
+        position: relative !important;
+    }
+}
+
+/* Mobile - Logo on the left */
+@media (max-width: 768px) {
+    .logo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        margin-left: 1rem !important;
+        z-index: 100 !important;
+    }
+    
+    .logo img,
+    .logo-img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 50px !important;
+        width: auto !important;
+    }
+}

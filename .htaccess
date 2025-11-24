@@ -16,6 +16,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteRule ^(.*)$ $1/ [L,R=301]
 
+# Set default index files
+DirectoryIndex index.html index.htm
+
 # Custom 404 error page (optional)
 ErrorDocument 404 /index.html
 

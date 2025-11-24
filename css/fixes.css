@@ -2,6 +2,20 @@
    CRITICAL FIXES
    ======================================== */
 
+/* Ensure logo is always visible on all devices */
+.logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.logo img,
+.logo-img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 /* Fix Category Font Visibility */
 .category-name {
     color: #FFFFFF !important;
@@ -470,10 +484,19 @@ section:first-of-type,
         transform: none !important;
         margin-left: 1rem !important;
         z-index: 1001 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
-    .logo img {
+    .logo img,
+    .logo-img {
         height: 50px !important;
+        width: auto !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-width: none !important;
     }
     
     /* Header adjustments for mobile */
