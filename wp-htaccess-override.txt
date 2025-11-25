@@ -1,0 +1,24 @@
+# WordPress .htaccess override
+# Upload this as .htaccess to public_html/wp/ folder
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /wp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /wp/index.php [L]
+</IfModule>
+# END WordPress
+
+# Allow access to wp-admin
+<Directory /wp/wp-admin>
+    Require all granted
+</Directory>
+
+# Allow access to wp-includes
+<Directory /wp/wp-includes>
+    Require all granted
+</Directory>

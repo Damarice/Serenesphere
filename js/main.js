@@ -92,55 +92,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, { passive: false });
 
-    // Hero Slideshow Logic
+    // Hero Slideshow Logic - Only initialize if elements exist
     const heroSection = document.querySelector('.hero-section');
     const slides = document.querySelectorAll('.hero-bg-slide');
     const dots = document.querySelectorAll('.slide-dot');
-    let currentSlide = 0;
-    let slideInterval;
-    const slideDuration = 6000;
+    
+    if (heroSection && slides.length > 0 && dots.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+        const slideDuration = 6000;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function goToSlide(index) {
-        if (index === currentSlide) return;
-        currentSlide = index;
-        showSlide(currentSlide);
-        // Reset and restart the interval
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, slideDuration);
-    }
-
-    function initSlideshow() {
-        // Show the first slide and remove the loading class
-        showSlide(0);
-        heroSection.classList.remove('loading');
-        
-        slideInterval = setInterval(nextSlide, slideDuration);
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToSlide(index);
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
             });
-        });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
 
-        heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
-        heroSection.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, slideDuration));
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            if (index === currentSlide) return;
+            currentSlide = index;
+            showSlide(currentSlide);
+            // Reset and restart the interval
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, slideDuration);
+        }
+
+        function initSlideshow() {
+            // Show the first slide and remove the loading class
+            showSlide(0);
+            heroSection.classList.remove('loading');
+            
+            slideInterval = setInterval(nextSlide, slideDuration);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            heroSection.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, slideDuration));
+        }
+
+        initSlideshow();
     }
-
-    initSlideshow();
     
     // Smooth scroll for CTA buttons
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -176,6 +179,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // Wait for Swiper library to load
 // Initialize Destinations Swiper with retry mechanism
 function initDestinationsSwiper() {
+    // Check if swiper element exists on the page
+    const swiperElement = document.querySelector('.destinations-swiper');
+    if (!swiperElement) {
+        return false; // Silently skip if element doesn't exist
+    }
+    
     if (typeof Swiper !== 'undefined') {
         console.log('Initializing destinations swiper...');
         const destinationsSwiper = new Swiper('.destinations-swiper', {
@@ -197,7 +206,8 @@ function initDestinationsSwiper() {
         console.log('Destinations swiper initialized successfully!');
         return true;
     } else {
-        console.error('Swiper library not loaded yet!');
+        // Only log error if element exists but library isn't loaded
+        console.warn('Swiper library not loaded yet, will retry...');
         return false;
     }
 }

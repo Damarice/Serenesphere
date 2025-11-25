@@ -9,15 +9,24 @@
 RewriteEngine On
 
 # -----------------------------
+# EXCLUDE WORDPRESS FROM ALL RULES
+# -----------------------------
+# Allow WordPress in /wp/ folder to handle its own rules - MUST BE FIRST
+RewriteRule ^wp - [L,NC]
+RewriteRule ^wp/ - [L,NC]
+
+# -----------------------------
 # FORCE HTTPS
 # -----------------------------
 RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # -----------------------------
 # FORCE NON-WWW (Cleaner URLs)
 # -----------------------------
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # -----------------------------
@@ -25,20 +34,24 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # -----------------------------
 # Redirect any .html URL to clean URL
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^ %1 [R=301,L]
 
 # Internally serve .html files without showing .html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^(.*)$ $1.html [L]
 
 # Remove trailing slash from pages (keep for directories)
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 # Ensure trailing slash for directories
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !^/wp
 RewriteRule ^(.*)$ $1/ [L,R=301]
 
 # -----------------------------
@@ -49,8 +62,7 @@ DirectoryIndex index.html index.htm
 # -----------------------------
 # CUSTOM 404 PAGE
 # -----------------------------
-# ErrorDocument 404 /index.html
-# Commented out for troubleshooting - uncomment after fixing 404 issues
+ErrorDocument 404 /index.html
 
 # -----------------------------
 # GZIP / COMPRESSION
@@ -103,8 +115,7 @@ Options -Indexes
 # PROTECT SENSITIVE FILES
 # -----------------------------
 <FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # -----------------------------

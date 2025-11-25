@@ -1,0 +1,11 @@
+# Minimal .htaccess - Test only
+RewriteEngine On
+
+# Exclude WordPress completely
+RewriteRule ^wp - [L,NC]
+
+# Default index
+DirectoryIndex index.html
+
+# Prevent directory browsing
+Options -Indexes

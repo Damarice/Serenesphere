@@ -1,0 +1,223 @@
+===========================================
+CONTACT FORM 7 SETUP FOR SERENESEPHERE
+Exact Match to Your HTML Form
+===========================================
+
+STEP 1: INSTALL CONTACT FORM 7 PLUGIN
+===========================================
+1. Go to: WordPress → Plugins → Add New
+2. Search: "Contact Form 7"
+3. Click "Install Now" → "Activate"
+
+STEP 2: CREATE NEW CONTACT FORM
+===========================================
+1. Go to: Contact → Add New
+2. Form Title: "Serenesephere Contact Form"
+3. Delete the default form content
+4. Paste this code:
+
+---COPY FROM HERE---
+
+<div class="form-row">
+    <div class="form-group">
+        [text* firstName placeholder "First Name*"]
+    </div>
+    <div class="form-group">
+        [text* lastName placeholder "Last Name*"]
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group">
+        [tel* phone placeholder "Phone Number*"]
+    </div>
+    <div class="form-group">
+        [email* email placeholder "Email Address*"]
+    </div>
+</div>
+
+<div class="form-group">
+    [select* service first_as_label "Discuss About Service" "Retreat Inquiry" "Join a Circle" "Partnership" "Other"]
+</div>
+
+<div class="form-group">
+    [textarea* message placeholder "Your Message" 6x6]
+</div>
+
+[submit class:btn-send-message "Send Message"]
+
+---COPY TO HERE---
+
+5. Click "Save"
+6. Copy the FORM ID from the URL (e.g., if URL is "post.php?post=123", the ID is 123)
+
+STEP 3: CONFIGURE MAIL SETTINGS
+===========================================
+1. In the same form editor, click the "Mail" tab
+2. Configure these settings:
+
+To: info@serenesephere.com
+From: [email]
+Subject: New Contact Form Submission from [firstName] [lastName]
+Additional Headers: Reply-To: [email]
+
+Message Body:
+---
+From: [firstName] [lastName]
+Email: [email]
+Phone: [phone]
+Service Interest: [service]
+
+Message:
+[message]
+---
+
+3. Click "Save"
+
+STEP 4: UPDATE JAVASCRIPT FILE
+===========================================
+Replace the FORM_ENDPOINT in js/contact-form.js with your new form ID:
+
+const FORM_ENDPOINT = 'https://serenesephere.com/wp/wp-json/contact-form-7/v1/contact-forms/YOUR_FORM_ID/feedback';
+
+Example: If your form ID is 123:
+const FORM_ENDPOINT = 'https://serenesephere.com/wp/wp-json/contact-form-7/v1/contact-forms/123/feedback';
+
+STEP 5: ADD CUSTOM CSS TO WORDPRESS (OPTIONAL)
+===========================================
+To ensure the form looks exactly like your design, add this CSS to WordPress:
+
+1. Go to: Appearance → Customize → Additional CSS
+2. Paste this code:
+
+/* Contact Form 7 Custom Styling */
+.wpcf7-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.wpcf7-form .form-group {
+    width: 100%;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form select,
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wpcf7-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.wpcf7-form .btn-send-message {
+    background: #0C4F58;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wpcf7-form .btn-send-message:hover {
+    background: #2BA6A0;
+    transform: translateY(-2px);
+}
+
+.wpcf7-form .wpcf7-response-output {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.wpcf7-form .wpcf7-mail-sent-ok {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.wpcf7-form .wpcf7-validation-errors {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .wpcf7-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+3. Click "Publish"
+
+STEP 6: TEST THE FORM
+===========================================
+1. Go to: https://serenesephere.com/pages/contact
+2. Fill out the form
+3. Click "Send Message"
+4. You should receive an email at info@serenesephere.com
+
+STEP 7: TROUBLESHOOTING
+===========================================
+
+ISSUE: Form not submitting
+SOLUTION: 
+- Check the form ID in contact-form.js matches WordPress
+- Check browser console for errors
+- Verify Contact Form 7 plugin is active
+
+ISSUE: Not receiving emails
+SOLUTION:
+- Check WordPress → Contact → Contact Forms → Mail tab
+- Verify "To:" email is correct
+- Check spam folder
+- Install "WP Mail SMTP" plugin for better email delivery
+
+ISSUE: Form fields not matching
+SOLUTION:
+- Make sure you copied the exact form code from STEP 2
+- Check that CSS is applied (STEP 5)
+
+ALTERNATIVE: EMBED WORDPRESS FORM DIRECTLY
+===========================================
+If you want to use WordPress form directly on the page:
+
+1. Get the shortcode from WordPress (e.g., [contact-form-7 id="123"])
+2. Replace the HTML form in contact.html with:
+   <div id="cf7-form-container"></div>
+3. Add this JavaScript to load it:
+
+<script>
+fetch('https://serenesephere.com/wp/wp-json/contact-form-7/v1/contact-forms/123')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('cf7-form-container').innerHTML = html;
+  });
+</script>
+
+But the current approach (AJAX submission) is cleaner and maintains your design!
+
+===========================================
+SUMMARY
+===========================================
+1. Install Contact Form 7 plugin
+2. Create form with the exact code provided
+3. Configure email settings
+4. Update contact-form.js with new form ID
+5. Add custom CSS (optional)
+6. Test the form
+
+Your contact form will look exactly the same but will work with WordPress!

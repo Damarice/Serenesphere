@@ -1,5 +1,5 @@
 // Service Worker for caching and offline support
-const CACHE_NAME = 'serenesephere-v1';
+const CACHE_NAME = 'serenesephere-v3'; // Updated version to force refresh
 const urlsToCache = [
   '/',
   '/index.html',
@@ -27,6 +27,15 @@ self.addEventListener('install', event => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', event => {
+  // Skip caching for WordPress, .html files (to allow redirects), and non-GET requests
+  if (event.request.url.includes('/wp/') || 
+      event.request.url.includes('/wp-admin/') || 
+      event.request.url.includes('/wp-content/') ||
+      event.request.url.endsWith('.html') ||
+      event.request.method !== 'GET') {
+    return; // Let browser handle it normally
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {
@@ -35,23 +44,25 @@ self.addEventListener('fetch', event => {
           return response;
         }
         
-        // Clone the request
-        const fetchRequest = event.request.clone();
+        // Clone the request with redirect mode set to follow
+        const fetchRequest = new Request(event.request, {
+          redirect: 'follow'
+        });
         
         return fetch(fetchRequest).then(response => {
-          // Check if valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
+          // Check if valid response (allow redirects)
+          if (!response || (response.status !== 200 && response.status !== 301 && response.status !== 302)) {
             return response;
           }
           
-          // Clone the response
-          const responseToCache = response.clone();
-          
-          // Cache the new response
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              cache.put(event.request, responseToCache);
-            });
+          // Only cache successful responses (200)
+          if (response.status === 200 && response.type === 'basic' && event.request.method === 'GET') {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request, responseToCache);
+              });
+          }
           
           return response;
         });

@@ -2,13 +2,17 @@
 (function() {
     'use strict';
     
-    const WP_API_URL = '/wp/wp-json/wp/v2';
+    // Use absolute URL to work on both localhost and live server
+    const WP_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'https://serenesephere.com/wp/wp-json/wp/v2'
+        : '/wp/wp-json/wp/v2';
     
     // Fetch retreat posts from WordPress custom post type
     async function fetchRetreats() {
         // Try custom post type first
-        let apiUrl = `${WP_API_URL}/retreats?per_page=10&_embed`;
+        let apiUrl = `${WP_API_URL}/retreats?per_page=10`;
         console.log('WordPress Retreats: Trying custom post type:', apiUrl);
+        console.log('WordPress Retreats: Current hostname:', window.location.hostname);
         
         try {
             let response = await fetch(apiUrl);
@@ -17,7 +21,7 @@
             // If custom post type doesn't exist (404), try regular posts
             if (response.status === 404) {
                 console.log('WordPress Retreats: Custom post type not found, trying regular posts...');
-                apiUrl = `${WP_API_URL}/posts?per_page=10&_embed`;
+                apiUrl = `${WP_API_URL}/posts?per_page=10`;
                 response = await fetch(apiUrl);
                 console.log('WordPress Retreats: Regular posts response:', response.status);
             }
@@ -30,6 +34,7 @@
             
             const data = await response.json();
             console.log('WordPress Retreats: Data received:', data.length, 'posts');
+            console.log('WordPress Retreats: First retreat data:', data[0]);
             
             // Filter for retreat-related posts if using regular posts
             if (apiUrl.includes('/posts?')) {
@@ -56,18 +61,20 @@
     
     // Get featured image
     function getFeaturedImage(retreat) {
-        if (retreat._embedded && retreat._embedded['wp:featuredmedia']) {
-            return retreat._embedded['wp:featuredmedia'][0].source_url;
-        }
-        return '../assets/images/default-retreat.jpg';
+        // Use a default image if no featured image
+        return '../assets/images/Photo A2.jpg';
     }
     
     // Get excerpt
     function getExcerpt(retreat) {
-        const div = document.createElement('div');
-        div.innerHTML = retreat.excerpt.rendered;
-        const text = div.textContent.trim();
-        return text.length > 150 ? text.substring(0, 150) + '...' : text;
+        if (retreat.excerpt && retreat.excerpt.rendered) {
+            const div = document.createElement('div');
+            div.innerHTML = retreat.excerpt.rendered;
+            const text = div.textContent.trim();
+            return text.length > 150 ? text.substring(0, 150) + '...' : text;
+        }
+        // Fallback if no excerpt
+        return 'Experience a transformative wellness retreat in Kenya.';
     }
     
     // Get custom field value
